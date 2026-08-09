@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>moxohubs — aplicații</title>
+<meta name="description" content="Aplicațiile MOXO — unelte practice, construite pentru oameni care lucrează cu ele zilnic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0912; --surface:#15141f; --surface-2:#1b1a28; --border:#28273a; --border-soft:#211f30;
+  --amber:#F0A93E; --amber-bright:#FFC670; --amber-dim:#6B4E22;
+  --good:#4FBE8A; --ink:#EEF1F7; --muted:#93A0B5; --faint:#565A6E;
+  --display:"Space Grotesk",-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--body); -webkit-font-smoothing:antialiased;}
+body{min-height:100vh; background:
+  radial-gradient(1000px 560px at 85% -10%, rgba(240,169,62,.10), transparent 60%),
+  radial-gradient(800px 460px at -10% 100%, rgba(79,190,138,.06), transparent 55%),
+  var(--bg); display:flex; flex-direction:column;}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:960px; margin:0 auto; padding:0 24px; width:100%;}
+
+nav{padding:26px 0;}
+.brand{display:flex; align-items:center; gap:11px; font-family:var(--display); font-weight:800; font-size:18px;}
+.brand .mark{width:34px; height:34px; border-radius:10px;
+  background:linear-gradient(155deg, var(--amber-bright), var(--amber) 62%, var(--amber-dim));
+  display:flex; align-items:center; justify-content:center; font-weight:800; color:#0B0A0D; font-size:16px;}
+
+main{flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px 0 60px;}
+.eyebrow{font-size:11.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--amber); margin-bottom:14px;}
+h1{font-family:var(--display); font-size:clamp(28px,4.5vw,42px); font-weight:800; letter-spacing:-.02em;
+  line-height:1.1; margin:0 0 16px; max-width:16ch; text-wrap:balance;}
+.lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:52ch; margin:0 0 48px;}
+
+.grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+.card{background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:26px;
+  display:flex; flex-direction:column; transition:border-color .15s ease, transform .15s ease;}
+a.card:hover{border-color:rgba(240,169,62,.4); transform:translateY(-2px);}
+.card .top{display:flex; align-items:center; gap:12px; margin-bottom:16px;}
+.card .icon{width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0;}
+.card.sd .icon{background:linear-gradient(155deg, var(--amber-bright), var(--amber) 62%, var(--amber-dim)); color:#0B0A0D;}
+.card h2{font-family:var(--display); font-size:16.5px; font-weight:700; margin:0;}
+.card .tag{font-family:var(--mono); font-size:10.5px; color:var(--good); background:rgba(79,190,138,.1);
+  border:1px solid rgba(79,190,138,.25); padding:3px 8px; border-radius:99px; display:inline-block; margin-top:3px;}
+.card p{font-size:13.5px; color:var(--muted); line-height:1.6; margin:0 0 18px; flex:1;}
+.card .go{font-size:13px; font-weight:700; color:var(--amber); display:flex; align-items:center; gap:6px;}
+.card .go svg{width:14px; height:14px; transition:transform .15s ease;}
+a.card:hover .go svg{transform:translateX(3px);}
+
+.card.empty{border-style:dashed; align-items:center; justify-content:center; text-align:center; color:var(--faint); min-height:180px;}
+.card.empty .icon{background:var(--surface-2); border:1px solid var(--border); color:var(--faint); margin-bottom:14px;}
+.card.empty h2{color:var(--faint); font-size:14px;}
+.card.empty p{color:var(--faint); font-size:12.5px; margin:6px 0 0;}
+
+footer{padding:28px 0; border-top:1px solid var(--border-soft);}
+footer p{color:var(--faint); font-size:12px; margin:0;}
+
+@media (max-width:640px){
+  .grid{grid-template-columns:1fr;}
+  nav{padding:20px 0;}
+  main{padding:24px 0 40px;}
+}
+</style>
+</head>
+<body>
+<nav class="wrap">
+  <div class="brand"><div class="mark">M</div>moxohubs</div>
+</nav>
+
+<main class="wrap">
+  <div class="eyebrow">Aplicații</div>
+  <h1>Unelte construite pentru munca de fiecare zi.</h1>
+  <p class="lead">Fiecare aplicație de aici rezolvă o singură problemă, bine — fără conturi complicate, fără funcții inutile.</p>
+
+  <div class="grid">
+    <a class="card sd" href="https://smartdrive.moxohubs.com">
+      <div class="top">
+        <div class="icon">🚗</div>
+        <div><h2>SmartDrive</h2><span class="tag">Live</span></div>
+      </div>
+      <p>Copilotul pentru șoferi Bolt/Uber — calculează profitul net real al fiecărei curse, după combustibil și uzură, și te ajută să refuzi cursele care te costă bani.</p>
+      <div class="go">Vezi aplicația
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <div class="card empty">
+      <div class="icon">＋</div>
+      <h2>Următoarea aplicație</h2>
+      <p>În lucru</p>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap">
+  <p>© moxohubs — aplicații independente. SmartDrive nu e afiliat cu Bolt sau Uber.</p>
+</footer>
+</body>
+</html>
