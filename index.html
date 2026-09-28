@@ -250,11 +250,11 @@
     </div>
 
     <!-- SENTINEL -->
-    <article class="showcase c-sentinel" id="sentinel" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-sentinel layout-banner" id="sentinel" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="BusinessApplication">
       <div class="wrap">
         <div class="showcase-grid">
-          <div>
+          <div class="sc-main">
             <div class="sc-kicker" data-i18n="sentinel.kicker">01 — RegTech · Node.js</div>
             <div class="sc-title">
               <h3 itemprop="name">Sentinel</h3>
@@ -268,13 +268,17 @@
               <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="sentinel.solution">An 18-phase pipeline analyzes the code and documentation, extracts evidence, and maps it to articles, sealed with a real RFC 3161 timestamp.</span></div>
             </div>
 
-            <ul class="sc-feats">
-              <li data-i18n="sentinel.feat1"><b>RFC 3161 timestamp</b> verified with OpenSSL, not simulated</li>
-              <li data-i18n="sentinel.feat2"><b>Hash on real content</b>, detects drift, not just location</li>
-              <li data-i18n="sentinel.feat3"><b>8 legal templates</b> migrated by real legal risk</li>
-              <li data-i18n="sentinel.feat4"><b>Automatic SBOM</b> + delta report on re-audit</li>
-              <li data-i18n="sentinel.feat5"><b>Webhook notifications</b> to Slack/Teams</li>
-              <li data-i18n="sentinel.feat6"><b>tsc --noEmit</b> clean, zero regressions</li>
+            <ul class="sc-feats cols2">
+              <li data-i18n="sentinel.feat1"><b>18-phase analysis pipeline</b> — source code, config, and documentation</li>
+              <li data-i18n="sentinel.feat2"><b>Guided compliance wizard</b> — restructured around signable documents</li>
+              <li data-i18n="sentinel.feat3"><b>Audit Navigator</b> — structured browsing of findings by article and risk tier</li>
+              <li data-i18n="sentinel.feat4"><b>Digital signature system</b> with live content-change verification</li>
+              <li data-i18n="sentinel.feat5"><b>RFC 3161 timestamp</b> verified with OpenSSL, not simulated</li>
+              <li data-i18n="sentinel.feat6"><b>Hash on real content</b>, detects drift, not just location</li>
+              <li data-i18n="sentinel.feat7"><b>8 legal document templates</b> migrated by real legal risk</li>
+              <li data-i18n="sentinel.feat8"><b>Automatic SBOM</b> generation + delta report on re-audit</li>
+              <li data-i18n="sentinel.feat9"><b>Multi-org roles &amp; permissions</b> with full audit trail</li>
+              <li data-i18n="sentinel.feat10"><b>In-app &amp; webhook notifications</b> to Slack/Teams</li>
             </ul>
 
             <div class="sc-tags">
@@ -310,11 +314,11 @@
     </article>
 
     <!-- GUANINA -->
-    <article class="showcase c-guanina rev" id="guanina" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-guanina layout-mirror" id="guanina" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <div class="wrap">
         <div class="showcase-grid">
-          <div>
+          <div class="sc-main">
             <div class="sc-kicker" data-i18n="guanina.kicker">02 — Marketplace · Next.js Edge</div>
             <div class="sc-title">
               <h3 itemprop="name">Guanina</h3>
@@ -328,13 +332,17 @@
               <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="guanina.solution">Every seller gets a fully isolated dashboard, enforced at the schema and query level. Payments route directly to the seller via Stripe Connect, with commission withheld automatically at the payment layer.</span></div>
             </div>
 
-            <ul class="sc-feats">
+            <ul class="sc-feats cols2">
               <li data-i18n="guanina.feat1"><b>Custom quote engine</b> — request broadcast with automatic notification waves to nearby sellers</li>
               <li data-i18n="guanina.feat2"><b>Real-time inventory engine</b> — automatic listing expiration and stock sync</li>
-              <li data-i18n="guanina.feat3"><b>Full admin panel</b> — orders, sellers, settlements, team, market survey</li>
-              <li data-i18n="guanina.feat4"><b>Web push (VAPID)</b> + transactional email, graceful degradation</li>
-              <li data-i18n="guanina.feat5"><b>Native SEO/AIO layer</b> — JSON-LD, dynamic sitemap, llms.txt</li>
-              <li data-i18n="guanina.feat6"><b>Delivery &amp; cancellation engine</b> — per-seller delivery option, payment-anchored refund windows</li>
+              <li data-i18n="guanina.feat3"><b>Vendor mobile dashboard</b> — QR scan-to-confirm pickup, order history, profile</li>
+              <li data-i18n="guanina.feat4"><b>Guest order lookup</b> — track and manage an order without an account</li>
+              <li data-i18n="guanina.feat5"><b>Geolocation catalog</b> — city/neighborhood browsing with fuzzy search</li>
+              <li data-i18n="guanina.feat6"><b>Full admin panel</b> — orders, sellers, settlements, team, market survey</li>
+              <li data-i18n="guanina.feat7"><b>Web push (VAPID)</b> + transactional email, graceful degradation</li>
+              <li data-i18n="guanina.feat8"><b>Delivery &amp; cancellation engine</b> — per-seller delivery, payment-anchored refund windows</li>
+              <li data-i18n="guanina.feat9"><b>Shareable product links</b> + structured legal pages and cookie consent</li>
+              <li data-i18n="guanina.feat10"><b>Native SEO/AIO layer</b> — JSON-LD, dynamic sitemap, IndexNow, llms.txt</li>
             </ul>
 
             <div class="sc-tags">
@@ -364,12 +372,12 @@
     </article>
 
     <!-- SMARTDRIVE -->
-    <article class="showcase c-smartdrive" id="smartdrive" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-smartdrive layout-wide" id="smartdrive" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="TravelApplication">
       <meta itemprop="operatingSystem" content="Android">
       <div class="wrap">
         <div class="showcase-grid">
-          <div>
+          <div class="sc-main">
             <div class="sc-kicker" data-i18n="smartdrive.kicker">03 — Rideshare · Native Android</div>
             <div class="sc-title">
               <h3 itemprop="name">SmartDrive</h3>
@@ -383,13 +391,17 @@
               <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="smartdrive.solution">Runs passively alongside the rideshare app, using on-device OCR to read fare offers and a local calculation engine to compute net profit, delivered through text-to-speech — no access to the driver's rideshare account at any point.</span></div>
             </div>
 
-            <ul class="sc-feats">
+            <ul class="sc-feats cols2">
               <li data-i18n="smartdrive.feat1"><b>Local OCR engine</b> — reads fare offers directly from the rideshare app's screen</li>
               <li data-i18n="smartdrive.feat2"><b>Voice-first mode</b> — text-to-speech output, zero screen interaction required</li>
-              <li data-i18n="smartdrive.feat3"><b>Real-time profit engine</b> — fuel cost, vehicle wear, and commission factored per ride</li>
-              <li data-i18n="smartdrive.feat4"><b>Referral tracking system</b> — automated attribution with built-in fraud safeguards</li>
-              <li data-i18n="smartdrive.feat5"><b>Operations dashboard</b> — subscriber management, metrics, payout requests</li>
-              <li data-i18n="smartdrive.feat6"><b>Schema migrations</b> tested against every previously shipped version</li>
+              <li data-i18n="smartdrive.feat3"><b>Quick Mute</b> — one tap silences announcements when a passenger boards</li>
+              <li data-i18n="smartdrive.feat4"><b>Real-time profit engine</b> — fuel cost, vehicle wear, and commission factored per ride</li>
+              <li data-i18n="smartdrive.feat5"><b>Zone avoidance</b> — vocal alert when a ride enters a marked street or area</li>
+              <li data-i18n="smartdrive.feat6"><b>Daily goal tracker</b> — real-time progress toward a set earnings target</li>
+              <li data-i18n="smartdrive.feat7"><b>Financial reports</b> — daily/weekly/monthly breakdown and most-profitable-hours chart</li>
+              <li data-i18n="smartdrive.feat8"><b>Separate audio channels</b> for private vs. passenger-facing announcements</li>
+              <li data-i18n="smartdrive.feat9"><b>Referral tracking system</b> — automated attribution with built-in fraud safeguards</li>
+              <li data-i18n="smartdrive.feat10"><b>Operations dashboard</b> — subscriber management, metrics, payout requests</li>
             </ul>
 
             <div class="sc-tags">
@@ -415,12 +427,12 @@
     </article>
 
     <!-- DEAL HUNTER RO -->
-    <article class="showcase c-dealhunter rev" id="dealhunter" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-dealhunter layout-stack" id="dealhunter" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <meta itemprop="operatingSystem" content="iOS, Android">
       <div class="wrap">
         <div class="showcase-grid">
-          <div>
+          <div class="sc-main">
             <div class="sc-kicker" data-i18n="dealhunter.kicker">04 — Affiliate e-commerce · Flutter</div>
             <div class="sc-title">
               <h3 itemprop="name">Deal Hunter RO</h3>
@@ -434,12 +446,15 @@
               <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="dealhunter.solution">The user sets a price threshold once; the app compares automatically and sends a push notification at the right moment.</span></div>
             </div>
 
-            <ul class="sc-feats">
-              <li data-i18n="dealhunter.feat1"><b>No password</b> — Apple/Google Sign In</li>
-              <li data-i18n="dealhunter.feat2"><b>Full price history</b> per product</li>
-              <li data-i18n="dealhunter.feat3"><b>Mandatory in-app browser</b> — preserves the affiliate cookie</li>
-              <li data-i18n="dealhunter.feat4"><b>No transactions in the app</b></li>
-              <li data-i18n="dealhunter.feat5"><b>UUID keys</b> across the whole schema</li>
+            <ul class="sc-feats cols2">
+              <li data-i18n="dealhunter.feat1"><b>Automated feed ingestion</b> — parses XML/CSV/API feeds from partner stores</li>
+              <li data-i18n="dealhunter.feat2"><b>Price comparison engine</b> — checks new vs. saved price, triggers on threshold cross</li>
+              <li data-i18n="dealhunter.feat3"><b>Full price history</b> chart per product</li>
+              <li data-i18n="dealhunter.feat4"><b>No password</b> — Apple/Google Sign In</li>
+              <li data-i18n="dealhunter.feat5"><b>Mandatory in-app browser</b> — preserves the affiliate attribution cookie</li>
+              <li data-i18n="dealhunter.feat6"><b>Adaptive dark/light UI</b></li>
+              <li data-i18n="dealhunter.feat7"><b>No transactions in the app</b> — redirects to the official store</li>
+              <li data-i18n="dealhunter.feat8"><b>UUID keys</b> across the whole schema</li>
             </ul>
 
             <div class="sc-tags">

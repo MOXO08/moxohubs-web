@@ -120,11 +120,31 @@ h1.hero-title em{font-style:normal; background:linear-gradient(100deg, var(--bra
 .showcase{padding:52px 0; border-top:1px solid var(--line); position:relative;}
 .showcase::before{content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(560px 360px at var(--gx,20%) 10%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 72%);}
 @media(min-width:760px){.showcase{padding:76px 0;}}
-.showcase-grid{display:grid; grid-template-columns:1fr; gap:32px; align-items:center;}
+.showcase-grid{display:grid; grid-template-columns:1fr; gap:32px; align-items:start;}
 @media(min-width:900px){
-  .showcase-grid{grid-template-columns:1fr 1fr; gap:56px;}
-  .showcase.rev .showcase-grid{direction:rtl;}
-  .showcase.rev .showcase-grid > *{direction:ltr;}
+  .showcase-grid{grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+
+  /* layout-mirror: visual on the left, content on the right (Guanina) */
+  .showcase.layout-mirror .showcase-grid{direction:rtl;}
+  .showcase.layout-mirror .showcase-grid > *{direction:ltr;}
+
+  /* layout-wide: content narrower, visual dominant (SmartDrive) */
+  .showcase.layout-wide .showcase-grid{grid-template-columns:.82fr 1.18fr;}
+
+  /* layout-banner: visual as a full-width console banner on top, content in wide columns below (Sentinel) */
+  .showcase.layout-banner .showcase-grid{grid-template-columns:1fr; gap:40px;}
+  .showcase.layout-banner .showcase-grid{display:flex; flex-direction:column;}
+  .showcase.layout-banner .sc-visual{order:-1; max-width:none;}
+  .showcase.layout-banner .sc-main{display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:start;}
+  .showcase.layout-banner .sc-feats{column-count:1;}
+
+  /* layout-stack: everything centered, visual as a wide banner below a narrow text column (Deal Hunter) */
+  .showcase.layout-stack .showcase-grid{grid-template-columns:1fr; display:flex; flex-direction:column; align-items:center; gap:36px;}
+  .showcase.layout-stack .sc-main{max-width:640px; text-align:center;}
+  .showcase.layout-stack .sc-callouts{text-align:left;}
+  .showcase.layout-stack .sc-feats{text-align:left; max-width:520px; margin-left:auto; margin-right:auto;}
+  .showcase.layout-stack .sc-tags{justify-content:center;}
+  .showcase.layout-stack .sc-visual{width:100%; max-width:820px;}
 }
 
 .sc-kicker{font-family:ui-monospace,"IBM Plex Mono",monospace; font-size:11px; font-weight:600; color:var(--accent); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px;}
@@ -146,9 +166,10 @@ h1.hero-title em{font-style:normal; background:linear-gradient(100deg, var(--bra
 .sc-callout.solution .tag{color:var(--accent); background:color-mix(in srgb, var(--accent) 16%, transparent);}
 
 .sc-feats{margin:0 0 22px; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px;}
-.sc-feats li{font-size:13px; color:var(--ink-soft); line-height:1.55; display:flex; gap:9px; align-items:flex-start;}
+.sc-feats li{font-size:13px; color:var(--ink-soft); line-height:1.55; display:flex; gap:9px; align-items:flex-start; break-inside:avoid;}
 .sc-feats li::before{content:"✓"; color:var(--accent); font-weight:700; flex-shrink:0; line-height:1.55;}
 .sc-feats li b{color:var(--ink); font-weight:600;}
+@media(min-width:640px){.sc-feats.cols2{column-count:2; column-gap:22px;}}
 
 .sc-tags{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:22px;}
 .sc-tag{font-family:ui-monospace,"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-faint); border:1px solid var(--line); border-radius:99px; padding:4px 11px;}
