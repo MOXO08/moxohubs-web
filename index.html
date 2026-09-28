@@ -258,63 +258,72 @@
     </div>
 
     <!-- SENTINEL -->
-    <article class="showcase c-sentinel" id="sentinel" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-sentinel" id="sentinel" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="BusinessApplication">
       <div class="wrap">
-        <div class="showcase-grid">
-          <div class="sc-main">
-            <div class="sc-kicker" data-i18n="sentinel.kicker">01 — RegTech · Node.js</div>
-            <div class="sc-title">
-              <h3 itemprop="name">Sentinel</h3>
-              <span class="sc-status dev"><span class="dot"></span><span data-i18n="sentinel.status">Pre-launch · 66/66 tests</span></span>
-            </div>
-            <p class="sc-tagline" data-i18n="sentinel.tagline">"Building Trust Through Evidence" — EU AI Act compliance</p>
-            <p class="sc-pitch" itemprop="description" data-i18n="sentinel.pitch">An <strong>evidence-oriented</strong> compliance assessment platform for AI system providers who must demonstrate conformity with Regulation (EU) 2024/1689 — validated by 4 independent experts and tested end-to-end.</p>
+        <div class="pcard">
+          <div class="showcase-grid">
+            <div class="sc-main">
+              <div class="ptags">
+                <span class="ptag cat">RegTech</span>
+                <span class="ptag stack">Node.js · Express</span>
+                <span class="ptag stack">RFC 3161</span>
+              </div>
+              <div class="sc-title">
+                <h3 itemprop="name">Sentinel</h3>
+                <span class="sc-status dev"><span class="dot"></span><span data-i18n="sentinel.status">Pre-launch · 66/66 tests</span></span>
+              </div>
+              <p class="sc-tagline" data-i18n="sentinel.tagline">"Building Trust Through Evidence" — EU AI Act compliance</p>
+              <p class="sc-pitch" itemprop="description" data-i18n="sentinel.pitch">An <strong>evidence-oriented</strong> compliance assessment platform for AI system providers who must demonstrate conformity with Regulation (EU) 2024/1689 — validated by 4 independent experts and tested end-to-end.</p>
 
-            <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="sentinel.problem">The EU AI Act requires article-by-article proof of conformity, under fines of up to €30M. It's usually done manually, with no verifiable link to the actual code.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="sentinel.solution">An 18-phase pipeline analyzes the code and documentation, extracts evidence, and maps it to articles, sealed with a real RFC 3161 timestamp.</span></div>
+              <div class="sc-callouts">
+                <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="sentinel.problem">The EU AI Act requires article-by-article proof of conformity, under fines of up to €30M. It's usually done manually, with no verifiable link to the actual code.</span></div>
+                <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="sentinel.solution">An 18-phase pipeline analyzes the code and documentation, extracts evidence, and maps it to articles, sealed with a real RFC 3161 timestamp.</span></div>
+              </div>
+
+              <div class="pbento">
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🔍</span><span data-i18n="sentinel.b1t">18-Phase Analysis</span></div><p data-i18n="sentinel.b1d">Pipeline across source code, config, and documentation.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🔐</span><span data-i18n="sentinel.b2t">RFC 3161 Seal</span></div><p data-i18n="sentinel.b2d">Timestamp verified with OpenSSL, not simulated.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🧭</span><span data-i18n="sentinel.b3t">Audit Navigator</span></div><p data-i18n="sentinel.b3d">Structured browsing of findings by article and risk tier.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">✍️</span><span data-i18n="sentinel.b4t">Live Signatures</span></div><p data-i18n="sentinel.b4d">Digital signing with live content-change verification.</p></div>
+              </div>
+
+              <div class="pmore">
+                <span data-i18n="sentinel.m1">Guided compliance wizard</span>
+                <span data-i18n="sentinel.m2">Content-hash drift detection</span>
+                <span data-i18n="sentinel.m3">8 legal document templates</span>
+                <span data-i18n="sentinel.m4">Automatic SBOM generation</span>
+                <span data-i18n="sentinel.m5">Multi-org roles &amp; permissions</span>
+                <span data-i18n="sentinel.m6">Slack/Teams webhook alerts</span>
+              </div>
+
+              <a class="sc-link" href="https://gettingsentinel.com" itemprop="url">gettingsentinel.com
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
             </div>
 
-            <ul class="sc-feats cols2">
-              <li data-i18n="sentinel.feat1"><span class="ft"><b>18-phase analysis pipeline</b><span class="ft-d">source code, config, and documentation</span></span></li>
-              <li data-i18n="sentinel.feat2"><span class="ft"><b>Guided compliance wizard</b><span class="ft-d">restructured around signable documents</span></span></li>
-              <li data-i18n="sentinel.feat3"><span class="ft"><b>Audit Navigator</b><span class="ft-d">structured browsing of findings by article and risk tier</span></span></li>
-              <li data-i18n="sentinel.feat4"><span class="ft"><b>Digital signature system</b><span class="ft-d">with live content-change verification</span></span></li>
-              <li data-i18n="sentinel.feat5"><span class="ft"><b>RFC 3161 timestamp</b><span class="ft-d">verified with OpenSSL, not simulated</span></span></li>
-              <li data-i18n="sentinel.feat6"><span class="ft"><b>Hash on real content</b><span class="ft-d">detects drift, not just location</span></span></li>
-              <li data-i18n="sentinel.feat7"><span class="ft"><b>8 legal document templates</b><span class="ft-d">migrated by real legal risk</span></span></li>
-              <li data-i18n="sentinel.feat8"><span class="ft"><b>Automatic SBOM</b><span class="ft-d">generation + delta report on re-audit</span></span></li>
-              <li data-i18n="sentinel.feat9"><span class="ft"><b>Multi-org roles &amp; permissions</b><span class="ft-d">with full audit trail</span></span></li>
-              <li data-i18n="sentinel.feat10"><span class="ft"><b>In-app &amp; webhook notifications</b><span class="ft-d">to Slack/Teams</span></span></li>
-            </ul>
-
-            <div class="sc-tags">
-              <span class="sc-tag">Node.js · Express</span><span class="sc-tag">JWT + TOTP</span><span class="sc-tag">AWS S3 / R2</span><span class="sc-tag">RFC 3161</span><span class="sc-tag">Docker</span>
-            </div>
-            <a class="sc-link" href="https://gettingsentinel.com" itemprop="url">gettingsentinel.com
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </div>
-
-          <div class="sc-visual tilt">
-            <div class="sc-visual-label" data-i18n="sentinel.vlabel">Live code scan</div>
-            <div class="sc-visual-value" data-i18n="sentinel.vvalue">18-phase analysis</div>
-            <div class="w-scan">
-              <div>const evidence = extractFromSource(file);</div>
-              <div>evidence.sha256 = hash(snippet);</div>
-              <div>mapToArticle(evidence, "Art. 9");</div>
-              <div>sealWithRFC3161(dossier);</div>
-              <div>tests: 66/66 passed ✓</div>
-            </div>
-            <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="sentinel.f1t">Analysis</b><span data-i18n="sentinel.f1d">18 phases on source/config</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="sentinel.f2t">Mapping</b><span data-i18n="sentinel.f2d">evidence → articles</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="sentinel.f3t">Dossier</b><span data-i18n="sentinel.f3d">sealed PDF + SBOM</span></div>
-            </div>
-            <div class="sc-proof">
-              <div class="sc-proof-row"><time>31.08</time><span data-i18n="sentinel.proof1">4 independent experts validated the hardening (legal, cryptography, architecture, product).</span></div>
-              <div class="sc-proof-row"><time>31.08</time><span data-i18n="sentinel.proof2">E2E testing found 2 real concurrency bugs — both fixed, each with a dedicated test.</span></div>
+            <div class="pcard-visual tilt">
+              <div class="pcard-glow" aria-hidden="true"></div>
+              <div class="pcard-frame">
+                <div class="sc-visual-label" data-i18n="sentinel.vlabel">Live code scan</div>
+                <div class="sc-visual-value" data-i18n="sentinel.vvalue">18-phase analysis</div>
+                <div class="w-scan">
+                  <div>const evidence = extractFromSource(file);</div>
+                  <div>evidence.sha256 = hash(snippet);</div>
+                  <div>mapToArticle(evidence, "Art. 9");</div>
+                  <div>sealWithRFC3161(dossier);</div>
+                  <div>tests: 66/66 passed ✓</div>
+                </div>
+                <div class="sc-flow">
+                  <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="sentinel.f1t">Analysis</b><span data-i18n="sentinel.f1d">18 phases on source/config</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="sentinel.f2t">Mapping</b><span data-i18n="sentinel.f2d">evidence → articles</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="sentinel.f3t">Dossier</b><span data-i18n="sentinel.f3d">sealed PDF + SBOM</span></div>
+                </div>
+                <div class="sc-proof">
+                  <div class="sc-proof-row"><time>31.08</time><span data-i18n="sentinel.proof1">4 independent experts validated the hardening (legal, cryptography, architecture, product).</span></div>
+                  <div class="sc-proof-row"><time>31.08</time><span data-i18n="sentinel.proof2">E2E testing found 2 real concurrency bugs — both fixed, each with a dedicated test.</span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -322,57 +331,68 @@
     </article>
 
     <!-- GUANINA -->
-    <article class="showcase c-guanina rev" id="guanina" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-guanina rev" id="guanina" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <div class="wrap">
-        <div class="showcase-grid">
-          <div class="sc-main">
-            <div class="sc-kicker" data-i18n="guanina.kicker">02 — Marketplace · Next.js Edge</div>
-            <div class="sc-title">
-              <h3 itemprop="name">Guanina</h3>
-              <span class="sc-status live"><span class="dot"></span><span data-i18n="guanina.status">Live · real transactions</span></span>
-            </div>
-            <p class="sc-tagline" data-i18n="guanina.tagline">Flower marketplace — also known as „Piața de Flori"</p>
-            <p class="sc-pitch" itemprop="description" data-i18n="guanina.pitch">Built on <strong>Next.js Edge Runtime</strong> with Cloudflare D1, KV, and R2, integrating <strong>Stripe Connect</strong> for split payments and a QR-based pickup system. Runs on 47 incremental schema migrations applied without downtime.</p>
+        <div class="pcard">
+          <div class="showcase-grid">
+            <div class="sc-main">
+              <div class="ptags">
+                <span class="ptag cat">Marketplace</span>
+                <span class="ptag stack">Next.js 15 Edge</span>
+                <span class="ptag stack">Stripe Connect</span>
+              </div>
+              <div class="sc-title">
+                <h3 itemprop="name">Guanina</h3>
+                <span class="sc-status live"><span class="dot"></span><span data-i18n="guanina.status">Live · real transactions</span></span>
+              </div>
+              <p class="sc-tagline" data-i18n="guanina.tagline">Flower marketplace — also known as „Piața de Flori"</p>
+              <p class="sc-pitch" itemprop="description" data-i18n="guanina.pitch">Built on <strong>Next.js Edge Runtime</strong> with Cloudflare D1, KV, and R2, integrating <strong>Stripe Connect</strong> for split payments and a QR-based pickup system. Runs on 47 incremental schema migrations applied without downtime.</p>
 
-            <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="guanina.problem">A shared multi-vendor platform must guarantee strict data isolation — one seller must never be able to query or view another seller's orders, inventory, or settlements.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="guanina.solution">Every seller gets a fully isolated dashboard, enforced at the schema and query level. Payments route directly to the seller via Stripe Connect, with commission withheld automatically at the payment layer.</span></div>
+              <div class="sc-callouts">
+                <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="guanina.problem">A shared multi-vendor platform must guarantee strict data isolation — one seller must never be able to query or view another seller's orders, inventory, or settlements.</span></div>
+                <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="guanina.solution">Every seller gets a fully isolated dashboard, enforced at the schema and query level. Payments route directly to the seller via Stripe Connect, with commission withheld automatically at the payment layer.</span></div>
+              </div>
+
+              <div class="pbento">
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">⚡</span><span data-i18n="guanina.b1t">Edge Architecture</span></div><p data-i18n="guanina.b1d">Cloudflare D1, KV &amp; R2 with no dedicated server.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">💳</span><span data-i18n="guanina.b2t">Split Payments</span></div><p data-i18n="guanina.b2d">Direct-to-seller routing via Stripe Connect.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🎯</span><span data-i18n="guanina.b3t">Custom Quote Engine</span></div><p data-i18n="guanina.b3d">Geo-targeted notification waves to nearby sellers.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">📱</span><span data-i18n="guanina.b4t">Vendor Dashboard &amp; QR</span></div><p data-i18n="guanina.b4d">Instant scan-to-confirm pickup at the stand.</p></div>
+              </div>
+
+              <div class="pmore">
+                <span data-i18n="guanina.m1">Real-time inventory engine</span>
+                <span data-i18n="guanina.m2">Guest order lookup</span>
+                <span data-i18n="guanina.m3">Geolocation catalog + fuzzy search</span>
+                <span data-i18n="guanina.m4">Full admin panel</span>
+                <span data-i18n="guanina.m5">Web push + transactional email</span>
+                <span data-i18n="guanina.m6">Delivery &amp; cancellation engine</span>
+                <span data-i18n="guanina.m7">Shareable product links</span>
+                <span data-i18n="guanina.m8">Native SEO/AIO layer</span>
+              </div>
+
+              <a class="sc-link" href="https://piatadeflori.moxohubs.com" itemprop="url">piatadeflori.moxohubs.com
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
             </div>
 
-            <ul class="sc-feats cols2">
-              <li data-i18n="guanina.feat1"><span class="ft"><b>Custom quote engine</b><span class="ft-d">request broadcast with automatic notification waves to nearby sellers</span></span></li>
-              <li data-i18n="guanina.feat2"><span class="ft"><b>Real-time inventory engine</b><span class="ft-d">automatic listing expiration and stock sync</span></span></li>
-              <li data-i18n="guanina.feat3"><span class="ft"><b>Vendor mobile dashboard</b><span class="ft-d">QR scan-to-confirm pickup, order history, profile</span></span></li>
-              <li data-i18n="guanina.feat4"><span class="ft"><b>Guest order lookup</b><span class="ft-d">track and manage an order without an account</span></span></li>
-              <li data-i18n="guanina.feat5"><span class="ft"><b>Geolocation catalog</b><span class="ft-d">city/neighborhood browsing with fuzzy search</span></span></li>
-              <li data-i18n="guanina.feat6"><span class="ft"><b>Full admin panel</b><span class="ft-d">orders, sellers, settlements, team, market survey</span></span></li>
-              <li data-i18n="guanina.feat7"><span class="ft"><b>Web push (VAPID)</b><span class="ft-d">transactional email, graceful degradation</span></span></li>
-              <li data-i18n="guanina.feat8"><span class="ft"><b>Delivery &amp; cancellation engine</b><span class="ft-d">per-seller delivery, payment-anchored refund windows</span></span></li>
-              <li data-i18n="guanina.feat9"><span class="ft"><b>Shareable product links</b><span class="ft-d">structured legal pages and cookie consent</span></span></li>
-              <li data-i18n="guanina.feat10"><span class="ft"><b>Native SEO/AIO layer</b><span class="ft-d">JSON-LD, dynamic sitemap, IndexNow, llms.txt</span></span></li>
-            </ul>
-
-            <div class="sc-tags">
-              <span class="sc-tag">Next.js 15 Edge</span><span class="sc-tag">Cloudflare D1/KV/R2</span><span class="sc-tag">Stripe Connect</span><span class="sc-tag">Web Push</span>
-            </div>
-            <a class="sc-link" href="https://piatadeflori.moxohubs.com" itemprop="url">piatadeflori.moxohubs.com
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </div>
-
-          <div class="sc-visual tilt">
-            <div class="sc-visual-label" data-i18n="guanina.vlabel">Live stock</div>
-            <div class="sc-visual-value" data-i18n="guanina.vvalue">Selling out in real time</div>
-            <div class="w-stock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="guanina.f1t">List</b><span data-i18n="guanina.f1d">limited stock</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="guanina.f2t">Pay</b><span>Stripe Connect</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="guanina.f3t">Pick up</b><span data-i18n="guanina.f3d">QR ticket</span></div>
-            </div>
-            <div class="sc-proof">
-              <div class="sc-proof-row"><time>24.09</time><span data-i18n="guanina.proof1">Dedicated security audit: XSS hardening, double-sale race condition fix on delayed webhooks, checkout rate limiting.</span></div>
-              <div class="sc-proof-row"><time>28.09</time><span data-i18n="guanina.proof2">Delivery module shipped with payment-anchored cancellation windows and automatic partial Stripe refunds.</span></div>
+            <div class="pcard-visual tilt">
+              <div class="pcard-glow" aria-hidden="true"></div>
+              <div class="pcard-frame">
+                <div class="sc-visual-label" data-i18n="guanina.vlabel">Live stock</div>
+                <div class="sc-visual-value" data-i18n="guanina.vvalue">Selling out in real time</div>
+                <div class="w-stock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="sc-flow">
+                  <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="guanina.f1t">List</b><span data-i18n="guanina.f1d">limited stock</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="guanina.f2t">Pay</b><span>Stripe Connect</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="guanina.f3t">Pick up</b><span data-i18n="guanina.f3d">QR ticket</span></div>
+                </div>
+                <div class="sc-proof">
+                  <div class="sc-proof-row"><time>24.09</time><span data-i18n="guanina.proof1">Dedicated security audit: XSS hardening, double-sale race condition fix on delayed webhooks, checkout rate limiting.</span></div>
+                  <div class="sc-proof-row"><time>28.09</time><span data-i18n="guanina.proof2">Delivery module shipped with payment-anchored cancellation windows and automatic partial Stripe refunds.</span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -380,54 +400,63 @@
     </article>
 
     <!-- SMARTDRIVE -->
-    <article class="showcase c-smartdrive" id="smartdrive" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-smartdrive" id="smartdrive" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="TravelApplication">
       <meta itemprop="operatingSystem" content="Android">
       <div class="wrap">
-        <div class="showcase-grid">
-          <div class="sc-main">
-            <div class="sc-kicker" data-i18n="smartdrive.kicker">03 — Rideshare · Native Android</div>
-            <div class="sc-title">
-              <h3 itemprop="name">SmartDrive</h3>
-              <span class="sc-status live"><span class="dot"></span><span data-i18n="smartdrive.status">Live · paying customers</span></span>
+        <div class="pcard">
+          <div class="showcase-grid">
+            <div class="sc-main">
+              <div class="ptags">
+                <span class="ptag cat">Rideshare</span>
+                <span class="ptag stack">Android · Java</span>
+                <span class="ptag stack">Supabase</span>
+              </div>
+              <div class="sc-title">
+                <h3 itemprop="name">SmartDrive</h3>
+                <span class="sc-status live"><span class="dot"></span><span data-i18n="smartdrive.status">Live · paying customers</span></span>
+              </div>
+              <p class="sc-tagline" data-i18n="smartdrive.tagline">The voice copilot for rideshare drivers</p>
+              <p class="sc-pitch" itemprop="description" data-i18n="smartdrive.pitch">A native Android app that reads the rideshare screen via local OCR, runs a real-time profit-calculation engine, and delivers the result <strong>by voice</strong> — backed by cloud sync and a full internal operations dashboard.</p>
+
+              <div class="sc-callouts">
+                <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="smartdrive.problem">Rideshare apps only surface the gross fare. Computing true net profit — fuel, wear, commission — in real time, without touching the driver's account or its data, requires reading the UI externally and safely.</span></div>
+                <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="smartdrive.solution">Runs passively alongside the rideshare app, using on-device OCR to read fare offers and a local calculation engine to compute net profit, delivered through text-to-speech — no access to the driver's rideshare account at any point.</span></div>
+              </div>
+
+              <div class="pbento">
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🎙️</span><span data-i18n="smartdrive.b1t">Local OCR Engine</span></div><p data-i18n="smartdrive.b1d">Reads fare offers directly from the app's screen.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🔊</span><span data-i18n="smartdrive.b2t">Voice-First Mode</span></div><p data-i18n="smartdrive.b2d">Text-to-speech output, zero screen interaction.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">💰</span><span data-i18n="smartdrive.b3t">Real-Time Profit Engine</span></div><p data-i18n="smartdrive.b3d">Fuel, wear, and commission factored per ride.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">📊</span><span data-i18n="smartdrive.b4t">Financial Reports</span></div><p data-i18n="smartdrive.b4d">Daily/weekly/monthly breakdown and hourly chart.</p></div>
+              </div>
+
+              <div class="pmore">
+                <span data-i18n="smartdrive.m1">Quick Mute</span>
+                <span data-i18n="smartdrive.m2">Zone avoidance</span>
+                <span data-i18n="smartdrive.m3">Daily goal tracker</span>
+                <span data-i18n="smartdrive.m4">Separate audio channels</span>
+                <span data-i18n="smartdrive.m5">Referral tracking system</span>
+                <span data-i18n="smartdrive.m6">Operations dashboard</span>
+              </div>
+
+              <a class="sc-link" href="https://smartdrive.moxohubs.com" itemprop="url">smartdrive.moxohubs.com
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
             </div>
-            <p class="sc-tagline" data-i18n="smartdrive.tagline">The voice copilot for rideshare drivers</p>
-            <p class="sc-pitch" itemprop="description" data-i18n="smartdrive.pitch">A native Android app that reads the rideshare screen via local OCR, runs a real-time profit-calculation engine, and delivers the result <strong>by voice</strong> — backed by cloud sync and a full internal operations dashboard.</p>
 
-            <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="smartdrive.problem">Rideshare apps only surface the gross fare. Computing true net profit — fuel, wear, commission — in real time, without touching the driver's account or its data, requires reading the UI externally and safely.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="smartdrive.solution">Runs passively alongside the rideshare app, using on-device OCR to read fare offers and a local calculation engine to compute net profit, delivered through text-to-speech — no access to the driver's rideshare account at any point.</span></div>
-            </div>
-
-            <ul class="sc-feats cols2">
-              <li data-i18n="smartdrive.feat1"><span class="ft"><b>Local OCR engine</b><span class="ft-d">reads fare offers directly from the rideshare app's screen</span></span></li>
-              <li data-i18n="smartdrive.feat2"><span class="ft"><b>Voice-first mode</b><span class="ft-d">text-to-speech output, zero screen interaction required</span></span></li>
-              <li data-i18n="smartdrive.feat3"><span class="ft"><b>Quick Mute</b><span class="ft-d">one tap silences announcements when a passenger boards</span></span></li>
-              <li data-i18n="smartdrive.feat4"><span class="ft"><b>Real-time profit engine</b><span class="ft-d">fuel cost, vehicle wear, and commission factored per ride</span></span></li>
-              <li data-i18n="smartdrive.feat5"><span class="ft"><b>Zone avoidance</b><span class="ft-d">vocal alert when a ride enters a marked street or area</span></span></li>
-              <li data-i18n="smartdrive.feat6"><span class="ft"><b>Daily goal tracker</b><span class="ft-d">real-time progress toward a set earnings target</span></span></li>
-              <li data-i18n="smartdrive.feat7"><span class="ft"><b>Financial reports</b><span class="ft-d">daily/weekly/monthly breakdown and most-profitable-hours chart</span></span></li>
-              <li data-i18n="smartdrive.feat8"><span class="ft"><b>Separate audio channels</b><span class="ft-d">for private vs. passenger-facing announcements</span></span></li>
-              <li data-i18n="smartdrive.feat9"><span class="ft"><b>Referral tracking system</b><span class="ft-d">automated attribution with built-in fraud safeguards</span></span></li>
-              <li data-i18n="smartdrive.feat10"><span class="ft"><b>Operations dashboard</b><span class="ft-d">subscriber management, metrics, payout requests</span></span></li>
-            </ul>
-
-            <div class="sc-tags">
-              <span class="sc-tag">Android · Java</span><span class="sc-tag">Supabase</span><span class="sc-tag">SQLite</span><span class="sc-tag">Lemon Squeezy</span>
-            </div>
-            <a class="sc-link" href="https://smartdrive.moxohubs.com" itemprop="url">smartdrive.moxohubs.com
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-            </a>
-          </div>
-
-          <div class="sc-visual tilt">
-            <div class="sc-visual-label" data-i18n="smartdrive.vlabel">Voice announcement</div>
-            <div class="sc-visual-value" data-i18n="smartdrive.vvalue">"42 RON per hour"</div>
-            <div class="w-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="smartdrive.f1t">Offer</b><span data-i18n="smartdrive.f1d">appears on screen</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="smartdrive.f2t">Calculate</b><span data-i18n="smartdrive.f2d">net profit</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="smartdrive.f3t">Announce</b><span data-i18n="smartdrive.f3d">by voice, in headset</span></div>
+            <div class="pcard-visual tilt">
+              <div class="pcard-glow" aria-hidden="true"></div>
+              <div class="pcard-frame">
+                <div class="sc-visual-label" data-i18n="smartdrive.vlabel">Voice announcement</div>
+                <div class="sc-visual-value" data-i18n="smartdrive.vvalue">"42 RON per hour"</div>
+                <div class="w-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="sc-flow">
+                  <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="smartdrive.f1t">Offer</b><span data-i18n="smartdrive.f1d">appears on screen</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="smartdrive.f2t">Calculate</b><span data-i18n="smartdrive.f2d">net profit</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="smartdrive.f3t">Announce</b><span data-i18n="smartdrive.f3d">by voice, in headset</span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -435,57 +464,65 @@
     </article>
 
     <!-- DEAL HUNTER RO -->
-    <article class="showcase c-dealhunter rev" id="dealhunter" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-dealhunter rev" id="dealhunter" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <meta itemprop="operatingSystem" content="iOS, Android">
       <div class="wrap">
-        <div class="showcase-grid">
-          <div class="sc-main">
-            <div class="sc-kicker" data-i18n="dealhunter.kicker">04 — Affiliate e-commerce · Flutter</div>
-            <div class="sc-title">
-              <h3 itemprop="name">Deal Hunter RO</h3>
-              <span class="sc-status dev" data-i18n="dealhunter.status">In development</span>
-            </div>
-            <p class="sc-tagline" data-i18n="dealhunter.tagline">Automatic price tracking for Romanian online stores</p>
-            <p class="sc-pitch" itemprop="description" data-i18n="dealhunter.pitch">A mobile app (iOS + Android) that automatically tracks prices across Romanian online stores and notifies you exactly when a price drops below your threshold — built with the same discipline as the live products above.</p>
+        <div class="pcard">
+          <div class="showcase-grid">
+            <div class="sc-main">
+              <div class="ptags">
+                <span class="ptag cat">Affiliate e-commerce</span>
+                <span class="ptag stack">Flutter</span>
+                <span class="ptag stack">Supabase</span>
+              </div>
+              <div class="sc-title">
+                <h3 itemprop="name">Deal Hunter RO</h3>
+                <span class="sc-status dev" data-i18n="dealhunter.status">In development</span>
+              </div>
+              <p class="sc-tagline" data-i18n="dealhunter.tagline">Automatic price tracking for Romanian online stores</p>
+              <p class="sc-pitch" itemprop="description" data-i18n="dealhunter.pitch">A mobile app (iOS + Android) that automatically tracks prices across Romanian online stores and notifies you exactly when a price drops below your threshold — built with the same discipline as the live products above.</p>
 
-            <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="dealhunter.problem">Prices at eMAG, FashionDays, Notino, Altex fluctuate constantly, but nobody has time to check manually every day.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="dealhunter.solution">The user sets a price threshold once; the app compares automatically and sends a push notification at the right moment.</span></div>
+              <div class="sc-callouts">
+                <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="dealhunter.problem">Prices at eMAG, FashionDays, Notino, Altex fluctuate constantly, but nobody has time to check manually every day.</span></div>
+                <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="dealhunter.solution">The user sets a price threshold once; the app compares automatically and sends a push notification at the right moment.</span></div>
+              </div>
+
+              <div class="pbento">
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">📥</span><span data-i18n="dealhunter.b1t">Feed Ingestion</span></div><p data-i18n="dealhunter.b1d">Parses XML/CSV/API feeds from partner stores.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🔔</span><span data-i18n="dealhunter.b2t">Comparison Engine</span></div><p data-i18n="dealhunter.b2d">Checks price vs. saved value, alerts on threshold cross.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">📈</span><span data-i18n="dealhunter.b3t">Price History</span></div><p data-i18n="dealhunter.b3d">Full chart per product, as a trust signal.</p></div>
+                <div class="pbento-item"><div class="pi-t"><span class="pi-icon">🔒</span><span data-i18n="dealhunter.b4t">Passwordless Auth</span></div><p data-i18n="dealhunter.b4d">Apple / Google Sign In, no account friction.</p></div>
+              </div>
+
+              <div class="pmore">
+                <span data-i18n="dealhunter.m1">Mandatory in-app browser</span>
+                <span data-i18n="dealhunter.m2">Adaptive dark/light UI</span>
+                <span data-i18n="dealhunter.m3">No transactions in the app</span>
+                <span data-i18n="dealhunter.m4">UUID keys across schema</span>
+              </div>
             </div>
 
-            <ul class="sc-feats cols2">
-              <li data-i18n="dealhunter.feat1"><span class="ft"><b>Automated feed ingestion</b><span class="ft-d">parses XML/CSV/API feeds from partner stores</span></span></li>
-              <li data-i18n="dealhunter.feat2"><span class="ft"><b>Price comparison engine</b><span class="ft-d">checks new vs. saved price, triggers on threshold cross</span></span></li>
-              <li data-i18n="dealhunter.feat3"><span class="ft"><b>Full price history</b><span class="ft-d">chart per product</span></span></li>
-              <li data-i18n="dealhunter.feat4"><span class="ft"><b>No password</b><span class="ft-d">Apple/Google Sign In</span></span></li>
-              <li data-i18n="dealhunter.feat5"><span class="ft"><b>Mandatory in-app browser</b><span class="ft-d">preserves the affiliate attribution cookie</span></span></li>
-              <li data-i18n="dealhunter.feat6"><span class="ft"><b>Adaptive dark/light UI</b></span></li>
-              <li data-i18n="dealhunter.feat7"><span class="ft"><b>No transactions in the app</b><span class="ft-d">redirects to the official store</span></span></li>
-              <li data-i18n="dealhunter.feat8"><span class="ft"><b>UUID keys</b><span class="ft-d">across the whole schema</span></span></li>
-            </ul>
-
-            <div class="sc-tags">
-              <span class="sc-tag">Flutter</span><span class="sc-tag">Supabase/PostgreSQL</span><span class="sc-tag">Firebase FCM</span>
-            </div>
-          </div>
-
-          <div class="sc-visual tilt">
-            <div class="sc-visual-label" data-i18n="dealhunter.vlabel">Price below threshold</div>
-            <div class="sc-visual-value" data-i18n="dealhunter.vvalue">Alert sent</div>
-            <div class="w-spark" aria-hidden="true">
-              <svg viewBox="0 0 200 74" preserveAspectRatio="none">
-                <defs><linearGradient id="sparkgrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop class="sg-stop1" offset="0%"/><stop class="sg-stop2" offset="100%"/>
-                </linearGradient></defs>
-                <polyline class="w-spark-line" points="0,18 30,26 60,20 90,42 120,36 150,58 180,52 200,62"/>
-                <circle class="w-spark-dot" cx="180" cy="52" r="3.5"/>
-              </svg>
-            </div>
-            <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="dealhunter.f1t">Alert</b><span data-i18n="dealhunter.f1d">threshold set</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="dealhunter.f2t">Compare</b><span data-i18n="dealhunter.f2d">daily</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b>Push</b><span data-i18n="dealhunter.f3d">on drop</span></div>
+            <div class="pcard-visual tilt">
+              <div class="pcard-glow" aria-hidden="true"></div>
+              <div class="pcard-frame">
+                <div class="sc-visual-label" data-i18n="dealhunter.vlabel">Price below threshold</div>
+                <div class="sc-visual-value" data-i18n="dealhunter.vvalue">Alert sent</div>
+                <div class="w-spark" aria-hidden="true">
+                  <svg viewBox="0 0 200 74" preserveAspectRatio="none">
+                    <defs><linearGradient id="sparkgrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop class="sg-stop1" offset="0%"/><stop class="sg-stop2" offset="100%"/>
+                    </linearGradient></defs>
+                    <polyline class="w-spark-line" points="0,18 30,26 60,20 90,42 120,36 150,58 180,52 200,62"/>
+                    <circle class="w-spark-dot" cx="180" cy="52" r="3.5"/>
+                  </svg>
+                </div>
+                <div class="sc-flow">
+                  <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="dealhunter.f1t">Alert</b><span data-i18n="dealhunter.f1d">threshold set</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="dealhunter.f2t">Compare</b><span data-i18n="dealhunter.f2d">daily</span></div>
+                  <div class="sc-flow-step"><span class="sc-flow-n">03</span><b>Push</b><span data-i18n="dealhunter.f3d">on drop</span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
