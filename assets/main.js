@@ -16,6 +16,29 @@ if (!reduceMotion) {
   });
 }
 
+/* ---------------- scroll reveal ---------------- */
+document.querySelectorAll('.showcase, .whycard, .section-head, .faqlist details, .closing-panel, .registry, .statuspanel').forEach((el) => {
+  el.classList.add('reveal');
+});
+document.querySelectorAll('.whygrid').forEach((el) => el.classList.add('reveal-stagger'));
+
+if (reduceMotion) {
+  document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+  document.querySelectorAll('.reveal-stagger').forEach((el) => el.classList.add('in'));
+} else if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => io.observe(el));
+} else {
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => el.classList.add('in'));
+}
+
 /* ---------------- i18n: English default, Romanian toggle ---------------- */
 const RO = {
   'nav.produse': 'Produse', 'nav.standard': 'Cum lucrăm', 'nav.faq': 'Întrebări', 'nav.cta': 'Scrie-ne',
@@ -40,16 +63,16 @@ const RO = {
   'sentinel.pitch': 'Platformă de evaluare a conformității <strong>orientată pe dovezi</strong>, pentru furnizori de sisteme AI care trebuie să demonstreze conformitatea cu Regulation (EU) 2024/1689 — validată de 4 experți independenți și testată end-to-end.',
   'sentinel.problem': 'EU AI Act cere demonstrarea conformității articol-cu-articol, sub amenzi de până la 30M€. De obicei se face manual, fără legătură verificabilă cu codul real.',
   'sentinel.solution': 'Pipeline de 18 faze analizează codul și documentația, extrage dovezi și le mapează pe articole, sigilate cu timestamp RFC 3161 real.',
-  'sentinel.feat1': '<b>Pipeline de analiză în 18 faze</b> — cod sursă, configurații și documentație',
-  'sentinel.feat2': '<b>Wizard de conformitate ghidat</b> — restructurat în jurul documentelor semnabile',
-  'sentinel.feat3': '<b>Audit Navigator</b> — navigare structurată a rezultatelor pe articol și nivel de risc',
-  'sentinel.feat4': '<b>Sistem de semnătură digitală</b> cu verificare live a modificării conținutului',
-  'sentinel.feat5': '<b>Timestamp RFC 3161</b> verificat cu OpenSSL, nu simulat',
-  'sentinel.feat6': '<b>Hash pe conținut real</b>, detectează drift, nu doar locație',
-  'sentinel.feat7': '<b>8 șabloane legale</b> migrate pe risc real',
-  'sentinel.feat8': '<b>Generare SBOM automată</b> + delta report la re-audit',
-  'sentinel.feat9': '<b>Roluri și permisiuni multi-organizație</b> cu audit trail complet',
-  'sentinel.feat10': '<b>Notificări in-app și webhook</b> către Slack/Teams',
+  'sentinel.feat1': '<span class="ft"><b>Pipeline de analiză în 18 faze</b><span class="ft-d">cod sursă, configurații și documentație</span></span>',
+  'sentinel.feat2': '<span class="ft"><b>Wizard de conformitate ghidat</b><span class="ft-d">restructurat în jurul documentelor semnabile</span></span>',
+  'sentinel.feat3': '<span class="ft"><b>Audit Navigator</b><span class="ft-d">navigare structurată a rezultatelor pe articol și nivel de risc</span></span>',
+  'sentinel.feat4': '<span class="ft"><b>Sistem de semnătură digitală</b><span class="ft-d">cu verificare live a modificării conținutului</span></span>',
+  'sentinel.feat5': '<span class="ft"><b>Timestamp RFC 3161</b><span class="ft-d">verificat cu OpenSSL, nu simulat</span></span>',
+  'sentinel.feat6': '<span class="ft"><b>Hash pe conținut real</b><span class="ft-d">detectează drift, nu doar locație</span></span>',
+  'sentinel.feat7': '<span class="ft"><b>8 șabloane legale</b><span class="ft-d">migrate pe risc real</span></span>',
+  'sentinel.feat8': '<span class="ft"><b>Generare SBOM automată</b><span class="ft-d">delta report la re-audit</span></span>',
+  'sentinel.feat9': '<span class="ft"><b>Roluri și permisiuni multi-organizație</b><span class="ft-d">cu audit trail complet</span></span>',
+  'sentinel.feat10': '<span class="ft"><b>Notificări in-app și webhook</b><span class="ft-d">către Slack/Teams</span></span>',
   'sentinel.vlabel': 'Scanare de cod live', 'sentinel.vvalue': '18 faze de analiză',
   'sentinel.f1t': 'Analiză', 'sentinel.f1d': '18 faze pe sursă/config',
   'sentinel.f2t': 'Mapare', 'sentinel.f2d': 'dovezi → articole',
@@ -62,16 +85,16 @@ const RO = {
   'guanina.pitch': 'Construit pe <strong>Next.js Edge Runtime</strong> cu Cloudflare D1, KV și R2, cu integrare <strong>Stripe Connect</strong> pentru plăți divizate și un sistem de ridicare pe bază de cod QR. Rulează pe 47 de migrări incrementale de schemă, aplicate fără downtime.',
   'guanina.problem': 'O platformă multi-vânzător comună trebuie să garanteze izolare strictă a datelor — un vânzător nu trebuie niciodată să poată vedea comenzile, stocul sau decontările altui vânzător.',
   'guanina.solution': 'Fiecare vânzător primește un dashboard complet izolat, aplicat la nivel de schemă și interogare. Plățile merg direct către vânzător prin Stripe Connect, cu comisionul reținut automat la nivelul de procesare.',
-  'guanina.feat1': '<b>Motor de cerere de ofertă</b> — difuzare automată cu valuri de notificare către vânzătorii din apropiere',
-  'guanina.feat2': '<b>Motor de inventar în timp real</b> — expirare automată a anunțurilor și sincronizare de stoc',
-  'guanina.feat3': '<b>Dashboard mobil pentru vânzător</b> — scanare QR pentru confirmarea ridicării, istoric, profil',
-  'guanina.feat4': '<b>Căutare comandă fără cont</b> — urmărire și gestionare comandă fără autentificare',
-  'guanina.feat5': '<b>Catalog geolocalizat</b> — navigare pe oraș/cartier cu căutare fuzzy',
-  'guanina.feat6': '<b>Panou admin complet</b> — comenzi, vânzători, decontări, echipă, sondaj de piață',
-  'guanina.feat7': '<b>Push web (VAPID)</b> + email tranzacțional, degradare grațioasă',
-  'guanina.feat8': '<b>Motor de livrare și anulare</b> — livrare per-vânzător, ferestre de rambursare ancorate pe plată',
-  'guanina.feat9': '<b>Linkuri de produs partajabile</b> + pagini legale structurate și consimțământ cookie',
-  'guanina.feat10': '<b>Strat SEO/AIO nativ</b> — JSON-LD, sitemap dinamic, IndexNow, llms.txt',
+  'guanina.feat1': '<span class="ft"><b>Motor de cerere de ofertă</b><span class="ft-d">difuzare automată cu valuri de notificare către vânzătorii din apropiere</span></span>',
+  'guanina.feat2': '<span class="ft"><b>Motor de inventar în timp real</b><span class="ft-d">expirare automată a anunțurilor și sincronizare de stoc</span></span>',
+  'guanina.feat3': '<span class="ft"><b>Dashboard mobil pentru vânzător</b><span class="ft-d">scanare QR pentru confirmarea ridicării, istoric, profil</span></span>',
+  'guanina.feat4': '<span class="ft"><b>Căutare comandă fără cont</b><span class="ft-d">urmărire și gestionare comandă fără autentificare</span></span>',
+  'guanina.feat5': '<span class="ft"><b>Catalog geolocalizat</b><span class="ft-d">navigare pe oraș/cartier cu căutare fuzzy</span></span>',
+  'guanina.feat6': '<span class="ft"><b>Panou admin complet</b><span class="ft-d">comenzi, vânzători, decontări, echipă, sondaj de piață</span></span>',
+  'guanina.feat7': '<span class="ft"><b>Push web (VAPID)</b><span class="ft-d">email tranzacțional, degradare grațioasă</span></span>',
+  'guanina.feat8': '<span class="ft"><b>Motor de livrare și anulare</b><span class="ft-d">livrare per-vânzător, ferestre de rambursare ancorate pe plată</span></span>',
+  'guanina.feat9': '<span class="ft"><b>Linkuri de produs partajabile</b><span class="ft-d">pagini legale structurate și consimțământ cookie</span></span>',
+  'guanina.feat10': '<span class="ft"><b>Strat SEO/AIO nativ</b><span class="ft-d">JSON-LD, sitemap dinamic, IndexNow, llms.txt</span></span>',
   'guanina.vlabel': 'Stoc live', 'guanina.vvalue': 'Se epuizează în timp real',
   'guanina.f1t': 'Listare', 'guanina.f1d': 'stoc limitat',
   'guanina.f2t': 'Plată', 'guanina.f3t': 'Ridicare', 'guanina.f3d': 'bilet QR',
@@ -83,16 +106,16 @@ const RO = {
   'smartdrive.pitch': 'O aplicație Android nativă care citește ecranul aplicației de rideshare prin OCR local, rulează un motor de calcul al profitului în timp real și livrează rezultatul <strong>vocal</strong> — susținută de sincronizare cloud și un dashboard complet de operațiuni interne.',
   'smartdrive.problem': 'Aplicațiile de rideshare arată doar tariful brut. Calcularea profitului net real — combustibil, uzură, comision — în timp real, fără a atinge contul sau datele șoferului, necesită citirea externă și sigură a interfeței.',
   'smartdrive.solution': 'Rulează pasiv alături de aplicația de rideshare, folosind OCR local pentru a citi ofertele de tarif și un motor de calcul local pentru profitul net, livrat prin sinteză vocală — fără acces la contul de rideshare al șoferului în niciun moment.',
-  'smartdrive.feat1': '<b>Motor OCR local</b> — citește ofertele de tarif direct de pe ecranul aplicației de rideshare',
-  'smartdrive.feat2': '<b>Mod voice-first</b> — ieșire text-to-speech, zero interacțiune cu ecranul necesară',
-  'smartdrive.feat3': '<b>Quick Mute</b> — un tap silențiază anunțurile la urcarea unui pasager',
-  'smartdrive.feat4': '<b>Motor de profit în timp real</b> — combustibil, uzură vehicul și comision calculate per cursă',
-  'smartdrive.feat5': '<b>Zone evitate</b> — avertizare vocală când o cursă intră pe o stradă/zonă marcată',
-  'smartdrive.feat6': '<b>Obiectiv zilnic de câștig</b> — progres în timp real față de ținta setată',
-  'smartdrive.feat7': '<b>Rapoarte financiare</b> — bilanț zilnic/săptămânal/lunar și grafic ore profitabile',
-  'smartdrive.feat8': '<b>Canale audio separate</b> pentru anunțuri private vs. pentru pasageri',
-  'smartdrive.feat9': '<b>Sistem de tracking recomandări</b> — atribuire automată cu protecții anti-fraudă integrate',
-  'smartdrive.feat10': '<b>Dashboard de operațiuni</b> — gestionare abonați, metrici, cereri de retragere',
+  'smartdrive.feat1': '<span class="ft"><b>Motor OCR local</b><span class="ft-d">citește ofertele de tarif direct de pe ecranul aplicației de rideshare</span></span>',
+  'smartdrive.feat2': '<span class="ft"><b>Mod voice-first</b><span class="ft-d">ieșire text-to-speech, zero interacțiune cu ecranul necesară</span></span>',
+  'smartdrive.feat3': '<span class="ft"><b>Quick Mute</b><span class="ft-d">un tap silențiază anunțurile la urcarea unui pasager</span></span>',
+  'smartdrive.feat4': '<span class="ft"><b>Motor de profit în timp real</b><span class="ft-d">combustibil, uzură vehicul și comision calculate per cursă</span></span>',
+  'smartdrive.feat5': '<span class="ft"><b>Zone evitate</b><span class="ft-d">avertizare vocală când o cursă intră pe o stradă/zonă marcată</span></span>',
+  'smartdrive.feat6': '<span class="ft"><b>Obiectiv zilnic de câștig</b><span class="ft-d">progres în timp real față de ținta setată</span></span>',
+  'smartdrive.feat7': '<span class="ft"><b>Rapoarte financiare</b><span class="ft-d">bilanț zilnic/săptămânal/lunar și grafic ore profitabile</span></span>',
+  'smartdrive.feat8': '<span class="ft"><b>Canale audio separate</b><span class="ft-d">pentru anunțuri private vs. pentru pasageri</span></span>',
+  'smartdrive.feat9': '<span class="ft"><b>Sistem de tracking recomandări</b><span class="ft-d">atribuire automată cu protecții anti-fraudă integrate</span></span>',
+  'smartdrive.feat10': '<span class="ft"><b>Dashboard de operațiuni</b><span class="ft-d">gestionare abonați, metrici, cereri de retragere</span></span>',
   'smartdrive.vlabel': 'Anunț vocal', 'smartdrive.vvalue': '„42 RON pe oră"',
   'smartdrive.f1t': 'Ofertă', 'smartdrive.f1d': 'apare pe ecran',
   'smartdrive.f2t': 'Calcul', 'smartdrive.f2d': 'profit net',
@@ -103,14 +126,14 @@ const RO = {
   'dealhunter.pitch': 'Aplicație mobilă (iOS + Android) care urmărește automat prețurile din magazinele românești și notifică exact când prețul scade sub prag — construită cu aceeași disciplină ca produsele live de mai sus.',
   'dealhunter.problem': 'Prețurile din eMAG, FashionDays, Notino, Altex fluctuează constant, dar nimeni nu are timp să verifice manual zilnic.',
   'dealhunter.solution': 'Utilizatorul setează pragul o singură dată; aplicația compară automat și trimite push exact la momentul potrivit.',
-  'dealhunter.feat1': '<b>Ingestie automată de feed-uri</b> — parsează feed-uri XML/CSV/API de la magazine partenere',
-  'dealhunter.feat2': '<b>Motor de comparare a prețului</b> — verifică preț nou vs. salvat, declanșează la trecerea pragului',
-  'dealhunter.feat3': '<b>Istoric complet de preț</b> per produs, afișat grafic',
-  'dealhunter.feat4': '<b>Fără parolă</b> — Apple/Google Sign In',
-  'dealhunter.feat5': '<b>Browser in-app obligatoriu</b> — păstrează cookie-ul de atribuire afiliată',
-  'dealhunter.feat6': '<b>Interfață adaptivă dark/light</b>',
-  'dealhunter.feat7': '<b>Nicio tranzacție în aplicație</b> — redirecționare către magazinul oficial',
-  'dealhunter.feat8': '<b>Chei UUID</b> pe toată schema',
+  'dealhunter.feat1': '<span class="ft"><b>Ingestie automată de feed-uri</b><span class="ft-d">parsează feed-uri XML/CSV/API de la magazine partenere</span></span>',
+  'dealhunter.feat2': '<span class="ft"><b>Motor de comparare a prețului</b><span class="ft-d">verifică preț nou vs. salvat, declanșează la trecerea pragului</span></span>',
+  'dealhunter.feat3': '<span class="ft"><b>Istoric complet de preț</b><span class="ft-d">per produs, afișat grafic</span></span>',
+  'dealhunter.feat4': '<span class="ft"><b>Fără parolă</b><span class="ft-d">Apple/Google Sign In</span></span>',
+  'dealhunter.feat5': '<span class="ft"><b>Browser in-app obligatoriu</b><span class="ft-d">păstrează cookie-ul de atribuire afiliată</span></span>',
+  'dealhunter.feat6': '<span class="ft"><b>Interfață adaptivă dark/light</b></span>',
+  'dealhunter.feat7': '<span class="ft"><b>Nicio tranzacție în aplicație</b><span class="ft-d">redirecționare către magazinul oficial</span></span>',
+  'dealhunter.feat8': '<span class="ft"><b>Chei UUID</b><span class="ft-d">pe toată schema</span></span>',
   'dealhunter.vlabel': 'Preț sub prag', 'dealhunter.vvalue': 'Alertă trimisă',
   'dealhunter.f1t': 'Alertă', 'dealhunter.f1d': 'prag setat',
   'dealhunter.f2t': 'Comparare', 'dealhunter.f2d': 'zilnică', 'dealhunter.f3d': 'la scădere',
