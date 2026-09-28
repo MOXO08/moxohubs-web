@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ro">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -160,15 +160,19 @@
 </head>
 <body>
 
-<nav class="topnav" aria-label="Navigare principală">
+<nav class="topnav" aria-label="Main navigation">
   <div class="wrap topnav-row">
     <div class="brand"><div class="mark">M</div>MOXO Technology</div>
     <div class="navlinks">
-      <a href="#produse">Produse</a>
-      <a href="#standard">Cum lucrăm</a>
-      <a href="#faq">Întrebări</a>
+      <a href="#produse" data-i18n="nav.produse">Products</a>
+      <a href="#standard" data-i18n="nav.standard">How we work</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
     </div>
-    <a class="btn primary" href="#contact">Scrie-ne</a>
+    <div class="langswitch" role="group" aria-label="Language">
+      <button type="button" class="langbtn" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="langbtn" data-lang="ro" aria-pressed="false">RO</button>
+    </div>
+    <a class="btn primary" href="#contact" data-i18n="nav.cta">Contact us</a>
   </div>
 </nav>
 
@@ -180,57 +184,57 @@
     <div class="hero-glow g2" aria-hidden="true"></div>
     <div class="wrap">
       <div class="hero-inner">
-        <div class="eyebrow">Studio de inginerie software</div>
-        <h1 class="hero-title">Construim sisteme care <em>rezistă la verificare</em>.</h1>
-        <p class="hero-lead"><strong>MOXO Technology</strong> proiectează și livrează software de producție: un marketplace cu plăți live, un copilot Android cu abonați plătitori, un motor de conformitate reglementară testat cu 66 de teste end-to-end, o aplicație mobilă de tracking prețuri. Fiecare afirmație de mai jos are o dovadă atașată — cod, test sau tranzacție reală.</p>
+        <div class="eyebrow" data-i18n="hero.eyebrow">Software engineering studio</div>
+        <h1 class="hero-title" data-i18n="hero.title">We build systems that <em>survive scrutiny</em>.</h1>
+        <p class="hero-lead" data-i18n="hero.lead"><strong>MOXO Technology</strong> designs and ships production software: a marketplace with live payments, an Android copilot with paying subscribers, a regulatory compliance engine with 66 end-to-end tests, a mobile price-tracking app. Every claim below comes with proof attached — code, a test, or a real transaction.</p>
         <div class="hero-cta">
-          <a class="btn primary" href="#produse">Vezi produsele
+          <a class="btn primary" href="#produse"><span data-i18n="hero.cta1">See the products</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a class="btn ghost" href="#contact">Hai să vorbim</a>
+          <a class="btn ghost" href="#contact" data-i18n="hero.cta2">Let's talk</a>
         </div>
       </div>
 
       <div class="statuspanel">
         <div class="statuspanel-head">
-          <span>Registru live · MOXO</span>
-          <span class="live-pulse"><i></i>4 sisteme</span>
+          <span data-i18n="panel.head">Live registry · MOXO</span>
+          <span class="live-pulse"><i></i><span data-i18n="panel.count">4 systems</span></span>
         </div>
         <a href="#sentinel" style="display:contents;">
           <div class="statusrow c-sentinel">
             <span class="dot"></span>
-            <span><span class="name">Sentinel</span> <span class="domain">— Conformitate EU AI Act</span></span>
-            <span class="pill dev">Pre-lansare</span>
+            <span><span class="name">Sentinel</span> <span class="domain" data-i18n="row.sentinel">— EU AI Act compliance</span></span>
+            <span class="pill dev" data-i18n="pill.sentinel">Pre-launch</span>
           </div>
         </a>
         <a href="#guanina" style="display:contents;">
           <div class="statusrow c-guanina">
             <span class="dot"></span>
-            <span><span class="name">Guanina</span> <span class="domain">— Marketplace flori</span></span>
-            <span class="pill live">Live</span>
+            <span><span class="name">Guanina</span> <span class="domain" data-i18n="row.guanina">— Flower marketplace</span></span>
+            <span class="pill live" data-i18n="pill.live">Live</span>
           </div>
         </a>
         <a href="#smartdrive" style="display:contents;">
           <div class="statusrow c-smartdrive">
             <span class="dot"></span>
-            <span><span class="name">SmartDrive</span> <span class="domain">— Copilot rideshare</span></span>
-            <span class="pill live">Live</span>
+            <span><span class="name">SmartDrive</span> <span class="domain" data-i18n="row.smartdrive">— Rideshare copilot</span></span>
+            <span class="pill live" data-i18n="pill.live">Live</span>
           </div>
         </a>
         <a href="#dealhunter" style="display:contents;">
           <div class="statusrow c-dealhunter">
             <span class="dot"></span>
-            <span><span class="name">Deal Hunter RO</span> <span class="domain">— Tracking prețuri</span></span>
-            <span class="pill dev">În dezvoltare</span>
+            <span><span class="name">Deal Hunter RO</span> <span class="domain" data-i18n="row.dealhunter">— Price tracking</span></span>
+            <span class="pill dev" data-i18n="pill.dealhunter">In development</span>
           </div>
         </a>
       </div>
 
       <div class="statstrip">
-        <div class="stat"><div class="n">4</div><div class="l">produse construite</div></div>
-        <div class="stat"><div class="n">2</div><div class="l">live, în producție</div></div>
-        <div class="stat"><div class="n">66/66</div><div class="l">teste end-to-end (Sentinel)</div></div>
-        <div class="stat"><div class="n">47</div><div class="l">migrări de schemă (Guanina)</div></div>
+        <div class="stat"><div class="n">4</div><div class="l" data-i18n="stat.1">products shipped</div></div>
+        <div class="stat"><div class="n">2</div><div class="l" data-i18n="stat.2">live, in production</div></div>
+        <div class="stat"><div class="n">66/66</div><div class="l" data-i18n="stat.3">end-to-end tests (Sentinel)</div></div>
+        <div class="stat"><div class="n">47</div><div class="l" data-i18n="stat.4">schema migrations (Guanina)</div></div>
       </div>
     </div>
   </header>
@@ -238,9 +242,9 @@
   <section class="section" id="produse" aria-labelledby="produse-h">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Portofoliu</div>
-        <h2 id="produse-h">Fiecare produs, în detaliu</h2>
-        <p>Ordonate după complexitatea tehnică și maturitatea dovezilor din producție.</p>
+        <div class="eyebrow" data-i18n="produse.eyebrow">Portfolio</div>
+        <h2 id="produse-h" data-i18n="produse.h2">Every product, in detail</h2>
+        <p data-i18n="produse.p">Ordered by technical complexity and the maturity of production evidence.</p>
       </div>
     </div>
 
@@ -250,26 +254,26 @@
       <div class="wrap">
         <div class="showcase-grid">
           <div>
-            <div class="sc-kicker">01 — RegTech · Node.js</div>
+            <div class="sc-kicker" data-i18n="sentinel.kicker">01 — RegTech · Node.js</div>
             <div class="sc-title">
               <h3 itemprop="name">Sentinel</h3>
-              <span class="sc-status dev"><span class="dot"></span>Pre-lansare · 66/66 teste</span>
+              <span class="sc-status dev"><span class="dot"></span><span data-i18n="sentinel.status">Pre-launch · 66/66 tests</span></span>
             </div>
-            <p class="sc-tagline">"Building Trust Through Evidence" — conformitate EU AI Act</p>
-            <p class="sc-pitch" itemprop="description">Platformă de evaluare a conformității <strong>orientată pe dovezi</strong>, pentru furnizori de sisteme AI care trebuie să demonstreze conformitatea cu Regulation (EU) 2024/1689 — validată de 4 experți independenți și testată end-to-end.</p>
+            <p class="sc-tagline" data-i18n="sentinel.tagline">"Building Trust Through Evidence" — EU AI Act compliance</p>
+            <p class="sc-pitch" itemprop="description" data-i18n="sentinel.pitch">An <strong>evidence-oriented</strong> compliance assessment platform for AI system providers who must demonstrate conformity with Regulation (EU) 2024/1689 — validated by 4 independent experts and tested end-to-end.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag">Situație</span><span>EU AI Act cere demonstrarea conformității articol-cu-articol, sub amenzi de până la 30M€. De obicei se face manual, fără legătură verificabilă cu codul real.</span></div>
-              <div class="sc-callout solution"><span class="tag">Soluție</span><span>Pipeline de 18 faze analizează codul și documentația, extrage dovezi și le mapează pe articole, sigilate cu timestamp RFC 3161 real.</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="sentinel.problem">The EU AI Act requires article-by-article proof of conformity, under fines of up to €30M. It's usually done manually, with no verifiable link to the actual code.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="sentinel.solution">An 18-phase pipeline analyzes the code and documentation, extracts evidence, and maps it to articles, sealed with a real RFC 3161 timestamp.</span></div>
             </div>
 
             <ul class="sc-feats">
-              <li><b>Timestamp RFC 3161</b> verificat cu OpenSSL, nu simulat</li>
-              <li><b>Hash pe conținut real</b>, detectează drift, nu doar locație</li>
-              <li><b>8 șabloane legale</b> migrate pe risc real</li>
-              <li><b>SBOM automat</b> + delta report la re-audit</li>
-              <li><b>Notificări webhook</b> Slack/Teams</li>
-              <li><b>tsc --noEmit</b> curat, zero regresii</li>
+              <li data-i18n="sentinel.feat1"><b>RFC 3161 timestamp</b> verified with OpenSSL, not simulated</li>
+              <li data-i18n="sentinel.feat2"><b>Hash on real content</b>, detects drift, not just location</li>
+              <li data-i18n="sentinel.feat3"><b>8 legal templates</b> migrated by real legal risk</li>
+              <li data-i18n="sentinel.feat4"><b>Automatic SBOM</b> + delta report on re-audit</li>
+              <li data-i18n="sentinel.feat5"><b>Webhook notifications</b> to Slack/Teams</li>
+              <li data-i18n="sentinel.feat6"><b>tsc --noEmit</b> clean, zero regressions</li>
             </ul>
 
             <div class="sc-tags">
@@ -281,8 +285,8 @@
           </div>
 
           <div class="sc-visual tilt">
-            <div class="sc-visual-label">Scanare de cod live</div>
-            <div class="sc-visual-value">18 faze de analiză</div>
+            <div class="sc-visual-label" data-i18n="sentinel.vlabel">Live code scan</div>
+            <div class="sc-visual-value" data-i18n="sentinel.vvalue">18-phase analysis</div>
             <div class="w-scan">
               <div>const evidence = extractFromSource(file);</div>
               <div>evidence.sha256 = hash(snippet);</div>
@@ -291,13 +295,13 @@
               <div>tests: 66/66 passed ✓</div>
             </div>
             <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b>Analiză</b><span>18 faze pe sursă/config</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b>Mapare</b><span>dovezi → articole</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b>Dosar</b><span>PDF + SBOM sigilat</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="sentinel.f1t">Analysis</b><span data-i18n="sentinel.f1d">18 phases on source/config</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="sentinel.f2t">Mapping</b><span data-i18n="sentinel.f2d">evidence → articles</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="sentinel.f3t">Dossier</b><span data-i18n="sentinel.f3d">sealed PDF + SBOM</span></div>
             </div>
             <div class="sc-proof">
-              <div class="sc-proof-row"><time>31.08</time><span>4 experți independenți au validat hardening-ul (juridic, criptografie, arhitectură, produs).</span></div>
-              <div class="sc-proof-row"><time>31.08</time><span>Testarea e2e a găsit 2 bug-uri reale de concurență — ambele reparate, cu test dedicat.</span></div>
+              <div class="sc-proof-row"><time>31.08</time><span data-i18n="sentinel.proof1">4 independent experts validated the hardening (legal, cryptography, architecture, product).</span></div>
+              <div class="sc-proof-row"><time>31.08</time><span data-i18n="sentinel.proof2">E2E testing found 2 real concurrency bugs — both fixed, each with a dedicated test.</span></div>
             </div>
           </div>
         </div>
@@ -310,26 +314,26 @@
       <div class="wrap">
         <div class="showcase-grid">
           <div>
-            <div class="sc-kicker">02 — Marketplace · Next.js Edge</div>
+            <div class="sc-kicker" data-i18n="guanina.kicker">02 — Marketplace · Next.js Edge</div>
             <div class="sc-title">
               <h3 itemprop="name">Guanina</h3>
-              <span class="sc-status live"><span class="dot"></span>Live · tranzacții reale</span>
+              <span class="sc-status live"><span class="dot"></span><span data-i18n="guanina.status">Live · real transactions</span></span>
             </div>
-            <p class="sc-tagline">Marketplace de flori — cunoscută și ca „Piața de Flori"</p>
-            <p class="sc-pitch" itemprop="description">Florăriile din piețe listează buchete cu stoc limitat, clienții plătesc online prin <strong>Stripe Connect</strong> și ridică produsul pe bază de <strong>bilet QR</strong>. 47 de migrări în producție, audit de securitate documentat.</p>
+            <p class="sc-tagline" data-i18n="guanina.tagline">Flower marketplace — also known as „Piața de Flori"</p>
+            <p class="sc-pitch" itemprop="description" data-i18n="guanina.pitch">Florists in local markets list bouquets with limited stock, customers pay online via <strong>Stripe Connect</strong> and pick up their order with a <strong>QR ticket</strong>. 47 migrations in production, a documented security audit.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag">Situație</span><span>Florăriile mici nu au echipă IT. O platformă comună riscă să amestece date între vânzători — o florărie nu trebuie să vadă comenzile alteia.</span></div>
-              <div class="sc-callout solution"><span class="tag">Soluție</span><span>Dashboard izolat complet per florărie. Plată directă către vânzător prin Stripe Connect, comision reținut automat, bilet QR fără cont necesar.</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="guanina.problem">Small florists don't have an IT team. A shared platform risks mixing data between sellers — one florist must never see another's orders.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="guanina.solution">A fully isolated dashboard per florist. Direct payment to the seller via Stripe Connect, commission withheld automatically, QR ticket with no account required.</span></div>
             </div>
 
             <ul class="sc-feats">
-              <li><b>Cerere de ofertă</b> — licitație între vânzători apropiați</li>
-              <li><b>15 conturi demo</b>, ascunse la primul vânzător real</li>
-              <li><b>Panou admin complet</b> — comenzi, decontări, sondaj</li>
-              <li><b>Push web</b> + email, degradare silențioasă</li>
-              <li><b>SEO/AIO nativ</b> — JSON-LD, llms.txt</li>
-              <li><b>Comision 0%</b> primele 30 zile, apoi 5%</li>
+              <li data-i18n="guanina.feat1"><b>Custom quote requests</b> — bidding between nearby sellers</li>
+              <li data-i18n="guanina.feat2"><b>15 demo accounts</b>, hidden once a real seller joins</li>
+              <li data-i18n="guanina.feat3"><b>Full admin panel</b> — orders, payouts, survey</li>
+              <li data-i18n="guanina.feat4"><b>Web push</b> + email, silent degradation</li>
+              <li data-i18n="guanina.feat5"><b>Native SEO/AIO</b> — JSON-LD, llms.txt</li>
+              <li data-i18n="guanina.feat6"><b>0% commission</b> first 30 days, then 5%</li>
             </ul>
 
             <div class="sc-tags">
@@ -341,17 +345,17 @@
           </div>
 
           <div class="sc-visual tilt">
-            <div class="sc-visual-label">Stoc live</div>
-            <div class="sc-visual-value">Se epuizează în timp real</div>
+            <div class="sc-visual-label" data-i18n="guanina.vlabel">Live stock</div>
+            <div class="sc-visual-value" data-i18n="guanina.vvalue">Selling out in real time</div>
             <div class="w-stock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b>Listare</b><span>stoc limitat</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b>Plată</b><span>Stripe Connect</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b>Ridicare</b><span>bilet QR</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="guanina.f1t">List</b><span data-i18n="guanina.f1d">limited stock</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="guanina.f2t">Pay</b><span>Stripe Connect</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="guanina.f3t">Pick up</b><span data-i18n="guanina.f3d">QR ticket</span></div>
             </div>
             <div class="sc-proof">
-              <div class="sc-proof-row"><time>24.09</time><span>Audit de securitate: 4 probleme găsite și reparate (XSS, risc dublă-vânzare, cont demo, orașe lipsă).</span></div>
-              <div class="sc-proof-row"><time>28.09</time><span>Livrare la domiciliu lansată + politică de anulare rescrisă, cu reținere reală a taxei Stripe.</span></div>
+              <div class="sc-proof-row"><time>24.09</time><span data-i18n="guanina.proof1">Security audit: 4 issues found and fixed (XSS, double-sale risk, demo account, missing cities).</span></div>
+              <div class="sc-proof-row"><time>28.09</time><span data-i18n="guanina.proof2">Home delivery launched + cancellation policy rewritten, with real withholding of the Stripe fee.</span></div>
             </div>
           </div>
         </div>
@@ -365,26 +369,26 @@
       <div class="wrap">
         <div class="showcase-grid">
           <div>
-            <div class="sc-kicker">03 — Rideshare · Android nativ</div>
+            <div class="sc-kicker" data-i18n="smartdrive.kicker">03 — Rideshare · Native Android</div>
             <div class="sc-title">
               <h3 itemprop="name">SmartDrive</h3>
-              <span class="sc-status live"><span class="dot"></span>Live · clienți plătitori</span>
+              <span class="sc-status live"><span class="dot"></span><span data-i18n="smartdrive.status">Live · paying customers</span></span>
             </div>
-            <p class="sc-tagline">Copilotul vocal pentru șoferii de rideshare</p>
-            <p class="sc-pitch" itemprop="description">Calculează în timp real câștigul net al fiecărei curse Bolt/Uber și îl anunță <strong>vocal</strong> — plus un back-office complet de business (abonamente, recomandări, MRR), nu doar o aplicație mobilă.</p>
+            <p class="sc-tagline" data-i18n="smartdrive.tagline">The voice copilot for rideshare drivers</p>
+            <p class="sc-pitch" itemprop="description" data-i18n="smartdrive.pitch">Calculates the real-time net profit of every Bolt/Uber ride and announces it <strong>by voice</strong> — plus a full business back-office (subscriptions, referrals, MRR), not just a mobile app.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag">Situație</span><span>Șoferul vede doar prețul brut. Calculează mental, sub presiune, dacă merită cursa — risc real la volan.</span></div>
-              <div class="sc-callout solution"><span class="tag">Soluție</span><span>Rulează pasiv, alături de aplicația de rideshare. Fiecare ofertă e evaluată automat și șoptită vocal: „Cursă 30 RON, câștig net 42 RON/oră."</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="smartdrive.problem">The driver only sees the gross price. They calculate mentally, under pressure, whether the ride is worth it — a real risk behind the wheel.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="smartdrive.solution">Runs passively, alongside the rideshare app. Every offer is evaluated automatically and whispered by voice: "30 RON ride, net 42 RON/hour."</span></div>
             </div>
 
             <ul class="sc-feats">
-              <li><b>Mod complet vocal</b> — zero distragere de la drum</li>
-              <li><b>Quick Mute</b> — un tap la urcarea pasagerului</li>
-              <li><b>7 zile probă</b>, apoi -50% preț lansare</li>
-              <li><b>Anti-fraudă recomandări</b> — anulare dacă referentul nu mai e activ</li>
-              <li><b>Back-office</b> — MRR, retenție, retrageri</li>
-              <li><b>Migrări testate</b> pe fiecare versiune veche</li>
+              <li data-i18n="smartdrive.feat1"><b>Fully voice mode</b> — zero distraction from the road</li>
+              <li data-i18n="smartdrive.feat2"><b>Quick Mute</b> — one tap when a passenger gets in</li>
+              <li data-i18n="smartdrive.feat3"><b>7-day trial</b>, then -50% launch price</li>
+              <li data-i18n="smartdrive.feat4"><b>Referral anti-fraud</b> — reward voided if referrer's subscription lapses</li>
+              <li data-i18n="smartdrive.feat5"><b>Back-office</b> — MRR, retention, payouts</li>
+              <li data-i18n="smartdrive.feat6"><b>Migrations tested</b> on every old version</li>
             </ul>
 
             <div class="sc-tags">
@@ -396,13 +400,13 @@
           </div>
 
           <div class="sc-visual tilt">
-            <div class="sc-visual-label">Anunț vocal</div>
-            <div class="sc-visual-value">„42 RON pe oră"</div>
+            <div class="sc-visual-label" data-i18n="smartdrive.vlabel">Voice announcement</div>
+            <div class="sc-visual-value" data-i18n="smartdrive.vvalue">"42 RON per hour"</div>
             <div class="w-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b>Ofertă</b><span>apare pe ecran</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b>Calcul</b><span>profit net</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b>Anunț</b><span>vocal, în cască</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="smartdrive.f1t">Offer</b><span data-i18n="smartdrive.f1d">appears on screen</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="smartdrive.f2t">Calculate</b><span data-i18n="smartdrive.f2d">net profit</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="smartdrive.f3t">Announce</b><span data-i18n="smartdrive.f3d">by voice, in headset</span></div>
             </div>
           </div>
         </div>
@@ -416,25 +420,25 @@
       <div class="wrap">
         <div class="showcase-grid">
           <div>
-            <div class="sc-kicker">04 — E-commerce afiliat · Flutter</div>
+            <div class="sc-kicker" data-i18n="dealhunter.kicker">04 — Affiliate e-commerce · Flutter</div>
             <div class="sc-title">
               <h3 itemprop="name">Deal Hunter RO</h3>
-              <span class="sc-status dev">În dezvoltare</span>
+              <span class="sc-status dev" data-i18n="dealhunter.status">In development</span>
             </div>
-            <p class="sc-tagline">Urmărire automată de prețuri pentru magazinele din România</p>
-            <p class="sc-pitch" itemprop="description">Aplicație mobilă (iOS + Android) care urmărește automat prețurile din magazinele românești și notifică exact când prețul scade sub prag — construită cu aceeași disciplină ca produsele live de mai sus.</p>
+            <p class="sc-tagline" data-i18n="dealhunter.tagline">Automatic price tracking for Romanian online stores</p>
+            <p class="sc-pitch" itemprop="description" data-i18n="dealhunter.pitch">A mobile app (iOS + Android) that automatically tracks prices across Romanian online stores and notifies you exactly when a price drops below your threshold — built with the same discipline as the live products above.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag">Situație</span><span>Prețurile din eMAG, FashionDays, Notino, Altex fluctuează constant, dar nimeni nu are timp să verifice manual zilnic.</span></div>
-              <div class="sc-callout solution"><span class="tag">Soluție</span><span>Utilizatorul setează pragul o singură dată; aplicația compară automat și trimite push exact la momentul potrivit.</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="dealhunter.problem">Prices at eMAG, FashionDays, Notino, Altex fluctuate constantly, but nobody has time to check manually every day.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="dealhunter.solution">The user sets a price threshold once; the app compares automatically and sends a push notification at the right moment.</span></div>
             </div>
 
             <ul class="sc-feats">
-              <li><b>Fără parolă</b> — Apple/Google Sign In</li>
-              <li><b>Istoric de preț</b> per produs</li>
-              <li><b>Browser in-app obligatoriu</b> — păstrează cookie-ul de afiliere</li>
-              <li><b>Nicio tranzacție în aplicație</b></li>
-              <li><b>Chei UUID</b> pe toată schema</li>
+              <li data-i18n="dealhunter.feat1"><b>No password</b> — Apple/Google Sign In</li>
+              <li data-i18n="dealhunter.feat2"><b>Full price history</b> per product</li>
+              <li data-i18n="dealhunter.feat3"><b>Mandatory in-app browser</b> — preserves the affiliate cookie</li>
+              <li data-i18n="dealhunter.feat4"><b>No transactions in the app</b></li>
+              <li data-i18n="dealhunter.feat5"><b>UUID keys</b> across the whole schema</li>
             </ul>
 
             <div class="sc-tags">
@@ -443,21 +447,21 @@
           </div>
 
           <div class="sc-visual tilt">
-            <div class="sc-visual-label">Preț sub prag</div>
-            <div class="sc-visual-value">Alertă trimisă</div>
+            <div class="sc-visual-label" data-i18n="dealhunter.vlabel">Price below threshold</div>
+            <div class="sc-visual-value" data-i18n="dealhunter.vvalue">Alert sent</div>
             <div class="w-spark" aria-hidden="true">
               <svg viewBox="0 0 200 74" preserveAspectRatio="none">
                 <defs><linearGradient id="sparkgrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="var(--accent-2)"/><stop offset="100%" stop-color="var(--accent)"/>
+                  <stop class="sg-stop1" offset="0%"/><stop class="sg-stop2" offset="100%"/>
                 </linearGradient></defs>
                 <polyline class="w-spark-line" points="0,18 30,26 60,20 90,42 120,36 150,58 180,52 200,62"/>
-                <circle class="w-spark-dot" cx="180" cy="52" r="3.5" fill="var(--accent)"/>
+                <circle class="w-spark-dot" cx="180" cy="52" r="3.5"/>
               </svg>
             </div>
             <div class="sc-flow">
-              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b>Alertă</b><span>prag setat</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b>Comparare</b><span>zilnică</span></div>
-              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b>Push</b><span>la scădere</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">01</span><b data-i18n="dealhunter.f1t">Alert</b><span data-i18n="dealhunter.f1d">threshold set</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">02</span><b data-i18n="dealhunter.f2t">Compare</b><span data-i18n="dealhunter.f2d">daily</span></div>
+              <div class="sc-flow-step"><span class="sc-flow-n">03</span><b>Push</b><span data-i18n="dealhunter.f3d">on drop</span></div>
             </div>
           </div>
         </div>
@@ -469,40 +473,40 @@
   <section class="section tint" id="standard" style="--tint:#5B6FFF;" aria-labelledby="standard-h">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Cum lucrăm</div>
-        <h2 id="standard-h">Standardul de inginerie</h2>
-        <p>Aplicat identic, indiferent de stack — verificabil direct în produsele de mai sus.</p>
+        <div class="eyebrow" data-i18n="standard.eyebrow">How we work</div>
+        <h2 id="standard-h" data-i18n="standard.h2">The engineering standard</h2>
+        <p data-i18n="standard.p">Applied identically regardless of stack — verifiable directly in the products above.</p>
       </div>
       <div class="whygrid">
         <div class="whycard">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <h4>Izolare de date verificată</h4>
-          <p>Într-un sistem multi-tenant, izolarea se verifică la nivel de schemă și query. <b>Guanina</b> a trecut printr-un audit dedicat care a confirmat-o explicit.</p>
+          <h4 data-i18n="why1.h">Verified data isolation</h4>
+          <p data-i18n="why1.p">In a multi-tenant system, isolation is verified at the schema and query level. <b>Guanina</b> went through a dedicated audit that confirmed it explicitly.</p>
         </div>
         <div class="whycard">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.7 1 6.4 2.6"/><path d="M21 3v6h-6"/></svg></div>
-          <h4>Migrări testate pe versiuni reale</h4>
-          <p><b>Guanina</b> rulează pe 47 de migrări fără downtime; <b>SmartDrive</b> are un istoric documentat de bug-uri de migrare reparate.</p>
+          <h4 data-i18n="why2.h">Migrations tested on real versions</h4>
+          <p data-i18n="why2.p"><b>Guanina</b> runs on 47 migrations with zero downtime; <b>SmartDrive</b> has a documented history of migration bugs fixed.</p>
         </div>
         <div class="whycard">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
-          <h4>Infrastructura rămâne a ta</h4>
-          <p>Cod, hosting, bază de date și chei de acces în conturile clientului de la prima zi. Fără lock-in.</p>
+          <h4 data-i18n="why3.h">The infrastructure stays yours</h4>
+          <p data-i18n="why3.p">Code, hosting, database, and access keys in the client's accounts from day one. No lock-in.</p>
         </div>
         <div class="whycard">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-          <h4>„Gata" înseamnă testat</h4>
-          <p><b>Sentinel</b> rulează 66 de teste end-to-end cu server și bază de date reale — a găsit 2 bug-uri de concurență reale înainte de lansare.</p>
+          <h4 data-i18n="why4.h">"Done" means tested</h4>
+          <p data-i18n="why4.p"><b>Sentinel</b> runs 66 end-to-end tests with a real server and database — it found 2 real concurrency bugs before launch.</p>
         </div>
         <div class="whycard">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <h4>Bani și identitate reale</h4>
-          <p>Plăți în producție (Stripe Connect, Lemon Squeezy). <b>Sentinel</b> sigilează fiecare dosar cu RFC 3161 real, verificat cu OpenSSL.</p>
+          <h4 data-i18n="why5.h">Real money, real identity</h4>
+          <p data-i18n="why5.p">Production payments (Stripe Connect, Lemon Squeezy). <b>Sentinel</b> seals every dossier with a real RFC 3161 timestamp, verified with OpenSSL.</p>
         </div>
         <div class="whycard">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7l-9-5Z"/></svg></div>
-          <h4>Onestitate tehnică</h4>
-          <p>Când o regulă nu e complet acoperită, spunem explicit ce lipsește — documentat ca „rezolvat parțial, onest", nu simulat.</p>
+          <h4 data-i18n="why6.h">Technical honesty</h4>
+          <p data-i18n="why6.p">When a rule isn't fully covered, we say explicitly what's missing — documented as "partially solved, honestly," never simulated.</p>
         </div>
       </div>
     </div>
@@ -511,29 +515,29 @@
   <section class="section" id="faq" aria-labelledby="faq-h">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Întrebări frecvente</div>
-        <h2 id="faq-h">Ce vrei să știi</h2>
+        <div class="eyebrow" data-i18n="faq.eyebrow">FAQ</div>
+        <h2 id="faq-h" data-i18n="faq.h2">What you want to know</h2>
       </div>
       <div class="faqlist">
         <details>
-          <summary>Ce este MOXO Technology? <span class="qm">+</span></summary>
-          <p>MOXO Technology proiectează și construiește aplicații full-stack complete — un marketplace live cu plăți reale, un copilot mobil cu abonați plătitori, o platformă de conformitate testată end-to-end, o aplicație de tracking prețuri. Fiecare produs e documentat cu dovezi verificabile.</p>
+          <summary><span data-i18n="faq.q1">What is MOXO Technology?</span> <span class="qm">+</span></summary>
+          <p data-i18n="faq.a1">MOXO Technology designs and builds complete full-stack applications — a live marketplace with real payments, a mobile copilot with paying subscribers, a compliance platform tested end-to-end, a price-tracking app. Every product is documented with verifiable evidence.</p>
         </details>
         <details>
-          <summary>Ce este Sentinel și ce reglementare acoperă? <span class="qm">+</span></summary>
-          <p>Sentinel este o platformă de conformitate pentru EU AI Act (Regulation (EU) 2024/1689). Analizează codul sursă și documentația pentru a genera dovezi mapate pe articolele regulamentului, testată cu 66 de teste end-to-end și validată de 4 experți independenți.</p>
+          <summary><span data-i18n="faq.q2">What is Sentinel and what regulation does it cover?</span> <span class="qm">+</span></summary>
+          <p data-i18n="faq.a2">Sentinel is a compliance platform for the EU AI Act (Regulation (EU) 2024/1689). It analyzes source code and documentation to generate evidence mapped to the regulation's articles, tested with 66 end-to-end tests and validated by 4 independent experts.</p>
         </details>
         <details>
-          <summary>Ce este Guanina (Piața de Flori)? <span class="qm">+</span></summary>
-          <p>Guanina este un marketplace live unde florăriile listează buchete cu stoc limitat, clienții plătesc prin Stripe Connect și ridică produsul cu un bilet QR. Rulează pe 47 de migrări în producție și a trecut printr-un audit de securitate documentat public.</p>
+          <summary><span data-i18n="faq.q3">What is Guanina (Piața de Flori)?</span> <span class="qm">+</span></summary>
+          <p data-i18n="faq.a3">Guanina is a live marketplace where florists list bouquets with limited stock, customers pay via Stripe Connect and pick up their order with a QR ticket. It runs on 47 production migrations and passed a publicly documented security audit.</p>
         </details>
         <details>
-          <summary>Ce este SmartDrive? <span class="qm">+</span></summary>
-          <p>SmartDrive este o aplicație Android nativă, live, cu abonați plătitori, care calculează în timp real câștigul net al fiecărei curse de rideshare și anunță vocal dacă merită acceptată.</p>
+          <summary><span data-i18n="faq.q4">What is SmartDrive?</span> <span class="qm">+</span></summary>
+          <p data-i18n="faq.a4">SmartDrive is a live native Android app with paying subscribers that calculates the real-time net profit of every rideshare trip and announces by voice whether it's worth accepting.</p>
         </details>
         <details>
-          <summary>Ce este Deal Hunter RO? <span class="qm">+</span></summary>
-          <p>Deal Hunter RO este o aplicație mobilă în dezvoltare pentru iOS și Android care urmărește automat prețurile din magazinele românești și trimite notificări push la scăderi sub pragul setat.</p>
+          <summary><span data-i18n="faq.q5">What is Deal Hunter RO?</span> <span class="qm">+</span></summary>
+          <p data-i18n="faq.a5">Deal Hunter RO is a mobile app in development for iOS and Android that automatically tracks prices across Romanian online stores and sends push notifications when prices drop below your threshold.</p>
         </details>
       </div>
     </div>
@@ -541,9 +545,9 @@
 
   <section class="closing wrap" id="contact" aria-labelledby="contact-h">
     <div class="closing-panel">
-      <h2 id="contact-h">Ai un produs de construit?</h2>
-      <p>De la MVP-uri până la platforme cu reguli de conformitate complexe — hai să vorbim despre ce vrei să construiești și ce dovadă vrei să poți arăta la final.</p>
-      <a class="btn primary" href="mailto:office@moxohubs.com">Scrie-ne
+      <h2 id="contact-h" data-i18n="closing.h2">Have a product to build?</h2>
+      <p data-i18n="closing.p">From MVPs to platforms with complex compliance rules — let's talk about what you want to build and what proof you want to be able to show at the end.</p>
+      <a class="btn primary" href="mailto:office@moxohubs.com"><span data-i18n="closing.cta">Contact us</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
     </div>
@@ -553,12 +557,12 @@
 
 <footer class="sitefoot wrap">
   <div class="footrow">
-    <span>© 2026 MOXO Technology · SmartDrive nu e afiliat cu Bolt sau Uber</span>
+    <span data-i18n="footer.line">© 2026 MOXO Technology · SmartDrive is not affiliated with Bolt or Uber</span>
     <div class="flinks">
-      <a href="#produse">Produse</a>
-      <a href="#standard">Cum lucrăm</a>
-      <a href="#faq">Întrebări</a>
-      <a href="mailto:office@moxohubs.com">Contact</a>
+      <a href="#produse" data-i18n="nav.produse">Products</a>
+      <a href="#standard" data-i18n="nav.standard">How we work</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="mailto:office@moxohubs.com" data-i18n="nav.cta">Contact us</a>
     </div>
   </div>
 </footer>
