@@ -39,6 +39,35 @@ if (reduceMotion) {
   document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => el.classList.add('in'));
 }
 
+/* ---------------- animated stat counters ---------------- */
+function animateCount(el) {
+  const target = parseInt(el.dataset.count, 10);
+  const suffix = el.dataset.suffix || '';
+  if (reduceMotion || isNaN(target)) { el.textContent = target + suffix; return; }
+  const dur = 1100;
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * eased) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const countEls = document.querySelectorAll('[data-count]');
+if (countEls.length) {
+  if ('IntersectionObserver' in window) {
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { animateCount(entry.target); cio.unobserve(entry.target); }
+      });
+    }, { threshold: 0.5 });
+    countEls.forEach((el) => cio.observe(el));
+  } else {
+    countEls.forEach(animateCount);
+  }
+}
+
 /* ---------------- i18n: English default, Romanian toggle ---------------- */
 const RO = {
   'nav.produse': 'Produse', 'nav.standard': 'Cum lucrăm', 'nav.faq': 'Întrebări', 'nav.cta': 'Scrie-ne',

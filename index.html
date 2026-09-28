@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MOXO Technology — dosar tehnic: Sentinel, Guanina, SmartDrive, Deal Hunter RO</title>
+<title>MOXO Technology — software engineering studio: Sentinel, Guanina, SmartDrive, Deal Hunter RO</title>
 <meta name="description" content="MOXO Technology proiectează și livrează software de producție: Sentinel (conformitate EU AI Act, 66 teste end-to-end, 4 experți independenți), Guanina (marketplace flori, live, 47 migrări), SmartDrive (copilot rideshare, live, clienți plătitori), Deal Hunter RO (tracking prețuri). Fiecare afirmație are o dovadă atașată.">
 <meta name="keywords" content="MOXO Technology, dezvoltator full-stack, SmartDrive, copilot Bolt Uber, Sentinel EU AI Act, platforma conformitate AI, Guanina piata de flori, Deal Hunter RO, marketplace flori, tracking preturi, Next.js Cloudflare, dezvoltare aplicatii mobile Romania">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -129,28 +129,28 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Ce este MOXO Technology?",
-      "acceptedAnswer": {"@type":"Answer","text":"MOXO Technology este un studio independent de dezvoltare software care proiectează și construiește aplicații full-stack complete — de la copiloți mobili pentru șoferi de rideshare, până la platforme de conformitate reglementară și marketplace-uri B2C cu plăți integrate."}
+      "name": "What is MOXO Technology?",
+      "acceptedAnswer": {"@type":"Answer","text":"MOXO Technology designs and builds complete full-stack applications — a live marketplace with real payments, a mobile copilot with paying subscribers, a compliance platform tested end-to-end, a price-tracking app. Every product is documented with verifiable evidence."}
     },
     {
       "@type": "Question",
-      "name": "Ce este SmartDrive?",
-      "acceptedAnswer": {"@type":"Answer","text":"SmartDrive este o aplicație Android nativă care funcționează ca un copilot vocal pentru șoferii de rideshare (Bolt, Uber). Calculează în timp real câștigul net al fiecărei curse, după combustibil și comision, și anunță vocal dacă merită acceptată — fără să interfereze cu aplicația de rideshare."}
+      "name": "What is Sentinel and what regulation does it cover?",
+      "acceptedAnswer": {"@type":"Answer","text":"Sentinel is a compliance platform for the EU AI Act (Regulation (EU) 2024/1689). It analyzes source code and documentation to generate evidence mapped to the regulation's articles, tested with 66 end-to-end tests and validated by 4 independent experts."}
     },
     {
       "@type": "Question",
-      "name": "Ce este Sentinel și ce reglementare acoperă?",
-      "acceptedAnswer": {"@type":"Answer","text":"Sentinel este o platformă de conformitate pentru EU AI Act (Regulation (EU) 2024/1689), regulamentul european privind inteligența artificială. Analizează codul sursă, configurațiile și documentația sistemelor AI pentru a genera dovezi de conformitate mapate direct pe articolele regulamentului, inclusiv dosare pregătite pentru evaluare Notified Body."}
+      "name": "What is Guanina (Piața de Flori)?",
+      "acceptedAnswer": {"@type":"Answer","text":"Guanina is a live marketplace where florists list bouquets with limited stock, customers pay via Stripe Connect and pick up their order with a QR ticket. It runs on 47 production migrations and passed a publicly documented security audit."}
     },
     {
       "@type": "Question",
-      "name": "Ce este Guanina (Piața de Flori)?",
-      "acceptedAnswer": {"@type":"Answer","text":"Guanina este un marketplace unde florăriile își listează buchetele cu stoc limitat, iar clienții cumpără online cu plată card prin Stripe și ridică produsul fizic de la stand pe baza unui bilet QR. Fiecare florărie vede și gestionează exclusiv propriile comenzi."}
+      "name": "What is SmartDrive?",
+      "acceptedAnswer": {"@type":"Answer","text":"SmartDrive is a live native Android app with paying subscribers that calculates the real-time net profit of every rideshare trip and announces by voice whether it's worth accepting."}
     },
     {
       "@type": "Question",
-      "name": "Ce este Deal Hunter RO?",
-      "acceptedAnswer": {"@type":"Answer","text":"Deal Hunter RO este o aplicație mobilă pentru iOS și Android care urmărește automat prețurile produselor din magazinele online românești (eMAG, FashionDays, Notino, Altex) și trimite notificări push când prețul scade sub pragul setat de utilizator."}
+      "name": "What is Deal Hunter RO?",
+      "acceptedAnswer": {"@type":"Answer","text":"Deal Hunter RO is a mobile app in development for iOS and Android that automatically tracks prices across Romanian online stores and sends push notifications when prices drop below your threshold."}
     }
   ]
 }
@@ -183,6 +183,7 @@
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-glow g1" aria-hidden="true"></div>
     <div class="hero-glow g2" aria-hidden="true"></div>
+    <div class="hero-glow g3" aria-hidden="true"></div>
     <div class="wrap">
       <div class="hero-inner">
         <div class="eyebrow" data-i18n="hero.eyebrow">Software engineering studio</div>
@@ -232,13 +233,20 @@
       </div>
 
       <div class="statstrip">
-        <div class="stat"><div class="n">4</div><div class="l" data-i18n="stat.1">products shipped</div></div>
-        <div class="stat"><div class="n">2</div><div class="l" data-i18n="stat.2">live, in production</div></div>
-        <div class="stat"><div class="n">66/66</div><div class="l" data-i18n="stat.3">end-to-end tests (Sentinel)</div></div>
-        <div class="stat"><div class="n">47</div><div class="l" data-i18n="stat.4">schema migrations (Guanina)</div></div>
+        <div class="stat"><div class="n" data-count="4">0</div><div class="l" data-i18n="stat.1">products shipped</div></div>
+        <div class="stat"><div class="n" data-count="2">0</div><div class="l" data-i18n="stat.2">live, in production</div></div>
+        <div class="stat"><div class="n" data-count="66" data-suffix="/66">0</div><div class="l" data-i18n="stat.3">end-to-end tests (Sentinel)</div></div>
+        <div class="stat"><div class="n" data-count="47">0</div><div class="l" data-i18n="stat.4">schema migrations (Guanina)</div></div>
       </div>
     </div>
   </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Next.js 15</span><span>Cloudflare Edge</span><span>Stripe Connect</span><span>Node.js</span><span>Android · Java</span><span>Flutter</span><span>Supabase</span><span>PostgreSQL</span><span>RFC 3161</span><span>JWT + TOTP</span><span>Firebase FCM</span><span>Docker</span>
+      <span>Next.js 15</span><span>Cloudflare Edge</span><span>Stripe Connect</span><span>Node.js</span><span>Android · Java</span><span>Flutter</span><span>Supabase</span><span>PostgreSQL</span><span>RFC 3161</span><span>JWT + TOTP</span><span>Firebase FCM</span><span>Docker</span>
+    </div>
+  </div>
 
   <section class="section" id="produse" aria-labelledby="produse-h">
     <div class="wrap">
@@ -250,7 +258,7 @@
     </div>
 
     <!-- SENTINEL -->
-    <article class="showcase c-sentinel layout-banner" id="sentinel" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-sentinel" id="sentinel" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="BusinessApplication">
       <div class="wrap">
         <div class="showcase-grid">
@@ -314,7 +322,7 @@
     </article>
 
     <!-- GUANINA -->
-    <article class="showcase c-guanina layout-mirror" id="guanina" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-guanina rev" id="guanina" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <div class="wrap">
         <div class="showcase-grid">
@@ -372,7 +380,7 @@
     </article>
 
     <!-- SMARTDRIVE -->
-    <article class="showcase c-smartdrive layout-wide" id="smartdrive" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-smartdrive" id="smartdrive" style="--gx:80%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="TravelApplication">
       <meta itemprop="operatingSystem" content="Android">
       <div class="wrap">
@@ -427,7 +435,7 @@
     </article>
 
     <!-- DEAL HUNTER RO -->
-    <article class="showcase c-dealhunter layout-stack" id="dealhunter" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="showcase c-dealhunter rev" id="dealhunter" style="--gx:20%;" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <meta itemprop="operatingSystem" content="iOS, Android">
       <div class="wrap">
