@@ -86,6 +86,7 @@ const RO = {
   'produse.p': 'Arhitectură, sisteme de bază și funcționalități pentru fiecare platformă construită și lansată.',
 
   'callout.problem': 'Provocare', 'callout.solution': 'Arhitectură',
+  'also.included': 'De asemenea incluse',
 
   'sentinel.kicker': '01 — RegTech · Node.js', 'sentinel.status': 'Pre-lansare · 66/66 teste',
   'sentinel.tagline': '"Building Trust Through Evidence" — conformitate EU AI Act',
