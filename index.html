@@ -156,6 +156,7 @@
 
 <link rel="stylesheet" href="assets/style.css">
 </head>
+</head>
 <body>
 
 <nav class="wrap" id="nav" aria-label="Navigare principală">
@@ -173,6 +174,7 @@
 <main class="wrap">
 
   <header class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
     <div class="eyebrow"><span class="dot"></span>Studio independent de dezvoltare software</div>
     <h1>Construim produse pe care oamenii <span class="accent">chiar le folosesc</span> zilnic.</h1>
     <p class="lead">MOXO Technology proiectează și livrează aplicații reale — de la un copilot vocal pentru șoferi rideshare, până la o platformă de conformitate reglementară pentru inteligență artificială și un marketplace B2C cu plăți integrate. Patru produse, patru domenii diferite, aceeași disciplină de inginerie.</p>
@@ -184,10 +186,22 @@
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="n">4</div><div class="l">produse construite</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">live, în producție</div></div>
-      <div class="stat"><div class="n">47+</div><div class="l">migrări de schemă versionate</div></div>
-      <div class="stat"><div class="n">100%</div><div class="l">cod propriu, fără lock-in no-code</div></div>
+      <div class="stat">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+        <div><div class="n">4</div><div class="l">produse construite</div></div>
+      </div>
+      <div class="stat">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>
+        <div><div class="n">2</div><div class="l">live, în producție</div></div>
+      </div>
+      <div class="stat">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <div><div class="n">47+</div><div class="l">migrări de schemă versionate</div></div>
+      </div>
+      <div class="stat">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7l-9-5Z"/></svg>
+        <div><div class="n">100%</div><div class="l">cod propriu, fără lock-in no-code</div></div>
+      </div>
     </div>
   </header>
 
@@ -195,7 +209,7 @@
     <div class="shead">
       <div class="k">Portofoliu</div>
       <h2 id="produse-h">Produsele noastre</h2>
-      <p>De la idee la aplicație în producție — fiecare proiect de mai jos acoperă un domeniu diferit, cu arhitectură, stack tehnic și reguli de business proprii.</p>
+      <p>De la idee la aplicație în producție — fiecare proiect de mai jos rezolvă o problemă reală, cu arhitectură, stack tehnic și reguli de business proprii.</p>
     </div>
 
     <div class="projects">
@@ -205,7 +219,9 @@
         <meta itemprop="applicationCategory" content="TravelApplication">
         <meta itemprop="operatingSystem" content="Android">
         <div class="head">
-          <div class="icon" aria-hidden="true">🚗</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h-2v-6l2-5h11l3 5h1a1 1 0 0 1 1 1v5h-2"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/><path d="M9 17h5"/></svg>
+          </div>
           <div>
             <div class="titlerow">
               <h3 itemprop="name">SmartDrive</h3>
@@ -220,7 +236,29 @@
           </a>
         </div>
         <div class="body">
-          <p class="desc" itemprop="description"><strong>SmartDrive</strong> este aplicația Android nativă care funcționează ca un copilot personal pentru șoferii Bolt și Uber: calculează în timp real, pentru fiecare cursă în parte, câștigul net rămas după combustibil, uzură și comision — și îl anunță <strong>vocal, în cască sau boxă</strong>, astfel încât șoferul să decidă în secunde dacă merită să accepte cursa, fără să se uite la ecran. Aplicația rulează pasiv, alături de aplicația de rideshare, fără să o modifice sau să-i acceseze contul — zero risc de suspendare. Distribuită deja ca APK descărcabil direct către șoferi, cu versiuni publicate și mentenanță activă în producție.</p>
+          <p class="desc" itemprop="description">Aplicația Android nativă care funcționează ca un copilot personal pentru șoferii Bolt și Uber, calculând în timp real câștigul net al fiecărei curse și anunțându-l vocal, fără să distragă atenția de la drum.</p>
+
+          <div class="narrative">
+            <div class="story">
+              <div class="story-tag bad">Provocarea</div>
+              <p>Un șofer de rideshare vede doar prețul brut al unei curse — nu și cât rămâne curat după combustiv, uzură și comisionul platformei. Ca să afle dacă merită, trebuie să calculeze mental, sub presiune, în câteva secunde, în timp ce conduce. Cursele proaste se acceptă din grabă, iar verificarea ecranului la volan e un risc real de siguranță.</p>
+            </div>
+            <div class="story">
+              <div class="story-tag good">Soluția</div>
+              <p>SmartDrive rulează pasiv, alături de aplicația de rideshare, fără să o modifice sau să-i acceseze contul — zero risc de suspendare. Fiecare ofertă nouă e evaluată automat pe baza consumului real al mașinii și a comisionului flotei, iar rezultatul e șoptit vocal în cască: „Cursă 30 RON, câștig net 42 RON pe oră.” Șoferul decide fără să ridice privirea de pe drum.</p>
+            </div>
+          </div>
+
+          <div class="flow">
+            <div class="flow-step"><span class="fn">1</span><b>Ofertă nouă</b><span>apare pe ecranul aplicației de rideshare</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">2</span><b>Citire &amp; calcul</b><span>SmartDrive scade combustibil, uzură, comision</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">3</span><b>Anunț vocal</b><span>câștig net pe oră, în cască sau boxă</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">4</span><b>Decizie</b><span>accept / refuz, fără să privească ecranul</span></div>
+          </div>
+
           <div class="detailgrid">
             <div>
               <h4>Funcționalități cheie</h4>
@@ -264,7 +302,9 @@
       <article class="proj c-blue" itemscope itemtype="https://schema.org/SoftwareApplication">
         <meta itemprop="applicationCategory" content="BusinessApplication">
         <div class="head">
-          <div class="icon" aria-hidden="true">🛡️</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
           <div>
             <div class="titlerow">
               <h3 itemprop="name">Sentinel</h3>
@@ -279,7 +319,29 @@
           </a>
         </div>
         <div class="body">
-          <p class="desc" itemprop="description"><strong>Sentinel</strong> — tagline "Building Trust Through Evidence" — este o platformă de evaluare a conformității <strong>orientată pe dovezi</strong>, construită pentru furnizorii de sisteme AI, consultanți și cabinete de avocatură care trebuie să demonstreze conformitatea cu <strong>Regulation (EU) 2024/1689 (EU AI Act)</strong>. Platforma rulează un pipeline de analiză pe <strong>18 faze</strong>, extrage dovezi concrete direct din codul sursă, configurații și documentație, le mapează pe articolele specifice ale regulamentului și generează un dosar de conformitate (inclusiv documentație Annex IV) pregătit pentru evaluare de către un Notified Body. Nu emite opinii juridice — furnizează analiză tehnică verificabilă, nu presupuneri.</p>
+          <p class="desc" itemprop="description">Platformă de evaluare a conformității orientată pe dovezi — tagline „Building Trust Through Evidence" — construită pentru furnizorii de sisteme AI care trebuie să demonstreze conformitatea cu Regulation (EU) 2024/1689.</p>
+
+          <div class="narrative">
+            <div class="story">
+              <div class="story-tag bad">Provocarea</div>
+              <p>EU AI Act cere furnizorilor de sisteme AI cu risc ridicat să demonstreze conformitatea articol-cu-articol, sub amenințarea unor amenzi de până la 30 de milioane de euro sau 6% din cifra de afaceri globală. Demonstrarea se face de obicei manual — ore de consultanță juridică, documente Word actualizate la mână, fără nicio legătură verificabilă cu codul sursă real al sistemului.</p>
+            </div>
+            <div class="story">
+              <div class="story-tag good">Soluția</div>
+              <p>Sentinel rulează un pipeline de analiză pe 18 faze direct pe codul sursă, configurațiile și documentația sistemului AI, extrage dovezi concrete și le mapează pe articolele specifice ale regulamentului. Fiecare dosar generat e sigilat cu timestamp RFC 3161 de o autoritate publică independentă, iar orice modificare ulterioară a conținutului citat e detectată automat prin hash — nu doar prin locația fișierului.</p>
+            </div>
+          </div>
+
+          <div class="flow">
+            <div class="flow-step"><span class="fn">1</span><b>Analiză de cod</b><span>pipeline de 18 faze pe sursă, config, documentație</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">2</span><b>Mapare pe articole</b><span>dovezi legate direct de cerințele regulamentului</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">3</span><b>Scoring &amp; wizard</b><span>completare asistată, blocare pe reguli învechite</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">4</span><b>Dosar sigilat</b><span>PDF + SBOM, timestamp RFC 3161 verificabil</span></div>
+          </div>
+
           <div class="detailgrid">
             <div>
               <h4>Funcționalități cheie</h4>
@@ -323,7 +385,9 @@
       <article class="proj c-good" itemscope itemtype="https://schema.org/SoftwareApplication">
         <meta itemprop="applicationCategory" content="ShoppingApplication">
         <div class="head">
-          <div class="icon" aria-hidden="true">🌸</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"/><circle cx="7.5" cy="12" r="2.6"/><circle cx="16.5" cy="12" r="2.6"/><circle cx="12" cy="16" r="2.2"/><path d="M12 18.5V21"/></svg>
+          </div>
           <div>
             <div class="titlerow">
               <h3 itemprop="name">Guanina</h3>
@@ -338,7 +402,29 @@
           </a>
         </div>
         <div class="body">
-          <p class="desc" itemprop="description"><strong>Guanina</strong> este un marketplace multi-vânzător: florăriile din piețe postează buchete cu stoc limitat, clienții cumpără online cu <strong>plată card prin Stripe Connect</strong> (bani direct către vânzător, comision de platformă reținut automat), apoi ridică produsul fizic de la stand pe baza unui <strong>bilet QR</strong>. Are și un flux paralel de „cerere de ofertă": clientul descrie ce vrea, iar florarii din apropiere licitează pentru comandă. Fiecare vânzător vede și gestionează <strong>exclusiv</strong> propriile comenzi și produse — izolare completă de date verificată printr-un audit de securitate dedicat.</p>
+          <p class="desc" itemprop="description">Marketplace multi-vânzător unde florăriile din piețe listează buchete cu stoc limitat, clienții plătesc online prin Stripe Connect și ridică produsul fizic pe baza unui bilet QR.</p>
+
+          <div class="narrative">
+            <div class="story">
+              <div class="story-tag bad">Provocarea</div>
+              <p>Florăriile mici din piețe nu au timp sau echipă IT ca să-și construiască un magazin online — vând ce au azi, stocul se schimbă zilnic, iar o comandă neonorată la timp strică relația cu clientul. În același timp, orice platformă comună pentru mai mulți vânzători riscă să amestece date: o florărie nu trebuie să vadă niciodată comenzile alteia.</p>
+            </div>
+            <div class="story">
+              <div class="story-tag good">Soluția</div>
+              <p>Guanina dă fiecărei florării propriul dashboard, izolat complet de ceilalți vânzători, cu produse care expiră automat la sfârșitul stocului. Clientul plătește card direct către vânzător prin Stripe Connect (platforma reține automat comisionul), primește un bilet QR și ridică personal produsul — fără cont, fără fricțiune. Pentru cereri speciale, clientul descrie ce vrea și florarii din apropiere licitează pentru comandă.</p>
+            </div>
+          </div>
+
+          <div class="flow">
+            <div class="flow-step"><span class="fn">1</span><b>Listare</b><span>vânzătorul postează buchete cu stoc limitat</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">2</span><b>Plată</b><span>client → Stripe Connect, comision reținut automat</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">3</span><b>Bilet QR</b><span>generat instant, fără cont necesar</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">4</span><b>Ridicare</b><span>scanare la stand, comandă finalizată</span></div>
+          </div>
+
           <div class="detailgrid">
             <div>
               <h4>Funcționalități cheie</h4>
@@ -383,7 +469,9 @@
         <meta itemprop="applicationCategory" content="ShoppingApplication">
         <meta itemprop="operatingSystem" content="iOS, Android">
         <div class="head">
-          <div class="icon" aria-hidden="true">🏷️</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .6 1.4l8.5 8.5a2 2 0 0 0 2.8 0l6.5-6.5a2 2 0 0 0 0-2.8L13 3.6a2 2 0 0 0-1.4-.6Z"/><circle cx="8" cy="8" r="1.4"/></svg>
+          </div>
           <div>
             <div class="titlerow">
               <h3 itemprop="name">Deal Hunter RO</h3>
@@ -393,7 +481,29 @@
           </div>
         </div>
         <div class="body">
-          <p class="desc" itemprop="description"><strong>Deal Hunter RO</strong> este o aplicație mobilă (iOS + Android) care urmărește automat prețurile produselor din magazinele partenere românești — <strong>eMAG, FashionDays, Notino, Altex</strong> — și trimite notificări push exact când prețul scade sub pragul setat de utilizator. Aplicația nu vinde nimic direct: toate tranzacțiile rămân pe platformele oficiale ale magazinelor, iar redirecționarea se face obligatoriu prin browser in-app pentru a păstra atribuirea comisionului de afiliere. Monetizare complet invizibilă pentru utilizator.</p>
+          <p class="desc" itemprop="description">Aplicație mobilă (iOS + Android) care urmărește automat prețurile din magazinele online românești și trimite notificări push exact când prețul scade sub pragul setat de utilizator.</p>
+
+          <div class="narrative">
+            <div class="story">
+              <div class="story-tag bad">Provocarea</div>
+              <p>Prețurile din magazinele online românești (eMAG, FashionDays, Notino, Altex) fluctuează constant, dar cumpărătorii nu au timp să verifice manual, zilnic, dacă produsul dorit a scăzut sub prețul pe care sunt dispuși să-l plătească. Rezultatul: fie cumpără prea devreme, la preț plin, fie ratează complet reducerea.</p>
+            </div>
+            <div class="story">
+              <div class="story-tag good">Soluția</div>
+              <p>Utilizatorul setează o singură dată pragul de preț dorit pentru un produs, iar aplicația face restul: ingerează automat feed-urile magazinelor partenere, compară prețul nou cu cel salvat și trimite o notificare push exact în momentul în care pragul e atins. Nicio tranzacție nu are loc în aplicație — clientul e redirecționat direct la magazinul oficial, prin browser in-app, ca să păstreze atribuirea comisionului de afiliere care susține gratuitatea aplicației.</p>
+            </div>
+          </div>
+
+          <div class="flow">
+            <div class="flow-step"><span class="fn">1</span><b>Alertă setată</b><span>utilizatorul alege produsul și pragul de preț</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">2</span><b>Ingestie feed</b><span>cron/Edge Functions parsează prețurile zilnic</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">3</span><b>Comparare</b><span>preț nou vs. preț salvat, per produs</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step"><span class="fn">4</span><b>Notificare push</b><span>FCM, exact la scăderea sub prag</span></div>
+          </div>
+
           <div class="detailgrid">
             <div>
               <h4>Funcționalități cheie</h4>
