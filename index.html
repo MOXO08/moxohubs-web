@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MOXO Technology — studio de dezvoltare software: SmartDrive, Sentinel, Guanina, Deal Hunter RO</title>
-<meta name="description" content="MOXO Technology este un studio independent de dezvoltare software care construiește produse digitale complete: copilot vocal pentru șoferi rideshare (SmartDrive), platformă de conformitate EU AI Act (Sentinel), marketplace de flori (Guanina) și urmărire de prețuri (Deal Hunter RO).">
+<title>MOXO Technology — dosar tehnic: SmartDrive, Sentinel, Guanina, Deal Hunter RO</title>
+<meta name="description" content="MOXO Technology e un studio de inginerie software care nu are un stil de produs — are un standard de dovezi. Patru sisteme documentate ca dosare tehnice: SmartDrive (copilot rideshare), Sentinel (conformitate EU AI Act), Guanina (marketplace flori), Deal Hunter RO (tracking prețuri).">
 <meta name="keywords" content="MOXO Technology, dezvoltator full-stack, SmartDrive, copilot Bolt Uber, Sentinel EU AI Act, platforma conformitate AI, Guanina piata de flori, Deal Hunter RO, marketplace flori, tracking preturi, Next.js Cloudflare, dezvoltare aplicatii mobile Romania">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="MOXO Technology">
@@ -27,7 +27,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;0,900;1,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- JSON-LD: Organization -->
 <script type="application/ld+json">
@@ -156,488 +156,475 @@
 
 <link rel="stylesheet" href="assets/style.css">
 </head>
-</head>
 <body>
 
-<nav class="wrap" id="nav" aria-label="Navigare principală">
-  <div class="navrow">
-    <div class="brand"><div class="mark">M</div><span class="name">MOXO <b>Technology</b></span></div>
-    <div class="navlinks">
-      <a href="#produse">Produse</a>
-      <a href="#capabilitati">Cum lucrăm</a>
-      <a href="#faq">Întrebări</a>
-      <a href="#contact">Contact</a>
-    </div>
+<header class="runhead">
+  <div class="wrap runhead-row">
+    <div class="mark"><span class="sq" aria-hidden="true"></span><b>MOXO Technology</b><span class="sub">— dosar tehnic, ed. 2026</span></div>
+    <nav class="runtabs" aria-label="Secțiuni document">
+      <a href="#despre">§1 Despre</a>
+      <a href="#standard">§2 Standard</a>
+      <a href="#registru">§3 Registru</a>
+      <a href="#faq">§4 Întrebări</a>
+      <a href="#contact">§5 Contact</a>
+    </nav>
   </div>
-</nav>
+</header>
 
-<main class="wrap">
+<main>
 
-  <header class="hero">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="eyebrow"><span class="dot"></span>Studio independent de dezvoltare software</div>
-    <h1>Construim produse pe care oamenii <span class="accent">chiar le folosesc</span> zilnic.</h1>
-    <p class="lead">MOXO Technology proiectează și livrează aplicații reale — de la un copilot vocal pentru șoferi rideshare, până la o platformă de conformitate reglementară pentru inteligență artificială și un marketplace B2C cu plăți integrate. Patru produse, patru domenii diferite, aceeași disciplină de inginerie.</p>
-    <div class="hero-cta">
-      <a class="btn primary" href="#produse">Vezi produsele
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+  <section class="wrap cover">
+    <div class="stamp" aria-hidden="true"><span class="stxt">VERIFICAT<br>ÎN&nbsp;PRODUCȚIE<br>MX·2026</span></div>
+    <div class="cover-kicker">Dosar tehnic — 4 sisteme, 1 studio</div>
+    <h1 class="cover-title">Nu avem un stil de produs. Avem un <em>standard de dovezi</em>.</h1>
+    <p class="cover-lead"><strong>MOXO Technology</strong> e un studio independent de inginerie software. Fiecare aplicație de mai jos e documentată ca un dosar tehnic — nu ca un pitch de marketing: ce problemă rezolvă, ce decizii de arhitectură s-au luat și ce dovadă concretă există că funcționează, verificabilă direct în cod — migrări testate pe versiuni vechi, timestamp-uri criptografice independente, audituri de securitate reale, tranzacții live.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#registru">Deschide registrul de produse
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
-      <a class="btn ghost" href="#contact">Hai să vorbim</a>
+      <a class="btn ghost" href="#contact">Scrie-ne</a>
     </div>
 
-    <div class="stats">
-      <div class="stat">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
-        <div><div class="n">4</div><div class="l">produse construite</div></div>
+    <div class="registry">
+      <div class="registry-row head">
+        <div>Nr.</div><div>Produs</div><div>Domeniu</div><div>Stare</div>
       </div>
-      <div class="stat">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>
-        <div><div class="n">2</div><div class="l">live, în producție</div></div>
-      </div>
-      <div class="stat">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-        <div><div class="n">47+</div><div class="l">migrări de schemă versionate</div></div>
-      </div>
-      <div class="stat">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7l-9-5Z"/></svg>
-        <div><div class="n">100%</div><div class="l">cod propriu, fără lock-in no-code</div></div>
-      </div>
-    </div>
-  </header>
-
-  <section class="section tight" id="produse" aria-labelledby="produse-h">
-    <div class="shead">
-      <div class="k">Portofoliu</div>
-      <h2 id="produse-h">Produsele noastre</h2>
-      <p>De la idee la aplicație în producție — fiecare proiect de mai jos rezolvă o problemă reală, cu arhitectură, stack tehnic și reguli de business proprii.</p>
-    </div>
-
-    <div class="projects">
-
-      <!-- SmartDrive -->
-      <article class="proj c-amber" itemscope itemtype="https://schema.org/SoftwareApplication">
-        <meta itemprop="applicationCategory" content="TravelApplication">
-        <meta itemprop="operatingSystem" content="Android">
-        <div class="head">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h-2v-6l2-5h11l3 5h1a1 1 0 0 1 1 1v5h-2"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/><path d="M9 17h5"/></svg>
-          </div>
-          <div>
-            <div class="titlerow">
-              <h3 itemprop="name">SmartDrive</h3>
-              <span class="status live"><span class="dot"></span>Live · clienți reali</span>
-            </div>
-            <p class="tagline">Copilotul vocal pentru șoferii de rideshare</p>
-          </div>
-          <a class="golink" href="https://smartdrive.moxohubs.com" itemprop="url">
-            <span class="go">Vezi aplicația
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </a>
+      <a class="rlink" href="#mx-001">
+        <div class="registry-row">
+          <div class="rr-no">MX-001</div>
+          <div class="rr-name">SmartDrive</div>
+          <div class="rr-domain">Copilot vocal · rideshare Android</div>
+          <div><span class="dstatus live"><span class="dot"></span>Live</span></div>
         </div>
-        <div class="body">
-          <p class="desc" itemprop="description">Aplicația Android nativă care funcționează ca un copilot personal pentru șoferii Bolt și Uber, calculând în timp real câștigul net al fiecărei curse și anunțându-l vocal, fără să distragă atenția de la drum.</p>
-
-          <div class="narrative">
-            <div class="story">
-              <div class="story-tag bad">Provocarea</div>
-              <p>Un șofer de rideshare vede doar prețul brut al unei curse — nu și cât rămâne curat după combustiv, uzură și comisionul platformei. Ca să afle dacă merită, trebuie să calculeze mental, sub presiune, în câteva secunde, în timp ce conduce. Cursele proaste se acceptă din grabă, iar verificarea ecranului la volan e un risc real de siguranță.</p>
-            </div>
-            <div class="story">
-              <div class="story-tag good">Soluția</div>
-              <p>SmartDrive rulează pasiv, alături de aplicația de rideshare, fără să o modifice sau să-i acceseze contul — zero risc de suspendare. Fiecare ofertă nouă e evaluată automat pe baza consumului real al mașinii și a comisionului flotei, iar rezultatul e șoptit vocal în cască: „Cursă 30 RON, câștig net 42 RON pe oră.” Șoferul decide fără să ridice privirea de pe drum.</p>
-            </div>
-          </div>
-
-          <div class="flow">
-            <div class="flow-step"><span class="fn">1</span><b>Ofertă nouă</b><span>apare pe ecranul aplicației de rideshare</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">2</span><b>Citire &amp; calcul</b><span>SmartDrive scade combustibil, uzură, comision</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">3</span><b>Anunț vocal</b><span>câștig net pe oră, în cască sau boxă</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">4</span><b>Decizie</b><span>accept / refuz, fără să privească ecranul</span></div>
-          </div>
-
-          <div class="detailgrid">
-            <div>
-              <h4>Funcționalități cheie</h4>
-              <ul class="feats">
-                <li><b>Calcul profit net în timp real</b> — scade automat combustibilul și comisionul din prețul cursei afișate</li>
-                <li><b>Mod complet vocal (fără afișaj)</b> — zero distragere de la drum, ambele mâini pe volan</li>
-                <li><b>Quick Mute</b> — un singur tap silențiază orice anunț când urcă un pasager, pentru discreție totală</li>
-                <li><b>Obiectiv zilnic de câștig</b> — urmărire în timp real față de ținta setată, cu confirmare sonoră la atingere</li>
-                <li><b>Zone evitate</b> — avertizare vocală dacă o cursă intră pe un traseu marcat ca nedorit</li>
-                <li><b>Istoric financiar</b> — bilanț zilnic/săptămânal/lunar și orele cele mai profitabile</li>
-                <li><b>Program de recomandare</b> — cod unic de invitație, recompensă bănească la abonament activ</li>
-                <li><b>Migrări de schemă testate explicit</b> pe fiecare versiune majoră suportată, nu doar pe ultima</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Fișă tehnică</h4>
-              <div class="metabox">
-                <dl>
-                  <div class="row"><dt>Platformă</dt><dd itemprop="operatingSystem">Android nativ (Java)</dd></div>
-                  <div class="row"><dt>Backend</dt><dd>Supabase (Postgres, Edge Functions)</dd></div>
-                  <div class="row"><dt>Bază locală</dt><dd>SQLite (ShiftDatabase)</dd></div>
-                  <div class="row"><dt>Plăți/abonament</dt><dd>Lemon Squeezy · RON</dd></div>
-                  <div class="row"><dt>Distribuție</dt><dd>APK direct (fără Play Store)</dd></div>
-                  <div class="row"><dt>Testare</dt><dd>Unit + Robolectric (SQLite)</dd></div>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="chips">
-            <span class="chip">Android · Java</span>
-            <span class="chip">Supabase</span>
-            <span class="chip">OCR local</span>
-            <span class="chip">SQLite</span>
-            <span class="chip">Lemon Squeezy</span>
-            <span class="chip">Robolectric</span>
-          </div>
+      </a>
+      <a class="rlink" href="#mx-002">
+        <div class="registry-row">
+          <div class="rr-no">MX-002</div>
+          <div class="rr-name">Sentinel</div>
+          <div class="rr-domain">Conformitate EU AI Act</div>
+          <div><span class="dstatus dev">Pre-lansare</span></div>
         </div>
-      </article>
-
-      <!-- Sentinel -->
-      <article class="proj c-blue" itemscope itemtype="https://schema.org/SoftwareApplication">
-        <meta itemprop="applicationCategory" content="BusinessApplication">
-        <div class="head">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <div>
-            <div class="titlerow">
-              <h3 itemprop="name">Sentinel</h3>
-              <span class="status dev">Pre-lansare · testat end-to-end</span>
-            </div>
-            <p class="tagline">Platformă de conformitate pentru EU AI Act</p>
-          </div>
-          <a class="golink" href="https://gettingsentinel.com" itemprop="url">
-            <span class="go">gettingsentinel.com
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </a>
+      </a>
+      <a class="rlink" href="#mx-003">
+        <div class="registry-row">
+          <div class="rr-no">MX-003</div>
+          <div class="rr-name">Guanina</div>
+          <div class="rr-domain">Marketplace flori</div>
+          <div><span class="dstatus live"><span class="dot"></span>Live</span></div>
         </div>
-        <div class="body">
-          <p class="desc" itemprop="description">Platformă de evaluare a conformității orientată pe dovezi — tagline „Building Trust Through Evidence" — construită pentru furnizorii de sisteme AI care trebuie să demonstreze conformitatea cu Regulation (EU) 2024/1689.</p>
-
-          <div class="narrative">
-            <div class="story">
-              <div class="story-tag bad">Provocarea</div>
-              <p>EU AI Act cere furnizorilor de sisteme AI cu risc ridicat să demonstreze conformitatea articol-cu-articol, sub amenințarea unor amenzi de până la 30 de milioane de euro sau 6% din cifra de afaceri globală. Demonstrarea se face de obicei manual — ore de consultanță juridică, documente Word actualizate la mână, fără nicio legătură verificabilă cu codul sursă real al sistemului.</p>
-            </div>
-            <div class="story">
-              <div class="story-tag good">Soluția</div>
-              <p>Sentinel rulează un pipeline de analiză pe 18 faze direct pe codul sursă, configurațiile și documentația sistemului AI, extrage dovezi concrete și le mapează pe articolele specifice ale regulamentului. Fiecare dosar generat e sigilat cu timestamp RFC 3161 de o autoritate publică independentă, iar orice modificare ulterioară a conținutului citat e detectată automat prin hash — nu doar prin locația fișierului.</p>
-            </div>
-          </div>
-
-          <div class="flow">
-            <div class="flow-step"><span class="fn">1</span><b>Analiză de cod</b><span>pipeline de 18 faze pe sursă, config, documentație</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">2</span><b>Mapare pe articole</b><span>dovezi legate direct de cerințele regulamentului</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">3</span><b>Scoring &amp; wizard</b><span>completare asistată, blocare pe reguli învechite</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">4</span><b>Dosar sigilat</b><span>PDF + SBOM, timestamp RFC 3161 verificabil</span></div>
-          </div>
-
-          <div class="detailgrid">
-            <div>
-              <h4>Funcționalități cheie</h4>
-              <ul class="feats">
-                <li><b>Analiză statică de cod</b> mapată articol-cu-articol pe EU AI Act, cu scoring de risc automatizat</li>
-                <li><b>Timestamp RFC 3161</b> — fiecare dosar e sigilat de o autoritate publică independentă (DigiCert, fallback FreeTSA), verificat cu OpenSSL, nu doar simulat</li>
-                <li><b>Hash per-dovadă pe conținut real</b> — detectează drift de conținut, nu doar de locație în fișier</li>
-                <li><b>Wizard restructurat pe documente</b>, cu blocare a răspunsurilor salvate pe reguli învechite</li>
-                <li><b>Detector de modificare substanțială</b> — scop declarat, context de deployment, scop geografic</li>
-                <li><b>SBOM</b> (Software Bill of Materials) generat automat + delta report la re-audit</li>
-                <li><b>Notificări in-app și webhook</b> (Slack/Teams) la assign, semnare, revocare</li>
-                <li><b>Roluri și permisiuni multi-organizație</b>, cu audit log complet</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Fișă tehnică</h4>
-              <div class="metabox">
-                <dl>
-                  <div class="row"><dt>Backend</dt><dd>Node.js · Express</dd></div>
-                  <div class="row"><dt>Autentificare</dt><dd>JWT + bcrypt + TOTP (2FA)</dd></div>
-                  <div class="row"><dt>Bază de date</dt><dd>SQLite (better-sqlite3)</dd></div>
-                  <div class="row"><dt>Stocare/backup</dt><dd>AWS S3 + Cloudflare R2 (fire-and-forget)</dd></div>
-                  <div class="row"><dt>Documente</dt><dd>PDFKit · QR · timestamping RFC 3161</dd></div>
-                  <div class="row"><dt>Suită de teste</dt><dd>48/48 — server real, nu doar unit</dd></div>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="chips">
-            <span class="chip">Node.js · Express</span>
-            <span class="chip">AWS S3 / Cloudflare R2</span>
-            <span class="chip">JWT + TOTP 2FA</span>
-            <span class="chip">Generare PDF</span>
-            <span class="chip">RFC 3161 Timestamping</span>
-            <span class="chip">Docker</span>
-          </div>
+      </a>
+      <a class="rlink" href="#mx-004">
+        <div class="registry-row">
+          <div class="rr-no">MX-004</div>
+          <div class="rr-name">Deal Hunter RO</div>
+          <div class="rr-domain">Tracking prețuri mobil</div>
+          <div><span class="dstatus dev">În dezvoltare</span></div>
         </div>
-      </article>
-
-      <!-- Guanina / Piata de Flori -->
-      <article class="proj c-good" itemscope itemtype="https://schema.org/SoftwareApplication">
-        <meta itemprop="applicationCategory" content="ShoppingApplication">
-        <div class="head">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"/><circle cx="7.5" cy="12" r="2.6"/><circle cx="16.5" cy="12" r="2.6"/><circle cx="12" cy="16" r="2.2"/><path d="M12 18.5V21"/></svg>
-          </div>
-          <div>
-            <div class="titlerow">
-              <h3 itemprop="name">Guanina</h3>
-              <span class="status live"><span class="dot"></span>Live · tranzacții reale</span>
-            </div>
-            <p class="tagline">Marketplace de flori — cunoscută și ca „Piața de Flori"</p>
-          </div>
-          <a class="golink" href="https://piatadeflori.moxohubs.com" itemprop="url">
-            <span class="go">piatadeflori.moxohubs.com
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </a>
-        </div>
-        <div class="body">
-          <p class="desc" itemprop="description">Marketplace multi-vânzător unde florăriile din piețe listează buchete cu stoc limitat, clienții plătesc online prin Stripe Connect și ridică produsul fizic pe baza unui bilet QR.</p>
-
-          <div class="narrative">
-            <div class="story">
-              <div class="story-tag bad">Provocarea</div>
-              <p>Florăriile mici din piețe nu au timp sau echipă IT ca să-și construiască un magazin online — vând ce au azi, stocul se schimbă zilnic, iar o comandă neonorată la timp strică relația cu clientul. În același timp, orice platformă comună pentru mai mulți vânzători riscă să amestece date: o florărie nu trebuie să vadă niciodată comenzile alteia.</p>
-            </div>
-            <div class="story">
-              <div class="story-tag good">Soluția</div>
-              <p>Guanina dă fiecărei florării propriul dashboard, izolat complet de ceilalți vânzători, cu produse care expiră automat la sfârșitul stocului. Clientul plătește card direct către vânzător prin Stripe Connect (platforma reține automat comisionul), primește un bilet QR și ridică personal produsul — fără cont, fără fricțiune. Pentru cereri speciale, clientul descrie ce vrea și florarii din apropiere licitează pentru comandă.</p>
-            </div>
-          </div>
-
-          <div class="flow">
-            <div class="flow-step"><span class="fn">1</span><b>Listare</b><span>vânzătorul postează buchete cu stoc limitat</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">2</span><b>Plată</b><span>client → Stripe Connect, comision reținut automat</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">3</span><b>Bilet QR</b><span>generat instant, fără cont necesar</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">4</span><b>Ridicare</b><span>scanare la stand, comandă finalizată</span></div>
-          </div>
-
-          <div class="detailgrid">
-            <div>
-              <h4>Funcționalități cheie</h4>
-              <ul class="feats">
-                <li><b>Checkout cu Stripe Connect</b> — plată directă către vânzător, comision automat prin <code>application_fee_amount</code></li>
-                <li><b>Bilet QR de ridicare</b> — fără cont de client necesar, checkout tip „guest"</li>
-                <li><b>Flux „cerere de ofertă"</b> — valuri de notificare către vânzătorii din apropiere, licitație pentru comandă</li>
-                <li><b>Politică de anulare ancorată pe plată</b> — 30 min pentru catalog, 3 min pentru comenzi la cerere, cu reținere reală a taxei Stripe</li>
-                <li><b>Livrare la domiciliu opțională per vânzător</b>, fără comision de platformă pe taxa de livrare</li>
-                <li><b>Panou admin complet</b> — comenzi, vânzători, decontări, echipă, sondaj de piață</li>
-                <li><b>Notificări push web (VAPID)</b> + email tranzacțional (Resend), degradare silențioasă fără cheie</li>
-                <li><b>SEO/AIO nativ</b> — JSON-LD Organization/WebSite/FAQPage, sitemap dinamic, <code>llms.txt</code></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Fișă tehnică</h4>
-              <div class="metabox">
-                <dl>
-                  <div class="row"><dt>Framework</dt><dd>Next.js 15 · App Router · Edge</dd></div>
-                  <div class="row"><dt>Bază de date</dt><dd>Cloudflare D1 (SQLite)</dd></div>
-                  <div class="row"><dt>Fișiere/cache</dt><dd>R2 (imagini) + KV (rate-limit, OTP)</dd></div>
-                  <div class="row"><dt>Plăți</dt><dd>Stripe + Stripe Connect</dd></div>
-                  <div class="row"><dt>Autentificare</dt><dd>JWT propriu (jose), cookie httpOnly</dd></div>
-                  <div class="row"><dt>Migrări</dt><dd>47 fișiere SQL incrementale</dd></div>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="chips">
-            <span class="chip">Next.js 15 · Edge Runtime</span>
-            <span class="chip">Cloudflare D1 / KV / R2</span>
-            <span class="chip">Stripe Connect</span>
-            <span class="chip">Web Push (VAPID)</span>
-            <span class="chip">JSON-LD / llms.txt</span>
-            <span class="chip">CI/CD GitHub Actions</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Deal Hunter RO -->
-      <article class="proj c-violet" itemscope itemtype="https://schema.org/SoftwareApplication">
-        <meta itemprop="applicationCategory" content="ShoppingApplication">
-        <meta itemprop="operatingSystem" content="iOS, Android">
-        <div class="head">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .6 1.4l8.5 8.5a2 2 0 0 0 2.8 0l6.5-6.5a2 2 0 0 0 0-2.8L13 3.6a2 2 0 0 0-1.4-.6Z"/><circle cx="8" cy="8" r="1.4"/></svg>
-          </div>
-          <div>
-            <div class="titlerow">
-              <h3 itemprop="name">Deal Hunter RO</h3>
-              <span class="status dev">În dezvoltare</span>
-            </div>
-            <p class="tagline">Urmărire automată de prețuri pentru magazinele din România</p>
-          </div>
-        </div>
-        <div class="body">
-          <p class="desc" itemprop="description">Aplicație mobilă (iOS + Android) care urmărește automat prețurile din magazinele online românești și trimite notificări push exact când prețul scade sub pragul setat de utilizator.</p>
-
-          <div class="narrative">
-            <div class="story">
-              <div class="story-tag bad">Provocarea</div>
-              <p>Prețurile din magazinele online românești (eMAG, FashionDays, Notino, Altex) fluctuează constant, dar cumpărătorii nu au timp să verifice manual, zilnic, dacă produsul dorit a scăzut sub prețul pe care sunt dispuși să-l plătească. Rezultatul: fie cumpără prea devreme, la preț plin, fie ratează complet reducerea.</p>
-            </div>
-            <div class="story">
-              <div class="story-tag good">Soluția</div>
-              <p>Utilizatorul setează o singură dată pragul de preț dorit pentru un produs, iar aplicația face restul: ingerează automat feed-urile magazinelor partenere, compară prețul nou cu cel salvat și trimite o notificare push exact în momentul în care pragul e atins. Nicio tranzacție nu are loc în aplicație — clientul e redirecționat direct la magazinul oficial, prin browser in-app, ca să păstreze atribuirea comisionului de afiliere care susține gratuitatea aplicației.</p>
-            </div>
-          </div>
-
-          <div class="flow">
-            <div class="flow-step"><span class="fn">1</span><b>Alertă setată</b><span>utilizatorul alege produsul și pragul de preț</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">2</span><b>Ingestie feed</b><span>cron/Edge Functions parsează prețurile zilnic</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">3</span><b>Comparare</b><span>preț nou vs. preț salvat, per produs</span></div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step"><span class="fn">4</span><b>Notificare push</b><span>FCM, exact la scăderea sub prag</span></div>
-          </div>
-
-          <div class="detailgrid">
-            <div>
-              <h4>Funcționalități cheie</h4>
-              <ul class="feats">
-                <li><b>Ingestie automată de feed-uri</b> XML/CSV/API de la afiliați, prin cron jobs / Edge Functions</li>
-                <li><b>Motor de notificări</b> — compară prețul nou cu cel salvat, declanșează alertă push (FCM) la scădere sub prag</li>
-                <li><b>Autentificare fără parolă</b> — Apple Sign In / Google Sign In</li>
-                <li><b>Istoric complet de preț</b> per produs, ca „trust builder" pentru utilizator</li>
-                <li><b>Browser in-app obligatoriu</b> la redirecționare — Custom Tabs (Android) / SFSafariViewController (iOS)</li>
-                <li><b>UI minimal dark/light</b>, cu accent unic de culoare pentru prețul redus</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Fișă tehnică</h4>
-              <div class="metabox">
-                <dl>
-                  <div class="row"><dt>Framework mobil</dt><dd>Flutter</dd></div>
-                  <div class="row"><dt>Backend</dt><dd>Supabase (PostgreSQL)</dd></div>
-                  <div class="row"><dt>Autentificare</dt><dd>Supabase Auth (OAuth)</dd></div>
-                  <div class="row"><dt>Notificări</dt><dd>Firebase Cloud Messaging</dd></div>
-                  <div class="row"><dt>Model de venit</dt><dd>Comisioane de afiliere</dd></div>
-                  <div class="row"><dt>Chei</dt><dd>UUID pe toate relațiile</dd></div>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="chips">
-            <span class="chip">Flutter</span>
-            <span class="chip">Supabase / PostgreSQL</span>
-            <span class="chip">Firebase Cloud Messaging</span>
-            <span class="chip">iOS + Android</span>
-          </div>
-        </div>
-      </article>
-
+      </a>
     </div>
   </section>
 
-  <section class="section" id="capabilitati" aria-labelledby="cap-h">
-    <div class="shead">
-      <div class="k">Cum lucrăm</div>
-      <h2 id="cap-h">Principii, nu doar tehnologii</h2>
-      <p>Stack-ul se schimbă de la un proiect la altul. Ce rămâne constant e disciplina cu care construim — verificabilă direct în codul din fiecare produs de mai sus.</p>
-    </div>
-    <div class="caps">
-      <div class="cap">
-        <div class="n">01</div>
-        <h4>Date izolate, pe bune</h4>
-        <p>Multi-tenant înseamnă izolare verificată la nivel de schemă și query, nu doar de interfață — un vânzător nu vede niciodată datele altuia (verificat printr-un audit de securitate dedicat în Guanina).</p>
+  <!-- §1 DESPRE -->
+  <section class="doc-section tight-top wrap" id="despre" aria-labelledby="despre-h">
+    <div class="sec-head"><span class="sec-num">§1</span><h2 id="despre-h">Despre MOXO</h2></div>
+    <p class="sec-dek">Un studio mic, fără portofoliu tematic — pentru că problema reală nu e niciodată aceeași de două ori.</p>
+
+    <p style="font-size:15.5px; line-height:1.75; color:var(--ink-soft); max-width:70ch; margin:0 0 22px;">Majoritatea studiourilor de dezvoltare se specializează pe un tip de produs — aplicații mobile, platforme SaaS, e-commerce — și repetă același șablon cu variații de brand. Noi am ales altceva: patru produse, patru domenii complet diferite (siguranță rutieră, conformitate reglementară europeană, comerț local, prețuri de retail), fiecare cu propria arhitectură, gândită de la zero pentru problema respectivă.</p>
+
+    <p style="font-size:15.5px; line-height:1.75; color:var(--ink-soft); max-width:70ch; margin:0 0 22px;">Ce rămâne constant nu e tehnologia — e <strong style="color:var(--ink); font-weight:600;">disciplina de verificare</strong>. Un dosar Sentinel nu e considerat complet până nu trece prin teste end-to-end cu server și bază de date reale. O migrare de schemă în SmartDrive nu e livrată până nu e testată explicit pe fiecare versiune veche suportată, nu doar pe ultima. Un audit de securitate în Guanina a găsit și reparat probleme reale înainte de lansare — documentate, nu ascunse. Asta înseamnă „standard de dovezi": nu promitem că funcționează, arătăm de ce știm sigur că funcționează.</p>
+  </section>
+
+  <!-- §2 STANDARD -->
+  <section class="doc-section wrap" id="standard" aria-labelledby="standard-h">
+    <div class="sec-head"><span class="sec-num">§2</span><h2 id="standard-h">Standardul de inginerie</h2></div>
+    <p class="sec-dek">Șase clauze pe care le aplicăm identic, indiferent de stack sau de client — verificabile direct în codul produselor din §3.</p>
+
+    <div class="clauses">
+      <div class="clause">
+        <div class="clause-id">§2.1</div>
+        <div>
+          <h3>Izolare de date verificată, nu presupusă</h3>
+          <p>Într-un sistem multi-tenant, izolarea se verifică la nivel de schemă și interogare, nu doar de interfață. În <b>Guanina</b>, un audit de securitate dedicat a confirmat explicit că un vânzător nu poate accesa comenzile altuia — nu a fost doar o presupunere de design.</p>
+        </div>
       </div>
-      <div class="cap">
-        <div class="n">02</div>
-        <h4>Migrări care nu strică producția</h4>
-        <p>Orice schimbare de schemă e testată explicit pe versiuni vechi reale, nu doar pe ultima — SmartDrive are un istoric documentat de bug-uri de migrare reparate, nu ipotetice.</p>
+      <div class="clause">
+        <div class="clause-id">§2.2</div>
+        <div>
+          <h3>Migrări testate pe versiuni reale, nu pe ultima</h3>
+          <p>Orice schimbare de schemă e testată explicit pe fiecare versiune majoră suportată. <b>SmartDrive</b> are un istoric documentat de bug-uri de migrare găsite și reparate în producție — regula există pentru că am plătit deja costul lipsei ei o dată.</p>
+        </div>
       </div>
-      <div class="cap">
-        <div class="n">03</div>
-        <h4>Infrastructură care nu depinde de noi</h4>
-        <p>Cod, hosting și baze de date în conturile clientului de la prima zi. Fără lock-in pe backend propriu, fără dependență de o singură persoană.</p>
+      <div class="clause">
+        <div class="clause-id">§2.3</div>
+        <div>
+          <h3>Infrastructura rămâne a clientului</h3>
+          <p>Cod, hosting, bază de date și chei de acces în conturile clientului de la prima zi. Fără backend proprietar, fără dependență de o singură persoană sau de o platformă no-code.</p>
+        </div>
       </div>
-      <div class="cap">
-        <div class="n">04</div>
-        <h4>Testat înainte de „gata"</h4>
-        <p>Nicio funcționalitate nu e raportată completă fără suita de teste rulată real — Sentinel rulează teste end-to-end cu server și bază de date reale, nu doar unit tests izolate.</p>
+      <div class="clause">
+        <div class="clause-id">§2.4</div>
+        <div>
+          <h3>„Gata" înseamnă testat, nu scris</h3>
+          <p>Nicio funcționalitate nu e raportată completă fără suita de teste rulată. <b>Sentinel</b> rulează teste end-to-end cu server și bază de date reale — nu doar teste unitare izolate care confirmă intenția codului, nu comportamentul lui real.</p>
+        </div>
       </div>
-      <div class="cap">
-        <div class="n">05</div>
-        <h4>Plăți și securitate reale</h4>
-        <p>Integrări de plăți în producție (Stripe Connect, Lemon Squeezy), audit trail pe acțiuni sensibile, autentificare cu 2FA acolo unde datele o cer.</p>
+      <div class="clause">
+        <div class="clause-id">§2.5</div>
+        <div>
+          <h3>Bani și identitate reale cer protecție reală</h3>
+          <p>Plăți în producție (Stripe Connect, Lemon Squeezy), audit trail pe acțiuni sensibile, 2FA acolo unde datele o cer. <b>Sentinel</b> sigilează fiecare dosar cu timestamp RFC 3161 emis de o autoritate publică independentă — nu simulat, verificat cu OpenSSL împotriva unui TSA real.</p>
+        </div>
       </div>
-      <div class="cap">
-        <div class="n">06</div>
-        <h4>Construim rapid, cu unelte AI moderne</h4>
-        <p>Folosim instrumente de dezvoltare asistată de AI ca parte a fluxului zilnic — dar verificăm activ fiecare presupunere, nu confirmăm pasiv ce generează.</p>
+      <div class="clause">
+        <div class="clause-id">§2.6</div>
+        <div>
+          <h3>Unelte AI moderne, verificare umană activă</h3>
+          <p>Folosim asistenți de dezvoltare AI zilnic, dar fiecare presupunere generată e verificată explicit — nu confirmată pasiv. Raportăm onest ce nu am verificat încă, în loc să presupunem că „arată bine".</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="faq" aria-labelledby="faq-h">
-    <div class="shead">
-      <div class="k">Întrebări frecvente</div>
-      <h2 id="faq-h">Ce vrei să știi</h2>
-    </div>
-    <div class="faq">
-      <details>
-        <summary>Ce este MOXO Technology?</summary>
-        <p>MOXO Technology este un studio independent de dezvoltare software care proiectează și construiește aplicații full-stack complete — de la copiloți mobili pentru șoferi de rideshare, până la platforme de conformitate reglementară și marketplace-uri B2C cu plăți integrate.</p>
-      </details>
-      <details>
-        <summary>Ce este SmartDrive?</summary>
-        <p>SmartDrive este o aplicație Android nativă care funcționează ca un copilot vocal pentru șoferii de rideshare (Bolt, Uber). Calculează în timp real câștigul net al fiecărei curse, după combustibil și comision, și anunță vocal dacă merită acceptată — fără să interfereze cu aplicația de rideshare.</p>
-      </details>
-      <details>
-        <summary>Ce este Sentinel și ce reglementare acoperă?</summary>
-        <p>Sentinel este o platformă de conformitate pentru EU AI Act (Regulation (EU) 2024/1689), regulamentul european privind inteligența artificială. Analizează codul sursă, configurațiile și documentația sistemelor AI pentru a genera dovezi de conformitate mapate direct pe articolele regulamentului, inclusiv dosare pregătite pentru evaluare Notified Body.</p>
-      </details>
-      <details>
-        <summary>Ce este Guanina (Piața de Flori)?</summary>
-        <p>Guanina este un marketplace unde florăriile își listează buchetele cu stoc limitat, iar clienții cumpără online cu plată card prin Stripe și ridică produsul fizic de la stand pe baza unui bilet QR. Fiecare florărie vede și gestionează exclusiv propriile comenzi.</p>
-      </details>
-      <details>
-        <summary>Ce este Deal Hunter RO?</summary>
-        <p>Deal Hunter RO este o aplicație mobilă pentru iOS și Android care urmărește automat prețurile produselor din magazinele online românești (eMAG, FashionDays, Notino, Altex) și trimite notificări push când prețul scade sub pragul setat de utilizator.</p>
-      </details>
-    </div>
-  </section>
+  <!-- §3 REGISTRU -->
+  <section class="doc-section wrap wide" id="registru" aria-labelledby="registru-h">
+    <div class="sec-head"><span class="sec-num">§3</span><h2 id="registru-h">Registrul de produse</h2></div>
+    <p class="sec-dek">Patru dosare complete — ce problemă rezolvă fiecare, cum funcționează tehnic și ce anume dovedește că e construit corect.</p>
 
-  <section class="section" id="contact" aria-labelledby="contact-h">
-    <div class="cta-band">
-      <h2 id="contact-h">Ai un produs de construit?</h2>
-      <p>De la MVP-uri până la platforme cu reguli de conformitate complexe — hai să vorbim despre ce vrei să construiești.</p>
-      <div class="hero-cta">
-        <a class="btn primary" href="mailto:office@moxohubs.com">Scrie-ne
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    <!-- MX-001 SmartDrive -->
+    <article class="dossier" id="mx-001" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <meta itemprop="applicationCategory" content="TravelApplication">
+      <meta itemprop="operatingSystem" content="Android">
+      <div class="dfile-meta"><span>DOSAR</span><b>MX-001</b><span>·</span><b>Android nativ</b><span>·</span><b>Rideshare</b></div>
+      <div class="dfile-head">
+        <div>
+          <div class="dtitlerow"><h3 itemprop="name">SmartDrive</h3><span class="dstatus live"><span class="dot"></span>Live · clienți reali</span></div>
+          <p class="dtagline">Copilotul vocal pentru șoferii de rideshare</p>
+        </div>
+        <a class="dlink" href="https://smartdrive.moxohubs.com" itemprop="url">smartdrive.moxohubs.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
         </a>
+      </div>
+
+      <p class="dlede" itemprop="description">Aplicație Android nativă care calculează în timp real câștigul net al fiecărei curse Bolt/Uber și îl anunță vocal — ca șoferul să decidă fără să ridice privirea de pe drum.</p>
+
+      <div class="evidence">
+        <div>
+          <div class="ev-label"><span class="m"></span>Situația</div>
+          <p>Un șofer vede doar prețul brut al unei curse — nu și cât rămâne curat după combustibil, uzură și comisionul platformei. Ca să afle dacă merită, calculează mental, sub presiune, în timp ce conduce. Cursele proaste se acceptă din grabă; verificarea ecranului la volan e un risc real.</p>
+        </div>
+        <div class="resp">
+          <div class="ev-label"><span class="m"></span>Răspunsul tehnic</div>
+          <p>SmartDrive rulează pasiv, alături de aplicația de rideshare, fără să o modifice sau să-i acceseze contul — zero risc de suspendare. Fiecare ofertă e evaluată automat pe baza consumului real al mașinii și e șoptită vocal: „Cursă 30 RON, câștig net 42 RON/oră.”</p>
+        </div>
+      </div>
+
+      <div class="schema">
+        <div class="schema-label">Traseul unei decizii</div>
+        <div class="schema-row">
+          <div class="snode"><span class="snode-tick">01</span><div class="snode-box"><b>Ofertă nouă</b><span>apare în aplicația de rideshare</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">02</span><div class="snode-box"><b>Citire &amp; calcul</b><span>scade combustibil, uzură, comision</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">03</span><div class="snode-box"><b>Anunț vocal</b><span>câștig net pe oră, în cască/boxă</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">04</span><div class="snode-box"><b>Decizie</b><span>accept/refuz, ochii pe drum</span></div></div>
+        </div>
+      </div>
+
+      <div class="dgrid">
+        <div>
+          <h4>Jurnal de capabilități</h4>
+          <ul class="caplog">
+            <li><b>Mod complet vocal</b> — fără afișaj, zero distragere de la drum</li>
+            <li><b>Quick Mute</b> — un tap silențiază orice anunț la urcarea unui pasager</li>
+            <li><b>Obiectiv zilnic de câștig</b> — urmărire live față de țintă, confirmare sonoră</li>
+            <li><b>Zone evitate</b> — avertizare vocală pe trasee marcate nedorite</li>
+            <li><b>Istoric financiar</b> — bilanț zilnic/săptămânal/lunar, ore profitabile</li>
+            <li><b>Program de recomandare</b> — cod unic, recompensă la abonament activ</li>
+            <li><b>Migrări testate</b> explicit pe fiecare versiune majoră suportată</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Fișă tehnică</h4>
+          <dl class="specsheet">
+            <div class="spec-row"><dt>Platformă</dt><dd itemprop="operatingSystem">Android · Java</dd></div>
+            <div class="spec-row"><dt>Backend</dt><dd>Supabase</dd></div>
+            <div class="spec-row"><dt>Bază locală</dt><dd>SQLite</dd></div>
+            <div class="spec-row"><dt>Abonament</dt><dd>Lemon Squeezy · RON</dd></div>
+            <div class="spec-row"><dt>Distribuție</dt><dd>APK direct</dd></div>
+            <div class="spec-row"><dt>Testare</dt><dd>Robolectric</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="dtags">
+        <span class="dtag">Android · Java</span><span class="dtag">Supabase</span><span class="dtag">OCR local</span><span class="dtag">SQLite</span><span class="dtag">Lemon Squeezy</span>
+      </div>
+    </article>
+
+    <!-- MX-002 Sentinel -->
+    <article class="dossier" id="mx-002" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <meta itemprop="applicationCategory" content="BusinessApplication">
+      <div class="dfile-meta"><span>DOSAR</span><b>MX-002</b><span>·</span><b>Node.js</b><span>·</span><b>RegTech</b></div>
+      <div class="dfile-head">
+        <div>
+          <div class="dtitlerow"><h3 itemprop="name">Sentinel</h3><span class="dstatus dev">Pre-lansare · testat end-to-end</span></div>
+          <p class="dtagline">"Building Trust Through Evidence" — conformitate EU AI Act</p>
+        </div>
+        <a class="dlink" href="https://gettingsentinel.com" itemprop="url">gettingsentinel.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <p class="dlede" itemprop="description">Platformă de evaluare a conformității orientată pe dovezi, pentru furnizorii de sisteme AI care trebuie să demonstreze conformitatea cu Regulation (EU) 2024/1689.</p>
+
+      <div class="evidence">
+        <div>
+          <div class="ev-label"><span class="m"></span>Situația</div>
+          <p>EU AI Act cere furnizorilor de sisteme AI cu risc ridicat să demonstreze conformitatea articol-cu-articol, sub amenzi de până la 30M€ sau 6% din cifra de afaceri globală. Demonstrarea se face de obicei manual — documente Word, fără legătură verificabilă cu codul real.</p>
+        </div>
+        <div class="resp">
+          <div class="ev-label"><span class="m"></span>Răspunsul tehnic</div>
+          <p>Un pipeline de 18 faze analizează codul, configurațiile și documentația, extrage dovezi concrete și le mapează pe articolele regulamentului. Fiecare dosar e sigilat cu timestamp RFC 3161, iar orice modificare ulterioară a conținutului citat e detectată automat prin hash.</p>
+        </div>
+      </div>
+
+      <div class="schema">
+        <div class="schema-label">Pipeline de conformitate</div>
+        <div class="schema-row">
+          <div class="snode"><span class="snode-tick">01</span><div class="snode-box"><b>Analiză de cod</b><span>18 faze, pe sursă/config/docs</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">02</span><div class="snode-box"><b>Mapare pe articole</b><span>dovezi legate de regulament</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">03</span><div class="snode-box"><b>Wizard &amp; scoring</b><span>completare asistată, risc calculat</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">04</span><div class="snode-box"><b>Dosar sigilat</b><span>PDF + SBOM, RFC 3161</span></div></div>
+        </div>
+      </div>
+
+      <div class="dgrid">
+        <div>
+          <h4>Jurnal de capabilități</h4>
+          <ul class="caplog">
+            <li><b>Timestamp RFC 3161</b> — DigiCert cu fallback FreeTSA, verificat cu OpenSSL</li>
+            <li><b>Hash pe conținut real</b> — detectează drift de conținut, nu doar de locație</li>
+            <li><b>Blocare pe reguli învechite</b> — răspunsuri salvate sub o versiune veche redevin „deschise"</li>
+            <li><b>Detector de modificare substanțială</b> — scop declarat, context, arie geografică</li>
+            <li><b>SBOM automat</b> + delta report la re-audit</li>
+            <li><b>Notificări webhook</b> (Slack/Teams) la assign, semnare, revocare</li>
+            <li><b>Suită de teste 48/48</b> — server real, nu doar unit</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Fișă tehnică</h4>
+          <dl class="specsheet">
+            <div class="spec-row"><dt>Backend</dt><dd>Node.js · Express</dd></div>
+            <div class="spec-row"><dt>Autentificare</dt><dd>JWT + TOTP 2FA</dd></div>
+            <div class="spec-row"><dt>Bază de date</dt><dd>SQLite</dd></div>
+            <div class="spec-row"><dt>Stocare</dt><dd>AWS S3 / R2</dd></div>
+            <div class="spec-row"><dt>Documente</dt><dd>PDFKit · QR</dd></div>
+            <div class="spec-row"><dt>Deploy</dt><dd>Docker</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="dtags">
+        <span class="dtag">Node.js · Express</span><span class="dtag">AWS S3 / R2</span><span class="dtag">JWT + TOTP</span><span class="dtag">RFC 3161</span><span class="dtag">Docker</span>
+      </div>
+    </article>
+
+    <!-- MX-003 Guanina -->
+    <article class="dossier" id="mx-003" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <meta itemprop="applicationCategory" content="ShoppingApplication">
+      <div class="dfile-meta"><span>DOSAR</span><b>MX-003</b><span>·</span><b>Next.js Edge</b><span>·</span><b>Marketplace</b></div>
+      <div class="dfile-head">
+        <div>
+          <div class="dtitlerow"><h3 itemprop="name">Guanina</h3><span class="dstatus live"><span class="dot"></span>Live · tranzacții reale</span></div>
+          <p class="dtagline">Marketplace de flori — cunoscută și ca „Piața de Flori"</p>
+        </div>
+        <a class="dlink" href="https://piatadeflori.moxohubs.com" itemprop="url">piatadeflori.moxohubs.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <p class="dlede" itemprop="description">Marketplace multi-vânzător: florăriile din piețe listează buchete cu stoc limitat, clienții plătesc online prin Stripe Connect și ridică produsul pe bază de bilet QR.</p>
+
+      <div class="evidence">
+        <div>
+          <div class="ev-label"><span class="m"></span>Situația</div>
+          <p>Florăriile mici nu au timp sau echipă IT pentru un magazin online propriu — stocul se schimbă zilnic, o comandă neonorată strică relația cu clientul. O platformă comună pentru mai mulți vânzători riscă să amestece date: o florărie nu trebuie să vadă comenzile alteia.</p>
+        </div>
+        <div class="resp">
+          <div class="ev-label"><span class="m"></span>Răspunsul tehnic</div>
+          <p>Fiecare florărie primește un dashboard izolat complet de ceilalți vânzători. Clientul plătește direct către vânzător prin Stripe Connect (comisionul e reținut automat), primește un bilet QR și ridică personal produsul — fără cont, fără fricțiune.</p>
+        </div>
+      </div>
+
+      <div class="schema">
+        <div class="schema-label">Fluxul unei comenzi</div>
+        <div class="schema-row">
+          <div class="snode"><span class="snode-tick">01</span><div class="snode-box"><b>Listare</b><span>buchet cu stoc limitat</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">02</span><div class="snode-box"><b>Plată</b><span>Stripe Connect, comision automat</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">03</span><div class="snode-box"><b>Bilet QR</b><span>generat instant, fără cont</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">04</span><div class="snode-box"><b>Ridicare</b><span>scanare la stand</span></div></div>
+        </div>
+      </div>
+
+      <div class="dgrid">
+        <div>
+          <h4>Jurnal de capabilități</h4>
+          <ul class="caplog">
+            <li><b>Cerere de ofertă</b> — valuri de notificare către vânzătorii apropiați, licitație</li>
+            <li><b>Anulare ancorată pe plată</b> — 30 min catalog, 3 min comenzi la cerere</li>
+            <li><b>Livrare opțională per vânzător</b>, fără comision de platformă pe taxa de livrare</li>
+            <li><b>Panou admin complet</b> — comenzi, vânzători, decontări, sondaj de piață</li>
+            <li><b>Push web (VAPID)</b> + email tranzacțional, degradare silențioasă fără cheie</li>
+            <li><b>SEO/AIO nativ</b> — JSON-LD, sitemap dinamic, <code>llms.txt</code></li>
+            <li><b>Audit de securitate</b> rulat înainte de lansare, probleme reparate documentat</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Fișă tehnică</h4>
+          <dl class="specsheet">
+            <div class="spec-row"><dt>Framework</dt><dd>Next.js 15 Edge</dd></div>
+            <div class="spec-row"><dt>Bază de date</dt><dd>Cloudflare D1</dd></div>
+            <div class="spec-row"><dt>Fișiere</dt><dd>R2 + KV</dd></div>
+            <div class="spec-row"><dt>Plăți</dt><dd>Stripe Connect</dd></div>
+            <div class="spec-row"><dt>Autentificare</dt><dd>JWT propriu</dd></div>
+            <div class="spec-row"><dt>Migrări</dt><dd>47 fișiere SQL</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="dtags">
+        <span class="dtag">Next.js 15 · Edge</span><span class="dtag">Cloudflare D1/KV/R2</span><span class="dtag">Stripe Connect</span><span class="dtag">Web Push</span><span class="dtag">CI/CD</span>
+      </div>
+    </article>
+
+    <!-- MX-004 Deal Hunter RO -->
+    <article class="dossier" id="mx-004" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <meta itemprop="applicationCategory" content="ShoppingApplication">
+      <meta itemprop="operatingSystem" content="iOS, Android">
+      <div class="dfile-meta"><span>DOSAR</span><b>MX-004</b><span>·</span><b>Flutter</b><span>·</span><b>E-commerce afiliat</b></div>
+      <div class="dfile-head">
+        <div>
+          <div class="dtitlerow"><h3 itemprop="name">Deal Hunter RO</h3><span class="dstatus dev">În dezvoltare</span></div>
+          <p class="dtagline">Urmărire automată de prețuri pentru magazinele din România</p>
+        </div>
+      </div>
+
+      <p class="dlede" itemprop="description">Aplicație mobilă (iOS + Android) care urmărește automat prețurile din magazinele online românești și notifică exact când prețul scade sub pragul setat.</p>
+
+      <div class="evidence">
+        <div>
+          <div class="ev-label"><span class="m"></span>Situația</div>
+          <p>Prețurile din magazinele românești (eMAG, FashionDays, Notino, Altex) fluctuează constant, dar cumpărătorii nu au timp să verifice manual, zilnic. Rezultatul: fie cumpără prea devreme la preț plin, fie ratează reducerea.</p>
+        </div>
+        <div class="resp">
+          <div class="ev-label"><span class="m"></span>Răspunsul tehnic</div>
+          <p>Utilizatorul setează o singură dată pragul dorit; aplicația ingerează automat feed-urile magazinelor, compară prețul nou cu cel salvat și trimite o notificare push exact la momentul potrivit. Redirecționarea la magazin păstrează atribuirea comisionului de afiliere care susține gratuitatea aplicației.</p>
+        </div>
+      </div>
+
+      <div class="schema">
+        <div class="schema-label">Motorul de alertă</div>
+        <div class="schema-row">
+          <div class="snode"><span class="snode-tick">01</span><div class="snode-box"><b>Alertă setată</b><span>produs + prag de preț</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">02</span><div class="snode-box"><b>Ingestie feed</b><span>cron / Edge Functions, zilnic</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">03</span><div class="snode-box"><b>Comparare</b><span>preț nou vs. preț salvat</span></div></div>
+          <div class="sconn" aria-hidden="true"></div>
+          <div class="snode"><span class="snode-tick">04</span><div class="snode-box"><b>Notificare push</b><span>FCM, la scădere sub prag</span></div></div>
+        </div>
+      </div>
+
+      <div class="dgrid">
+        <div>
+          <h4>Jurnal de capabilități</h4>
+          <ul class="caplog">
+            <li><b>Autentificare fără parolă</b> — Apple Sign In / Google Sign In</li>
+            <li><b>Istoric complet de preț</b> per produs, ca „trust builder"</li>
+            <li><b>Browser in-app obligatoriu</b> — Custom Tabs / SFSafariViewController</li>
+            <li><b>Nicio tranzacție în aplicație</b> — redirecționare directă la magazinul oficial</li>
+            <li><b>UI minimal dark/light</b>, accent unic pentru prețul redus</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Fișă tehnică</h4>
+          <dl class="specsheet">
+            <div class="spec-row"><dt>Framework mobil</dt><dd>Flutter</dd></div>
+            <div class="spec-row"><dt>Backend</dt><dd>Supabase / PostgreSQL</dd></div>
+            <div class="spec-row"><dt>Autentificare</dt><dd>Supabase Auth</dd></div>
+            <div class="spec-row"><dt>Notificări</dt><dd>Firebase FCM</dd></div>
+            <div class="spec-row"><dt>Venit</dt><dd>Comisioane afiliere</dd></div>
+            <div class="spec-row"><dt>Chei</dt><dd>UUID</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="dtags">
+        <span class="dtag">Flutter</span><span class="dtag">Supabase / PostgreSQL</span><span class="dtag">Firebase FCM</span><span class="dtag">iOS + Android</span>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- §4 FAQ -->
+  <section class="doc-section wrap" id="faq" aria-labelledby="faq-h">
+    <div class="sec-head"><span class="sec-num">§4</span><h2 id="faq-h">Întrebări frecvente</h2></div>
+    <div class="faqlist">
+      <details>
+        <summary>Ce este MOXO Technology? <span class="qm">+</span></summary>
+        <p>MOXO Technology este un studio independent de dezvoltare software care proiectează și construiește aplicații full-stack complete — de la copiloți mobili pentru șoferi de rideshare, până la platforme de conformitate reglementară și marketplace-uri B2C cu plăți integrate. Fiecare produs e documentat ca un dosar tehnic, cu dovezi verificabile, nu doar promisiuni.</p>
+      </details>
+      <details>
+        <summary>Ce este SmartDrive? <span class="qm">+</span></summary>
+        <p>SmartDrive este o aplicație Android nativă care funcționează ca un copilot vocal pentru șoferii de rideshare (Bolt, Uber). Calculează în timp real câștigul net al fiecărei curse, după combustibil și comision, și anunță vocal dacă merită acceptată.</p>
+      </details>
+      <details>
+        <summary>Ce este Sentinel și ce reglementare acoperă? <span class="qm">+</span></summary>
+        <p>Sentinel este o platformă de conformitate pentru EU AI Act (Regulation (EU) 2024/1689), regulamentul european privind inteligența artificială. Analizează codul sursă, configurațiile și documentația sistemelor AI pentru a genera dovezi de conformitate mapate direct pe articolele regulamentului.</p>
+      </details>
+      <details>
+        <summary>Ce este Guanina (Piața de Flori)? <span class="qm">+</span></summary>
+        <p>Guanina este un marketplace unde florăriile își listează buchetele cu stoc limitat, iar clienții cumpără online cu plată card prin Stripe și ridică produsul fizic de la stand pe baza unui bilet QR.</p>
+      </details>
+      <details>
+        <summary>Ce este Deal Hunter RO? <span class="qm">+</span></summary>
+        <p>Deal Hunter RO este o aplicație mobilă pentru iOS și Android care urmărește automat prețurile produselor din magazinele online românești și trimite notificări push când prețul scade sub pragul setat de utilizator.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- §5 CONTACT -->
+  <section class="closing wrap" id="contact" aria-labelledby="contact-h">
+    <div class="closing-inner">
+      <h2 id="contact-h">Dosar deschis. Următorul e al tău.</h2>
+      <p>De la MVP-uri până la platforme cu reguli de conformitate complexe — hai să vorbim despre ce vrei să construiești și ce dovadă vrei să poți arăta la final.</p>
+      <a class="btn primary" href="mailto:office@moxohubs.com">Deschide o discuție
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <div class="sig">
+        <span>MOXO Technology</span>
+        <span>office@moxohubs.com</span>
+        <span>§ Dosar actualizat 2026</span>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="wrap">
+<footer class="docfoot wrap">
   <div class="footrow">
-    <address style="font-style:normal;"><p>© 2026 MOXO Technology. SmartDrive nu e afiliat cu Bolt sau Uber.</p></address>
+    <span>© 2026 MOXO Technology · SmartDrive nu e afiliat cu Bolt sau Uber</span>
     <div class="flinks">
-      <a href="#produse">Produse</a>
-      <a href="#capabilitati">Cum lucrăm</a>
+      <a href="#despre">Despre</a>
+      <a href="#registru">Registru</a>
       <a href="#faq">Întrebări</a>
       <a href="mailto:office@moxohubs.com">Contact</a>
     </div>
   </div>
 </footer>
-
-<script src="assets/main.js" defer></script>
 
 </body>
 </html>
