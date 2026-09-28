@@ -1,0 +1,20 @@
+# MOXO Technology
+
+> Studio independent de dezvoltare software. Construim aplicații full-stack complete — mobile native, platforme web edge/serverless, integrări de plăți și sisteme de conformitate reglementară — și le operăm în producție, nu doar le livrăm.
+
+Contact: office@moxohubs.com
+
+## Produse
+
+- [SmartDrive](https://smartdrive.moxohubs.com): Copilot vocal Android nativ pentru șoferii de rideshare (Bolt/Uber). Calculează în timp real profitul net al fiecărei curse (după combustibil și comision) și anunță vocal dacă merită acceptată. Live, cu clienți reali. Stack: Android/Java, Supabase, SQLite, Lemon Squeezy.
+- [Sentinel](https://gettingsentinel.com): Platformă de conformitate pentru EU AI Act (Regulation (EU) 2024/1689). Pipeline de analiză pe 18 faze care extrage dovezi din cod sursă și documentație, mapate pe articole din regulament, cu timestamping RFC 3161 și generare de dosare de conformitate pentru evaluare Notified Body. Pre-lansare, testat end-to-end (48/48 teste). Stack: Node.js/Express, AWS S3/Cloudflare R2, JWT+TOTP.
+- [Guanina](https://piatadeflori.moxohubs.com): Marketplace multi-vânzător pentru florării (cunoscut și ca „Piața de Flori"). Plată online prin Stripe Connect, ridicare fizică pe bază de bilet QR, flux de „cerere de ofertă" cu licitație între vânzători apropiați. Live, cu tranzacții reale. Stack: Next.js 15 Edge, Cloudflare D1/KV/R2, Stripe Connect.
+- Deal Hunter RO: Aplicație mobilă (iOS + Android, Flutter) de urmărire automată a prețurilor din magazinele online românești (eMAG, FashionDays, Notino, Altex), cu notificări push la scăderi de preț. Monetizare prin comisioane de afiliere, fără vânzare directă. În dezvoltare. Stack: Flutter, Supabase/PostgreSQL, Firebase Cloud Messaging.
+
+## Principii de inginerie
+
+- Izolare de date verificată la nivel de schemă/query în sistemele multi-tenant, nu doar la nivel de interfață.
+- Migrări de schemă testate explicit pe versiuni vechi reale înainte de lansare.
+- Cod, hosting și baze de date păstrate în conturile clientului — fără lock-in pe infrastructură proprie.
+- Nicio funcționalitate raportată „gata" fără suită de teste rulată real (inclusiv end-to-end cu server/DB reale).
+- Dezvoltare asistată de unelte AI moderne, cu verificare activă a fiecărei presupuneri generate.

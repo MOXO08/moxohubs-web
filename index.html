@@ -3,103 +3,531 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>moxohubs — aplicații</title>
-<meta name="description" content="Aplicațiile MOXO — unelte practice, construite pentru oameni care lucrează cu ele zilnic.">
+<title>MOXO Technology — studio de dezvoltare software: SmartDrive, Sentinel, Guanina, Deal Hunter RO</title>
+<meta name="description" content="MOXO Technology este un studio independent de dezvoltare software care construiește produse digitale complete: copilot vocal pentru șoferi rideshare (SmartDrive), platformă de conformitate EU AI Act (Sentinel), marketplace de flori (Guanina) și urmărire de prețuri (Deal Hunter RO).">
+<meta name="keywords" content="MOXO Technology, dezvoltator full-stack, SmartDrive, copilot Bolt Uber, Sentinel EU AI Act, platforma conformitate AI, Guanina piata de flori, Deal Hunter RO, marketplace flori, tracking preturi, Next.js Cloudflare, dezvoltare aplicatii mobile Romania">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="MOXO Technology">
+<link rel="canonical" href="https://moxohubs.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MOXO Technology">
+<meta property="og:title" content="MOXO Technology — produse digitale construite pentru munca de fiecare zi">
+<meta property="og:description" content="Studio independent de dezvoltare software: SmartDrive (copilot rideshare), Sentinel (conformitate EU AI Act), Guanina (marketplace flori), Deal Hunter RO (tracking prețuri).">
+<meta property="og:url" content="https://moxohubs.com/">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:image" content="https://moxohubs.com/og-cover.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MOXO Technology — produse digitale construite pentru munca de fiecare zi">
+<meta name="twitter:description" content="SmartDrive, Sentinel, Guanina, Deal Hunter RO — patru produse, un singur studio de inginerie.">
+<meta name="twitter:image" content="https://moxohubs.com/og-cover.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0A0912; --surface:#15141f; --surface-2:#1b1a28; --border:#28273a; --border-soft:#211f30;
-  --amber:#F0A93E; --amber-bright:#FFC670; --amber-dim:#6B4E22;
-  --good:#4FBE8A; --ink:#EEF1F7; --muted:#93A0B5; --faint:#565A6E;
-  --display:"Space Grotesk",-apple-system,BlinkMacSystemFont,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://moxohubs.com/#organization",
+  "name": "MOXO Technology",
+  "alternateName": "moxohubs",
+  "url": "https://moxohubs.com/",
+  "description": "Studio independent de dezvoltare software specializat în aplicații full-stack: mobile native, platforme web edge/serverless, integrări de plăți și sisteme de conformitate reglementară.",
+  "email": "office@moxohubs.com",
+  "knowsAbout": ["Full-stack development", "Android native development", "Next.js", "Cloudflare Workers", "EU AI Act compliance", "Marketplace platforms", "Payment integrations", "Flutter"],
+  "makesOffer": [
+    {"@type":"Offer","itemOffered":{"@type":"SoftwareApplication","name":"SmartDrive"}},
+    {"@type":"Offer","itemOffered":{"@type":"SoftwareApplication","name":"Sentinel"}},
+    {"@type":"Offer","itemOffered":{"@type":"SoftwareApplication","name":"Guanina"}},
+    {"@type":"Offer","itemOffered":{"@type":"SoftwareApplication","name":"Deal Hunter RO"}}
+  ]
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--body); -webkit-font-smoothing:antialiased;}
-body{min-height:100vh; background:
-  radial-gradient(1000px 560px at 85% -10%, rgba(240,169,62,.10), transparent 60%),
-  radial-gradient(800px 460px at -10% 100%, rgba(79,190,138,.06), transparent 55%),
-  var(--bg); display:flex; flex-direction:column;}
-a{color:inherit; text-decoration:none}
-.wrap{max-width:960px; margin:0 auto; padding:0 24px; width:100%;}
+</script>
 
-nav{padding:26px 0;}
-.brand{display:flex; align-items:center; gap:11px; font-family:var(--display); font-weight:800; font-size:18px;}
-.brand .mark{width:34px; height:34px; border-radius:10px;
-  background:linear-gradient(155deg, var(--amber-bright), var(--amber) 62%, var(--amber-dim));
-  display:flex; align-items:center; justify-content:center; font-weight:800; color:#0B0A0D; font-size:16px;}
-
-main{flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px 0 60px;}
-.eyebrow{font-size:11.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--amber); margin-bottom:14px;}
-h1{font-family:var(--display); font-size:clamp(28px,4.5vw,42px); font-weight:800; letter-spacing:-.02em;
-  line-height:1.1; margin:0 0 16px; max-width:16ch; text-wrap:balance;}
-.lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:52ch; margin:0 0 48px;}
-
-.grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
-.card{background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:26px;
-  display:flex; flex-direction:column; transition:border-color .15s ease, transform .15s ease;}
-a.card:hover{border-color:rgba(240,169,62,.4); transform:translateY(-2px);}
-.card .top{display:flex; align-items:center; gap:12px; margin-bottom:16px;}
-.card .icon{width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0;}
-.card.sd .icon{background:linear-gradient(155deg, var(--amber-bright), var(--amber) 62%, var(--amber-dim)); color:#0B0A0D;}
-.card h2{font-family:var(--display); font-size:16.5px; font-weight:700; margin:0;}
-.card .tag{font-family:var(--mono); font-size:10.5px; color:var(--good); background:rgba(79,190,138,.1);
-  border:1px solid rgba(79,190,138,.25); padding:3px 8px; border-radius:99px; display:inline-block; margin-top:3px;}
-.card p{font-size:13.5px; color:var(--muted); line-height:1.6; margin:0 0 18px; flex:1;}
-.card .go{font-size:13px; font-weight:700; color:var(--amber); display:flex; align-items:center; gap:6px;}
-.card .go svg{width:14px; height:14px; transition:transform .15s ease;}
-a.card:hover .go svg{transform:translateX(3px);}
-
-.card.empty{border-style:dashed; align-items:center; justify-content:center; text-align:center; color:var(--faint); min-height:180px;}
-.card.empty .icon{background:var(--surface-2); border:1px solid var(--border); color:var(--faint); margin-bottom:14px;}
-.card.empty h2{color:var(--faint); font-size:14px;}
-.card.empty p{color:var(--faint); font-size:12.5px; margin:6px 0 0;}
-
-footer{padding:28px 0; border-top:1px solid var(--border-soft);}
-footer p{color:var(--faint); font-size:12px; margin:0;}
-
-@media (max-width:640px){
-  .grid{grid-template-columns:1fr;}
-  nav{padding:20px 0;}
-  main{padding:24px 0 40px;}
+<!-- JSON-LD: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://moxohubs.com/#website",
+  "url": "https://moxohubs.com/",
+  "name": "MOXO Technology",
+  "publisher": {"@id": "https://moxohubs.com/#organization"},
+  "inLanguage": "ro-RO"
 }
-</style>
+</script>
+
+<!-- JSON-LD: ItemList of products -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Produsele MOXO Technology",
+  "itemListElement": [
+    {
+      "@type": "ListItem", "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "SmartDrive",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "Android",
+        "url": "https://smartdrive.moxohubs.com",
+        "description": "Copilot vocal pentru șoferii de rideshare (Bolt/Uber) care calculează în timp real profitul net al fiecărei curse și anunță vocal dacă merită acceptată.",
+        "offers": {"@type":"Offer","price":"49","priceCurrency":"RON","priceValidUntil":"2026-12-31"}
+      }
+    },
+    {
+      "@type": "ListItem", "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Sentinel",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://gettingsentinel.com",
+        "description": "Platformă de evaluare a conformității cu EU AI Act (Regulation (EU) 2024/1689), bazată pe dovezi extrase direct din codul sursă și documentația sistemelor de inteligență artificială."
+      }
+    },
+    {
+      "@type": "ListItem", "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Guanina",
+        "alternateName": "Piața de Flori",
+        "applicationCategory": "ShoppingApplication",
+        "operatingSystem": "Web",
+        "url": "https://piatadeflori.moxohubs.com",
+        "description": "Marketplace multi-vânzător pentru florării, cu plată online prin Stripe Connect și ridicare fizică pe bază de bilet QR."
+      }
+    },
+    {
+      "@type": "ListItem", "position": 4,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Deal Hunter RO",
+        "applicationCategory": "ShoppingApplication",
+        "operatingSystem": "iOS, Android",
+        "description": "Aplicație mobilă de urmărire automată a prețurilor din magazinele online românești, cu notificări push la scăderi de preț."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ce este MOXO Technology?",
+      "acceptedAnswer": {"@type":"Answer","text":"MOXO Technology este un studio independent de dezvoltare software care proiectează și construiește aplicații full-stack complete — de la copiloți mobili pentru șoferi de rideshare, până la platforme de conformitate reglementară și marketplace-uri B2C cu plăți integrate."}
+    },
+    {
+      "@type": "Question",
+      "name": "Ce este SmartDrive?",
+      "acceptedAnswer": {"@type":"Answer","text":"SmartDrive este o aplicație Android nativă care funcționează ca un copilot vocal pentru șoferii de rideshare (Bolt, Uber). Calculează în timp real câștigul net al fiecărei curse, după combustibil și comision, și anunță vocal dacă merită acceptată — fără să interfereze cu aplicația de rideshare."}
+    },
+    {
+      "@type": "Question",
+      "name": "Ce este Sentinel și ce reglementare acoperă?",
+      "acceptedAnswer": {"@type":"Answer","text":"Sentinel este o platformă de conformitate pentru EU AI Act (Regulation (EU) 2024/1689), regulamentul european privind inteligența artificială. Analizează codul sursă, configurațiile și documentația sistemelor AI pentru a genera dovezi de conformitate mapate direct pe articolele regulamentului, inclusiv dosare pregătite pentru evaluare Notified Body."}
+    },
+    {
+      "@type": "Question",
+      "name": "Ce este Guanina (Piața de Flori)?",
+      "acceptedAnswer": {"@type":"Answer","text":"Guanina este un marketplace unde florăriile își listează buchetele cu stoc limitat, iar clienții cumpără online cu plată card prin Stripe și ridică produsul fizic de la stand pe baza unui bilet QR. Fiecare florărie vede și gestionează exclusiv propriile comenzi."}
+    },
+    {
+      "@type": "Question",
+      "name": "Ce este Deal Hunter RO?",
+      "acceptedAnswer": {"@type":"Answer","text":"Deal Hunter RO este o aplicație mobilă pentru iOS și Android care urmărește automat prețurile produselor din magazinele online românești (eMAG, FashionDays, Notino, Altex) și trimite notificări push când prețul scade sub pragul setat de utilizator."}
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="wrap">
-  <div class="brand"><div class="mark">M</div>moxohubs</div>
+
+<nav class="wrap" id="nav" aria-label="Navigare principală">
+  <div class="navrow">
+    <div class="brand"><div class="mark">M</div><span class="name">MOXO <b>Technology</b></span></div>
+    <div class="navlinks">
+      <a href="#produse">Produse</a>
+      <a href="#capabilitati">Cum lucrăm</a>
+      <a href="#faq">Întrebări</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
 
 <main class="wrap">
-  <div class="eyebrow">Aplicații</div>
-  <h1>Unelte construite pentru munca de fiecare zi.</h1>
-  <p class="lead">Fiecare aplicație de aici rezolvă o singură problemă, bine — fără conturi complicate, fără funcții inutile.</p>
 
-  <div class="grid">
-    <a class="card sd" href="https://smartdrive.moxohubs.com">
-      <div class="top">
-        <div class="icon">🚗</div>
-        <div><h2>SmartDrive</h2><span class="tag">Live</span></div>
-      </div>
-      <p>Copilotul pentru șoferi Bolt/Uber — calculează profitul net real al fiecărei curse, după combustibil și uzură, și te ajută să refuzi cursele care te costă bani.</p>
-      <div class="go">Vezi aplicația
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </div>
-    </a>
-
-    <div class="card empty">
-      <div class="icon">＋</div>
-      <h2>Următoarea aplicație</h2>
-      <p>În lucru</p>
+  <header class="hero">
+    <div class="eyebrow"><span class="dot"></span>Studio independent de dezvoltare software</div>
+    <h1>Construim produse pe care oamenii <span class="accent">chiar le folosesc</span> zilnic.</h1>
+    <p class="lead">MOXO Technology proiectează și livrează aplicații reale — de la un copilot vocal pentru șoferi rideshare, până la o platformă de conformitate reglementară pentru inteligență artificială și un marketplace B2C cu plăți integrate. Patru produse, patru domenii diferite, aceeași disciplină de inginerie.</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="#produse">Vezi produsele
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a class="btn ghost" href="#contact">Hai să vorbim</a>
     </div>
-  </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">4</div><div class="l">produse construite</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">live, în producție</div></div>
+      <div class="stat"><div class="n">47+</div><div class="l">migrări de schemă versionate</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">cod propriu, fără lock-in no-code</div></div>
+    </div>
+  </header>
+
+  <section class="section tight" id="produse" aria-labelledby="produse-h">
+    <div class="shead">
+      <div class="k">Portofoliu</div>
+      <h2 id="produse-h">Produsele noastre</h2>
+      <p>De la idee la aplicație în producție — fiecare proiect de mai jos acoperă un domeniu diferit, cu arhitectură, stack tehnic și reguli de business proprii.</p>
+    </div>
+
+    <div class="projects">
+
+      <!-- SmartDrive -->
+      <article class="proj c-amber" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <meta itemprop="applicationCategory" content="TravelApplication">
+        <meta itemprop="operatingSystem" content="Android">
+        <div class="head">
+          <div class="icon" aria-hidden="true">🚗</div>
+          <div>
+            <div class="titlerow">
+              <h3 itemprop="name">SmartDrive</h3>
+              <span class="status live"><span class="dot"></span>Live · clienți reali</span>
+            </div>
+            <p class="tagline">Copilotul vocal pentru șoferii de rideshare</p>
+          </div>
+          <a class="golink" href="https://smartdrive.moxohubs.com" itemprop="url">
+            <span class="go">Vezi aplicația
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="body">
+          <p class="desc" itemprop="description"><strong>SmartDrive</strong> este aplicația Android nativă care funcționează ca un copilot personal pentru șoferii Bolt și Uber: calculează în timp real, pentru fiecare cursă în parte, câștigul net rămas după combustibil, uzură și comision — și îl anunță <strong>vocal, în cască sau boxă</strong>, astfel încât șoferul să decidă în secunde dacă merită să accepte cursa, fără să se uite la ecran. Aplicația rulează pasiv, alături de aplicația de rideshare, fără să o modifice sau să-i acceseze contul — zero risc de suspendare. Distribuită deja ca APK descărcabil direct către șoferi, cu versiuni publicate și mentenanță activă în producție.</p>
+          <div class="detailgrid">
+            <div>
+              <h4>Funcționalități cheie</h4>
+              <ul class="feats">
+                <li><b>Calcul profit net în timp real</b> — scade automat combustibilul și comisionul din prețul cursei afișate</li>
+                <li><b>Mod complet vocal (fără afișaj)</b> — zero distragere de la drum, ambele mâini pe volan</li>
+                <li><b>Quick Mute</b> — un singur tap silențiază orice anunț când urcă un pasager, pentru discreție totală</li>
+                <li><b>Obiectiv zilnic de câștig</b> — urmărire în timp real față de ținta setată, cu confirmare sonoră la atingere</li>
+                <li><b>Zone evitate</b> — avertizare vocală dacă o cursă intră pe un traseu marcat ca nedorit</li>
+                <li><b>Istoric financiar</b> — bilanț zilnic/săptămânal/lunar și orele cele mai profitabile</li>
+                <li><b>Program de recomandare</b> — cod unic de invitație, recompensă bănească la abonament activ</li>
+                <li><b>Migrări de schemă testate explicit</b> pe fiecare versiune majoră suportată, nu doar pe ultima</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Fișă tehnică</h4>
+              <div class="metabox">
+                <dl>
+                  <div class="row"><dt>Platformă</dt><dd itemprop="operatingSystem">Android nativ (Java)</dd></div>
+                  <div class="row"><dt>Backend</dt><dd>Supabase (Postgres, Edge Functions)</dd></div>
+                  <div class="row"><dt>Bază locală</dt><dd>SQLite (ShiftDatabase)</dd></div>
+                  <div class="row"><dt>Plăți/abonament</dt><dd>Lemon Squeezy · RON</dd></div>
+                  <div class="row"><dt>Distribuție</dt><dd>APK direct (fără Play Store)</dd></div>
+                  <div class="row"><dt>Testare</dt><dd>Unit + Robolectric (SQLite)</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip">Android · Java</span>
+            <span class="chip">Supabase</span>
+            <span class="chip">OCR local</span>
+            <span class="chip">SQLite</span>
+            <span class="chip">Lemon Squeezy</span>
+            <span class="chip">Robolectric</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sentinel -->
+      <article class="proj c-blue" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <meta itemprop="applicationCategory" content="BusinessApplication">
+        <div class="head">
+          <div class="icon" aria-hidden="true">🛡️</div>
+          <div>
+            <div class="titlerow">
+              <h3 itemprop="name">Sentinel</h3>
+              <span class="status dev">Pre-lansare · testat end-to-end</span>
+            </div>
+            <p class="tagline">Platformă de conformitate pentru EU AI Act</p>
+          </div>
+          <a class="golink" href="https://gettingsentinel.com" itemprop="url">
+            <span class="go">gettingsentinel.com
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="body">
+          <p class="desc" itemprop="description"><strong>Sentinel</strong> — tagline "Building Trust Through Evidence" — este o platformă de evaluare a conformității <strong>orientată pe dovezi</strong>, construită pentru furnizorii de sisteme AI, consultanți și cabinete de avocatură care trebuie să demonstreze conformitatea cu <strong>Regulation (EU) 2024/1689 (EU AI Act)</strong>. Platforma rulează un pipeline de analiză pe <strong>18 faze</strong>, extrage dovezi concrete direct din codul sursă, configurații și documentație, le mapează pe articolele specifice ale regulamentului și generează un dosar de conformitate (inclusiv documentație Annex IV) pregătit pentru evaluare de către un Notified Body. Nu emite opinii juridice — furnizează analiză tehnică verificabilă, nu presupuneri.</p>
+          <div class="detailgrid">
+            <div>
+              <h4>Funcționalități cheie</h4>
+              <ul class="feats">
+                <li><b>Analiză statică de cod</b> mapată articol-cu-articol pe EU AI Act, cu scoring de risc automatizat</li>
+                <li><b>Timestamp RFC 3161</b> — fiecare dosar e sigilat de o autoritate publică independentă (DigiCert, fallback FreeTSA), verificat cu OpenSSL, nu doar simulat</li>
+                <li><b>Hash per-dovadă pe conținut real</b> — detectează drift de conținut, nu doar de locație în fișier</li>
+                <li><b>Wizard restructurat pe documente</b>, cu blocare a răspunsurilor salvate pe reguli învechite</li>
+                <li><b>Detector de modificare substanțială</b> — scop declarat, context de deployment, scop geografic</li>
+                <li><b>SBOM</b> (Software Bill of Materials) generat automat + delta report la re-audit</li>
+                <li><b>Notificări in-app și webhook</b> (Slack/Teams) la assign, semnare, revocare</li>
+                <li><b>Roluri și permisiuni multi-organizație</b>, cu audit log complet</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Fișă tehnică</h4>
+              <div class="metabox">
+                <dl>
+                  <div class="row"><dt>Backend</dt><dd>Node.js · Express</dd></div>
+                  <div class="row"><dt>Autentificare</dt><dd>JWT + bcrypt + TOTP (2FA)</dd></div>
+                  <div class="row"><dt>Bază de date</dt><dd>SQLite (better-sqlite3)</dd></div>
+                  <div class="row"><dt>Stocare/backup</dt><dd>AWS S3 + Cloudflare R2 (fire-and-forget)</dd></div>
+                  <div class="row"><dt>Documente</dt><dd>PDFKit · QR · timestamping RFC 3161</dd></div>
+                  <div class="row"><dt>Suită de teste</dt><dd>48/48 — server real, nu doar unit</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip">Node.js · Express</span>
+            <span class="chip">AWS S3 / Cloudflare R2</span>
+            <span class="chip">JWT + TOTP 2FA</span>
+            <span class="chip">Generare PDF</span>
+            <span class="chip">RFC 3161 Timestamping</span>
+            <span class="chip">Docker</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Guanina / Piata de Flori -->
+      <article class="proj c-good" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <meta itemprop="applicationCategory" content="ShoppingApplication">
+        <div class="head">
+          <div class="icon" aria-hidden="true">🌸</div>
+          <div>
+            <div class="titlerow">
+              <h3 itemprop="name">Guanina</h3>
+              <span class="status live"><span class="dot"></span>Live · tranzacții reale</span>
+            </div>
+            <p class="tagline">Marketplace de flori — cunoscută și ca „Piața de Flori"</p>
+          </div>
+          <a class="golink" href="https://piatadeflori.moxohubs.com" itemprop="url">
+            <span class="go">piatadeflori.moxohubs.com
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="body">
+          <p class="desc" itemprop="description"><strong>Guanina</strong> este un marketplace multi-vânzător: florăriile din piețe postează buchete cu stoc limitat, clienții cumpără online cu <strong>plată card prin Stripe Connect</strong> (bani direct către vânzător, comision de platformă reținut automat), apoi ridică produsul fizic de la stand pe baza unui <strong>bilet QR</strong>. Are și un flux paralel de „cerere de ofertă": clientul descrie ce vrea, iar florarii din apropiere licitează pentru comandă. Fiecare vânzător vede și gestionează <strong>exclusiv</strong> propriile comenzi și produse — izolare completă de date verificată printr-un audit de securitate dedicat.</p>
+          <div class="detailgrid">
+            <div>
+              <h4>Funcționalități cheie</h4>
+              <ul class="feats">
+                <li><b>Checkout cu Stripe Connect</b> — plată directă către vânzător, comision automat prin <code>application_fee_amount</code></li>
+                <li><b>Bilet QR de ridicare</b> — fără cont de client necesar, checkout tip „guest"</li>
+                <li><b>Flux „cerere de ofertă"</b> — valuri de notificare către vânzătorii din apropiere, licitație pentru comandă</li>
+                <li><b>Politică de anulare ancorată pe plată</b> — 30 min pentru catalog, 3 min pentru comenzi la cerere, cu reținere reală a taxei Stripe</li>
+                <li><b>Livrare la domiciliu opțională per vânzător</b>, fără comision de platformă pe taxa de livrare</li>
+                <li><b>Panou admin complet</b> — comenzi, vânzători, decontări, echipă, sondaj de piață</li>
+                <li><b>Notificări push web (VAPID)</b> + email tranzacțional (Resend), degradare silențioasă fără cheie</li>
+                <li><b>SEO/AIO nativ</b> — JSON-LD Organization/WebSite/FAQPage, sitemap dinamic, <code>llms.txt</code></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Fișă tehnică</h4>
+              <div class="metabox">
+                <dl>
+                  <div class="row"><dt>Framework</dt><dd>Next.js 15 · App Router · Edge</dd></div>
+                  <div class="row"><dt>Bază de date</dt><dd>Cloudflare D1 (SQLite)</dd></div>
+                  <div class="row"><dt>Fișiere/cache</dt><dd>R2 (imagini) + KV (rate-limit, OTP)</dd></div>
+                  <div class="row"><dt>Plăți</dt><dd>Stripe + Stripe Connect</dd></div>
+                  <div class="row"><dt>Autentificare</dt><dd>JWT propriu (jose), cookie httpOnly</dd></div>
+                  <div class="row"><dt>Migrări</dt><dd>47 fișiere SQL incrementale</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip">Next.js 15 · Edge Runtime</span>
+            <span class="chip">Cloudflare D1 / KV / R2</span>
+            <span class="chip">Stripe Connect</span>
+            <span class="chip">Web Push (VAPID)</span>
+            <span class="chip">JSON-LD / llms.txt</span>
+            <span class="chip">CI/CD GitHub Actions</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Deal Hunter RO -->
+      <article class="proj c-violet" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <meta itemprop="applicationCategory" content="ShoppingApplication">
+        <meta itemprop="operatingSystem" content="iOS, Android">
+        <div class="head">
+          <div class="icon" aria-hidden="true">🏷️</div>
+          <div>
+            <div class="titlerow">
+              <h3 itemprop="name">Deal Hunter RO</h3>
+              <span class="status dev">În dezvoltare</span>
+            </div>
+            <p class="tagline">Urmărire automată de prețuri pentru magazinele din România</p>
+          </div>
+        </div>
+        <div class="body">
+          <p class="desc" itemprop="description"><strong>Deal Hunter RO</strong> este o aplicație mobilă (iOS + Android) care urmărește automat prețurile produselor din magazinele partenere românești — <strong>eMAG, FashionDays, Notino, Altex</strong> — și trimite notificări push exact când prețul scade sub pragul setat de utilizator. Aplicația nu vinde nimic direct: toate tranzacțiile rămân pe platformele oficiale ale magazinelor, iar redirecționarea se face obligatoriu prin browser in-app pentru a păstra atribuirea comisionului de afiliere. Monetizare complet invizibilă pentru utilizator.</p>
+          <div class="detailgrid">
+            <div>
+              <h4>Funcționalități cheie</h4>
+              <ul class="feats">
+                <li><b>Ingestie automată de feed-uri</b> XML/CSV/API de la afiliați, prin cron jobs / Edge Functions</li>
+                <li><b>Motor de notificări</b> — compară prețul nou cu cel salvat, declanșează alertă push (FCM) la scădere sub prag</li>
+                <li><b>Autentificare fără parolă</b> — Apple Sign In / Google Sign In</li>
+                <li><b>Istoric complet de preț</b> per produs, ca „trust builder" pentru utilizator</li>
+                <li><b>Browser in-app obligatoriu</b> la redirecționare — Custom Tabs (Android) / SFSafariViewController (iOS)</li>
+                <li><b>UI minimal dark/light</b>, cu accent unic de culoare pentru prețul redus</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Fișă tehnică</h4>
+              <div class="metabox">
+                <dl>
+                  <div class="row"><dt>Framework mobil</dt><dd>Flutter</dd></div>
+                  <div class="row"><dt>Backend</dt><dd>Supabase (PostgreSQL)</dd></div>
+                  <div class="row"><dt>Autentificare</dt><dd>Supabase Auth (OAuth)</dd></div>
+                  <div class="row"><dt>Notificări</dt><dd>Firebase Cloud Messaging</dd></div>
+                  <div class="row"><dt>Model de venit</dt><dd>Comisioane de afiliere</dd></div>
+                  <div class="row"><dt>Chei</dt><dd>UUID pe toate relațiile</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip">Flutter</span>
+            <span class="chip">Supabase / PostgreSQL</span>
+            <span class="chip">Firebase Cloud Messaging</span>
+            <span class="chip">iOS + Android</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="capabilitati" aria-labelledby="cap-h">
+    <div class="shead">
+      <div class="k">Cum lucrăm</div>
+      <h2 id="cap-h">Principii, nu doar tehnologii</h2>
+      <p>Stack-ul se schimbă de la un proiect la altul. Ce rămâne constant e disciplina cu care construim — verificabilă direct în codul din fiecare produs de mai sus.</p>
+    </div>
+    <div class="caps">
+      <div class="cap">
+        <div class="n">01</div>
+        <h4>Date izolate, pe bune</h4>
+        <p>Multi-tenant înseamnă izolare verificată la nivel de schemă și query, nu doar de interfață — un vânzător nu vede niciodată datele altuia (verificat printr-un audit de securitate dedicat în Guanina).</p>
+      </div>
+      <div class="cap">
+        <div class="n">02</div>
+        <h4>Migrări care nu strică producția</h4>
+        <p>Orice schimbare de schemă e testată explicit pe versiuni vechi reale, nu doar pe ultima — SmartDrive are un istoric documentat de bug-uri de migrare reparate, nu ipotetice.</p>
+      </div>
+      <div class="cap">
+        <div class="n">03</div>
+        <h4>Infrastructură care nu depinde de noi</h4>
+        <p>Cod, hosting și baze de date în conturile clientului de la prima zi. Fără lock-in pe backend propriu, fără dependență de o singură persoană.</p>
+      </div>
+      <div class="cap">
+        <div class="n">04</div>
+        <h4>Testat înainte de „gata"</h4>
+        <p>Nicio funcționalitate nu e raportată completă fără suita de teste rulată real — Sentinel rulează teste end-to-end cu server și bază de date reale, nu doar unit tests izolate.</p>
+      </div>
+      <div class="cap">
+        <div class="n">05</div>
+        <h4>Plăți și securitate reale</h4>
+        <p>Integrări de plăți în producție (Stripe Connect, Lemon Squeezy), audit trail pe acțiuni sensibile, autentificare cu 2FA acolo unde datele o cer.</p>
+      </div>
+      <div class="cap">
+        <div class="n">06</div>
+        <h4>Construim rapid, cu unelte AI moderne</h4>
+        <p>Folosim instrumente de dezvoltare asistată de AI ca parte a fluxului zilnic — dar verificăm activ fiecare presupunere, nu confirmăm pasiv ce generează.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="shead">
+      <div class="k">Întrebări frecvente</div>
+      <h2 id="faq-h">Ce vrei să știi</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Ce este MOXO Technology?</summary>
+        <p>MOXO Technology este un studio independent de dezvoltare software care proiectează și construiește aplicații full-stack complete — de la copiloți mobili pentru șoferi de rideshare, până la platforme de conformitate reglementară și marketplace-uri B2C cu plăți integrate.</p>
+      </details>
+      <details>
+        <summary>Ce este SmartDrive?</summary>
+        <p>SmartDrive este o aplicație Android nativă care funcționează ca un copilot vocal pentru șoferii de rideshare (Bolt, Uber). Calculează în timp real câștigul net al fiecărei curse, după combustibil și comision, și anunță vocal dacă merită acceptată — fără să interfereze cu aplicația de rideshare.</p>
+      </details>
+      <details>
+        <summary>Ce este Sentinel și ce reglementare acoperă?</summary>
+        <p>Sentinel este o platformă de conformitate pentru EU AI Act (Regulation (EU) 2024/1689), regulamentul european privind inteligența artificială. Analizează codul sursă, configurațiile și documentația sistemelor AI pentru a genera dovezi de conformitate mapate direct pe articolele regulamentului, inclusiv dosare pregătite pentru evaluare Notified Body.</p>
+      </details>
+      <details>
+        <summary>Ce este Guanina (Piața de Flori)?</summary>
+        <p>Guanina este un marketplace unde florăriile își listează buchetele cu stoc limitat, iar clienții cumpără online cu plată card prin Stripe și ridică produsul fizic de la stand pe baza unui bilet QR. Fiecare florărie vede și gestionează exclusiv propriile comenzi.</p>
+      </details>
+      <details>
+        <summary>Ce este Deal Hunter RO?</summary>
+        <p>Deal Hunter RO este o aplicație mobilă pentru iOS și Android care urmărește automat prețurile produselor din magazinele online românești (eMAG, FashionDays, Notino, Altex) și trimite notificări push când prețul scade sub pragul setat de utilizator.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="cta-band">
+      <h2 id="contact-h">Ai un produs de construit?</h2>
+      <p>De la MVP-uri până la platforme cu reguli de conformitate complexe — hai să vorbim despre ce vrei să construiești.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="mailto:office@moxohubs.com">Scrie-ne
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="wrap">
-  <p>© moxohubs — aplicații independente. SmartDrive nu e afiliat cu Bolt sau Uber.</p>
+  <div class="footrow">
+    <address style="font-style:normal;"><p>© 2026 MOXO Technology. SmartDrive nu e afiliat cu Bolt sau Uber.</p></address>
+    <div class="flinks">
+      <a href="#produse">Produse</a>
+      <a href="#capabilitati">Cum lucrăm</a>
+      <a href="#faq">Întrebări</a>
+      <a href="mailto:office@moxohubs.com">Contact</a>
+    </div>
+  </div>
 </footer>
+
+<script src="assets/main.js" defer></script>
+
 </body>
 </html>
