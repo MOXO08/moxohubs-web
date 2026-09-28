@@ -145,10 +145,9 @@ h1.hero-title em{font-style:normal; background:linear-gradient(100deg, var(--bra
 .sc-callout.problem .tag{color:#FF7A7A; background:rgba(255,122,122,.12);}
 .sc-callout.solution .tag{color:var(--accent); background:color-mix(in srgb, var(--accent) 16%, transparent);}
 
-.sc-feats{margin:0 0 22px; padding:0; list-style:none; display:grid; grid-template-columns:1fr; gap:9px;}
-@media(min-width:480px){.sc-feats{grid-template-columns:1fr 1fr;}}
-.sc-feats li{font-size:12.5px; color:var(--ink-soft); line-height:1.5; display:flex; gap:7px;}
-.sc-feats li::before{content:"✓"; color:var(--accent); font-weight:700; flex-shrink:0;}
+.sc-feats{margin:0 0 22px; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px;}
+.sc-feats li{font-size:13px; color:var(--ink-soft); line-height:1.55; display:flex; gap:9px; align-items:flex-start;}
+.sc-feats li::before{content:"✓"; color:var(--accent); font-weight:700; flex-shrink:0; line-height:1.55;}
 .sc-feats li b{color:var(--ink); font-weight:600;}
 
 .sc-tags{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:22px;}

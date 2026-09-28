@@ -167,6 +167,7 @@
       <a href="#produse" data-i18n="nav.produse">Products</a>
       <a href="#standard" data-i18n="nav.standard">How we work</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
     </div>
     <div class="langswitch" role="group" aria-label="Language">
       <button type="button" class="langbtn" data-lang="en" aria-pressed="true">EN</button>
@@ -244,7 +245,7 @@
       <div class="section-head">
         <div class="eyebrow" data-i18n="produse.eyebrow">Portfolio</div>
         <h2 id="produse-h" data-i18n="produse.h2">Every product, in detail</h2>
-        <p data-i18n="produse.p">Ordered by technical complexity and the maturity of production evidence.</p>
+        <p data-i18n="produse.p">Architecture, core systems, and functionality for each platform we've built and shipped.</p>
       </div>
     </div>
 
@@ -263,8 +264,8 @@
             <p class="sc-pitch" itemprop="description" data-i18n="sentinel.pitch">An <strong>evidence-oriented</strong> compliance assessment platform for AI system providers who must demonstrate conformity with Regulation (EU) 2024/1689 — validated by 4 independent experts and tested end-to-end.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="sentinel.problem">The EU AI Act requires article-by-article proof of conformity, under fines of up to €30M. It's usually done manually, with no verifiable link to the actual code.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="sentinel.solution">An 18-phase pipeline analyzes the code and documentation, extracts evidence, and maps it to articles, sealed with a real RFC 3161 timestamp.</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="sentinel.problem">The EU AI Act requires article-by-article proof of conformity, under fines of up to €30M. It's usually done manually, with no verifiable link to the actual code.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="sentinel.solution">An 18-phase pipeline analyzes the code and documentation, extracts evidence, and maps it to articles, sealed with a real RFC 3161 timestamp.</span></div>
             </div>
 
             <ul class="sc-feats">
@@ -320,20 +321,20 @@
               <span class="sc-status live"><span class="dot"></span><span data-i18n="guanina.status">Live · real transactions</span></span>
             </div>
             <p class="sc-tagline" data-i18n="guanina.tagline">Flower marketplace — also known as „Piața de Flori"</p>
-            <p class="sc-pitch" itemprop="description" data-i18n="guanina.pitch">Florists in local markets list bouquets with limited stock, customers pay online via <strong>Stripe Connect</strong> and pick up their order with a <strong>QR ticket</strong>. 47 migrations in production, a documented security audit.</p>
+            <p class="sc-pitch" itemprop="description" data-i18n="guanina.pitch">Built on <strong>Next.js Edge Runtime</strong> with Cloudflare D1, KV, and R2, integrating <strong>Stripe Connect</strong> for split payments and a QR-based pickup system. Runs on 47 incremental schema migrations applied without downtime.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="guanina.problem">Small florists don't have an IT team. A shared platform risks mixing data between sellers — one florist must never see another's orders.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="guanina.solution">A fully isolated dashboard per florist. Direct payment to the seller via Stripe Connect, commission withheld automatically, QR ticket with no account required.</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="guanina.problem">A shared multi-vendor platform must guarantee strict data isolation — one seller must never be able to query or view another seller's orders, inventory, or settlements.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="guanina.solution">Every seller gets a fully isolated dashboard, enforced at the schema and query level. Payments route directly to the seller via Stripe Connect, with commission withheld automatically at the payment layer.</span></div>
             </div>
 
             <ul class="sc-feats">
-              <li data-i18n="guanina.feat1"><b>Custom quote requests</b> — bidding between nearby sellers</li>
-              <li data-i18n="guanina.feat2"><b>15 demo accounts</b>, hidden once a real seller joins</li>
-              <li data-i18n="guanina.feat3"><b>Full admin panel</b> — orders, payouts, survey</li>
-              <li data-i18n="guanina.feat4"><b>Web push</b> + email, silent degradation</li>
-              <li data-i18n="guanina.feat5"><b>Native SEO/AIO</b> — JSON-LD, llms.txt</li>
-              <li data-i18n="guanina.feat6"><b>0% commission</b> first 30 days, then 5%</li>
+              <li data-i18n="guanina.feat1"><b>Custom quote engine</b> — request broadcast with automatic notification waves to nearby sellers</li>
+              <li data-i18n="guanina.feat2"><b>Real-time inventory engine</b> — automatic listing expiration and stock sync</li>
+              <li data-i18n="guanina.feat3"><b>Full admin panel</b> — orders, sellers, settlements, team, market survey</li>
+              <li data-i18n="guanina.feat4"><b>Web push (VAPID)</b> + transactional email, graceful degradation</li>
+              <li data-i18n="guanina.feat5"><b>Native SEO/AIO layer</b> — JSON-LD, dynamic sitemap, llms.txt</li>
+              <li data-i18n="guanina.feat6"><b>Delivery &amp; cancellation engine</b> — per-seller delivery option, payment-anchored refund windows</li>
             </ul>
 
             <div class="sc-tags">
@@ -354,8 +355,8 @@
               <div class="sc-flow-step"><span class="sc-flow-n">03</span><b data-i18n="guanina.f3t">Pick up</b><span data-i18n="guanina.f3d">QR ticket</span></div>
             </div>
             <div class="sc-proof">
-              <div class="sc-proof-row"><time>24.09</time><span data-i18n="guanina.proof1">Security audit: 4 issues found and fixed (XSS, double-sale risk, demo account, missing cities).</span></div>
-              <div class="sc-proof-row"><time>28.09</time><span data-i18n="guanina.proof2">Home delivery launched + cancellation policy rewritten, with real withholding of the Stripe fee.</span></div>
+              <div class="sc-proof-row"><time>24.09</time><span data-i18n="guanina.proof1">Dedicated security audit: XSS hardening, double-sale race condition fix on delayed webhooks, checkout rate limiting.</span></div>
+              <div class="sc-proof-row"><time>28.09</time><span data-i18n="guanina.proof2">Delivery module shipped with payment-anchored cancellation windows and automatic partial Stripe refunds.</span></div>
             </div>
           </div>
         </div>
@@ -375,20 +376,20 @@
               <span class="sc-status live"><span class="dot"></span><span data-i18n="smartdrive.status">Live · paying customers</span></span>
             </div>
             <p class="sc-tagline" data-i18n="smartdrive.tagline">The voice copilot for rideshare drivers</p>
-            <p class="sc-pitch" itemprop="description" data-i18n="smartdrive.pitch">Calculates the real-time net profit of every Bolt/Uber ride and announces it <strong>by voice</strong> — plus a full business back-office (subscriptions, referrals, MRR), not just a mobile app.</p>
+            <p class="sc-pitch" itemprop="description" data-i18n="smartdrive.pitch">A native Android app that reads the rideshare screen via local OCR, runs a real-time profit-calculation engine, and delivers the result <strong>by voice</strong> — backed by cloud sync and a full internal operations dashboard.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="smartdrive.problem">The driver only sees the gross price. They calculate mentally, under pressure, whether the ride is worth it — a real risk behind the wheel.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="smartdrive.solution">Runs passively, alongside the rideshare app. Every offer is evaluated automatically and whispered by voice: "30 RON ride, net 42 RON/hour."</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="smartdrive.problem">Rideshare apps only surface the gross fare. Computing true net profit — fuel, wear, commission — in real time, without touching the driver's account or its data, requires reading the UI externally and safely.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="smartdrive.solution">Runs passively alongside the rideshare app, using on-device OCR to read fare offers and a local calculation engine to compute net profit, delivered through text-to-speech — no access to the driver's rideshare account at any point.</span></div>
             </div>
 
             <ul class="sc-feats">
-              <li data-i18n="smartdrive.feat1"><b>Fully voice mode</b> — zero distraction from the road</li>
-              <li data-i18n="smartdrive.feat2"><b>Quick Mute</b> — one tap when a passenger gets in</li>
-              <li data-i18n="smartdrive.feat3"><b>7-day trial</b>, then -50% launch price</li>
-              <li data-i18n="smartdrive.feat4"><b>Referral anti-fraud</b> — reward voided if referrer's subscription lapses</li>
-              <li data-i18n="smartdrive.feat5"><b>Back-office</b> — MRR, retention, payouts</li>
-              <li data-i18n="smartdrive.feat6"><b>Migrations tested</b> on every old version</li>
+              <li data-i18n="smartdrive.feat1"><b>Local OCR engine</b> — reads fare offers directly from the rideshare app's screen</li>
+              <li data-i18n="smartdrive.feat2"><b>Voice-first mode</b> — text-to-speech output, zero screen interaction required</li>
+              <li data-i18n="smartdrive.feat3"><b>Real-time profit engine</b> — fuel cost, vehicle wear, and commission factored per ride</li>
+              <li data-i18n="smartdrive.feat4"><b>Referral tracking system</b> — automated attribution with built-in fraud safeguards</li>
+              <li data-i18n="smartdrive.feat5"><b>Operations dashboard</b> — subscriber management, metrics, payout requests</li>
+              <li data-i18n="smartdrive.feat6"><b>Schema migrations</b> tested against every previously shipped version</li>
             </ul>
 
             <div class="sc-tags">
@@ -429,8 +430,8 @@
             <p class="sc-pitch" itemprop="description" data-i18n="dealhunter.pitch">A mobile app (iOS + Android) that automatically tracks prices across Romanian online stores and notifies you exactly when a price drops below your threshold — built with the same discipline as the live products above.</p>
 
             <div class="sc-callouts">
-              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Situation</span><span data-i18n="dealhunter.problem">Prices at eMAG, FashionDays, Notino, Altex fluctuate constantly, but nobody has time to check manually every day.</span></div>
-              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Solution</span><span data-i18n="dealhunter.solution">The user sets a price threshold once; the app compares automatically and sends a push notification at the right moment.</span></div>
+              <div class="sc-callout problem"><span class="tag" data-i18n="callout.problem">Challenge</span><span data-i18n="dealhunter.problem">Prices at eMAG, FashionDays, Notino, Altex fluctuate constantly, but nobody has time to check manually every day.</span></div>
+              <div class="sc-callout solution"><span class="tag" data-i18n="callout.solution">Architecture</span><span data-i18n="dealhunter.solution">The user sets a price threshold once; the app compares automatically and sends a push notification at the right moment.</span></div>
             </div>
 
             <ul class="sc-feats">
@@ -562,6 +563,7 @@
       <a href="#produse" data-i18n="nav.produse">Products</a>
       <a href="#standard" data-i18n="nav.standard">How we work</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
       <a href="mailto:office@moxohubs.com" data-i18n="nav.cta">Contact us</a>
     </div>
   </div>
