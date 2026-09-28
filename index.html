@@ -25,9 +25,11 @@
 <meta name="twitter:description" content="SmartDrive, Sentinel, Guanina, Deal Hunter RO — patru produse, un singur studio de inginerie.">
 <meta name="twitter:image" content="https://moxohubs.com/og-cover.png">
 
+<link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;0,900;1,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- JSON-LD: Organization -->
 <script type="application/ld+json">
@@ -174,6 +176,16 @@
 <main>
 
   <section class="wrap cover">
+    <div class="cover-glow g1" aria-hidden="true"></div>
+    <div class="cover-glow g2" aria-hidden="true"></div>
+    <div class="retrogrid" aria-hidden="true"></div>
+    <div class="meteors" aria-hidden="true">
+      <span class="meteor" style="--x:8%; --y:-5%; --delay:0s; --dur:6s;"></span>
+      <span class="meteor" style="--x:28%; --y:-15%; --delay:1.4s; --dur:7s;"></span>
+      <span class="meteor" style="--x:52%; --y:-8%; --delay:2.8s; --dur:5.5s;"></span>
+      <span class="meteor" style="--x:70%; --y:-20%; --delay:0.7s; --dur:6.5s;"></span>
+      <span class="meteor" style="--x:88%; --y:-10%; --delay:3.6s; --dur:7.5s;"></span>
+    </div>
     <div class="stamp" aria-hidden="true"><span class="stxt">VERIFICAT<br>ÎN&nbsp;PRODUCȚIE<br>MX·2026</span></div>
     <div class="cover-kicker">Dosar tehnic — 4 sisteme livrate</div>
     <h1 class="cover-title">Construim sisteme care <em>rezistă la verificare</em>, nu doar la prezentare.</h1>
@@ -291,7 +303,7 @@
     <p class="sec-dek">Ordonate după complexitatea tehnică și maturitatea dovezilor din producție — de la motorul de conformitate reglementară, până la aplicația în construcție.</p>
 
     <!-- MX-001 Guanina — flagship -->
-    <article class="dossier" id="mx-001" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="dossier beam c-sentinel" id="mx-001" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="BusinessApplication">
       <div class="dfile-meta"><span>DOSAR</span><b>MX-001</b><span>·</span><b>Node.js</b><span>·</span><b>RegTech</b></div>
       <div class="dfile-head">
@@ -306,7 +318,7 @@
 
       <p class="dlede" itemprop="description">Platformă de evaluare a conformității orientată pe dovezi, pentru furnizorii de sisteme AI care trebuie să demonstreze conformitatea cu Regulation (EU) 2024/1689 — validată de patru experți independenți și testată end-to-end.</p>
 
-      <div class="signal tilt">
+      <div class="signal tilt beam">
         <div class="signal-label">Scanare de cod<b>18 faze de analiză</b></div>
         <div class="signal-scan" aria-hidden="true">
           <div>const evidence = extractFromSource(file);</div>
@@ -375,7 +387,7 @@
         <span class="dtag">Node.js · Express</span><span class="dtag">AWS S3 / R2</span><span class="dtag">JWT + TOTP</span><span class="dtag">RFC 3161</span><span class="dtag">Docker</span>
       </div>
     </article>
-    <article class="dossier" id="mx-002" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="dossier beam c-guanina" id="mx-002" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <div class="dfile-meta"><span>DOSAR</span><b>MX-002</b><span>·</span><b>Next.js Edge</b><span>·</span><b>Marketplace</b></div>
       <div class="dfile-head">
@@ -390,7 +402,7 @@
 
       <p class="dlede" itemprop="description">Marketplace multi-vânzător matur: florăriile din piețe listează buchete cu stoc limitat, clienții plătesc online prin Stripe Connect și ridică produsul pe bază de bilet QR. 47 de migrări de schemă în producție, audit de securitate documentat, plăți live.</p>
 
-      <div class="signal tilt">
+      <div class="signal tilt beam">
         <div class="signal-label">Stoc live<b>se epuizează în timp real</b></div>
         <div class="signal-stock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       </div>
@@ -453,7 +465,7 @@
         <span class="dtag">Next.js 15 · Edge</span><span class="dtag">Cloudflare D1/KV/R2</span><span class="dtag">Stripe Connect</span><span class="dtag">Web Push</span><span class="dtag">CI/CD</span>
       </div>
     </article>
-    <article class="dossier" id="mx-003" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="dossier beam c-smartdrive" id="mx-003" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="TravelApplication">
       <meta itemprop="operatingSystem" content="Android">
       <div class="dfile-meta"><span>DOSAR</span><b>MX-003</b><span>·</span><b>Android nativ</b><span>·</span><b>Rideshare</b></div>
@@ -469,7 +481,7 @@
 
       <p class="dlede" itemprop="description">Aplicație Android nativă cu abonați plătitori activi: calculează în timp real câștigul net al fiecărei curse Bolt/Uber și îl anunță vocal — plus un back-office complet de business, nu doar o aplicație mobilă.</p>
 
-      <div class="signal tilt">
+      <div class="signal tilt beam">
         <div class="signal-label">Anunț vocal<b>„42 RON pe oră"</b></div>
         <div class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       </div>
@@ -527,7 +539,7 @@
         <span class="dtag">Android · Java</span><span class="dtag">Supabase</span><span class="dtag">OCR local</span><span class="dtag">SQLite</span><span class="dtag">Lemon Squeezy</span>
       </div>
     </article>
-    <article class="dossier" id="mx-004" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <article class="dossier beam c-dealhunter" id="mx-004" itemscope itemtype="https://schema.org/SoftwareApplication">
       <meta itemprop="applicationCategory" content="ShoppingApplication">
       <meta itemprop="operatingSystem" content="iOS, Android">
       <div class="dfile-meta"><span>DOSAR</span><b>MX-004</b><span>·</span><b>Flutter</b><span>·</span><b>E-commerce afiliat</b></div>
@@ -540,7 +552,7 @@
 
       <p class="dlede" itemprop="description">Aplicație mobilă (iOS + Android) care urmărește automat prețurile din magazinele online românești și notifică exact când prețul scade sub pragul setat — construită cu aceeași disciplină de arhitectură ca produsele live de mai sus.</p>
 
-      <div class="signal tilt">
+      <div class="signal tilt beam">
         <div class="signal-label">Preț sub prag<b>alertă trimisă</b></div>
         <div class="signal-spark" aria-hidden="true">
           <svg viewBox="0 0 200 44" preserveAspectRatio="none">
