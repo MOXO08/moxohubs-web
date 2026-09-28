@@ -110,6 +110,17 @@ h1.cover-title em{font-style:italic; font-weight:600; color:var(--stamp);}
 }
 @media(max-width:640px){.cover::before{display:none;}}
 
+@keyframes sweep{0%{transform:translateX(-120%) rotate(8deg);} 100%{transform:translateX(220%) rotate(8deg);}}
+.cover::after{
+  content:""; position:absolute; top:-40px; right:-10%; width:220px; height:480px; z-index:-1; pointer-events:none;
+  background:linear-gradient(90deg, transparent, rgba(168,53,31,.10) 45%, rgba(168,53,31,.16) 50%, rgba(168,53,31,.10) 55%, transparent);
+  animation:sweep 7s ease-in-out infinite; animation-delay:1s;
+}
+@media(max-width:640px){.cover::after{display:none;}}
+
+/* 3D tilt (JS-driven via main.js) */
+.tilt{transition:transform .12s ease-out; transform-style:preserve-3d; will-change:transform;}
+
 .dstatus.live .dot{animation:blip 1.8s ease-in-out infinite;}
 @keyframes blip{0%,100%{opacity:1; box-shadow:0 0 0 0 rgba(46,107,76,.35);} 50%{opacity:.55; box-shadow:0 0 0 4px rgba(46,107,76,0);}}
 
@@ -248,14 +259,23 @@ h1.cover-title em{font-style:italic; font-weight:600; color:var(--stamp);}
 .snode-box span{font-size:11px; color:var(--ink-faint); line-height:1.4;}
 .snode-tick{position:absolute; top:0; left:4px; font-family:var(--mono); font-size:10px; color:var(--stamp);}
 .sconn{width:26px; flex-shrink:0; position:relative; align-self:center; top:7px;}
-.sconn::before{content:""; position:absolute; top:0; left:0; right:0; border-top:1.4px dashed var(--line-strong);}
+.sconn::before{
+  content:""; position:absolute; top:0; left:0; right:0; height:1.6px;
+  background-image:repeating-linear-gradient(90deg, var(--stamp) 0 5px, transparent 5px 12px);
+  background-size:200% 100%; opacity:.75;
+  animation:beamflow 1.8s linear infinite;
+}
 .sconn::after{content:"›"; position:absolute; top:-9px; right:-2px; color:var(--ink-faint); font-family:var(--mono); font-size:13px;}
+@keyframes beamflow{0%{background-position:0 0;} 100%{background-position:-34px 0;}}
 @media(max-width:760px){
   .schema-row{flex-direction:column; gap:0;}
   .sconn{width:auto; height:22px; align-self:flex-start; margin-left:16px; top:0;}
-  .sconn::before{top:0; bottom:0; left:0; right:auto; border-top:none; border-left:1.4px dashed var(--line-strong); height:100%;}
+  .sconn::before{top:0; bottom:0; left:0; right:auto; width:1.6px; height:100%;
+    background-image:repeating-linear-gradient(180deg, var(--stamp) 0 5px, transparent 5px 12px);
+    background-size:100% 200%; animation:beamflowv 1.8s linear infinite;}
   .sconn::after{content:"⌄"; top:auto; bottom:-4px; left:-4px; right:auto;}
 }
+@keyframes beamflowv{0%{background-position:0 0;} 100%{background-position:0 -34px;}}
 
 .dgrid{display:grid; grid-template-columns:1.15fr .85fr; gap:32px; margin-bottom:28px;}
 @media(max-width:760px){.dgrid{grid-template-columns:1fr; gap:22px;}}
